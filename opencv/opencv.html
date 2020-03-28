@@ -1,0 +1,1464 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>OpenCV笔记 · gitbook title</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../shu-ju-ku/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://robotchaox.github.io/" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../c++/">
+            
+                <a href="../c++/">
+            
+                    
+                    C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../c++/c++-ji-chu.html">
+            
+                <a href="../c++/c++-ji-chu.html">
+            
+                    
+                    C++基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../c++/stl.html">
+            
+                <a href="../c++/stl.html">
+            
+                    
+                    STL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../linux-ji-chu/">
+            
+                <a href="../linux-ji-chu/">
+            
+                    
+                    linux基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../linux-ji-chu/linux.html">
+            
+                <a href="../linux-ji-chu/linux.html">
+            
+                    
+                    Linux基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../linux-xi-tong-bian-cheng/">
+            
+                <a href="../linux-xi-tong-bian-cheng/">
+            
+                    
+                    linux系统编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../linux-xi-tong-bian-cheng/untitled.html">
+            
+                <a href="../linux-xi-tong-bian-cheng/untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../linux-wang-luo-bian-cheng/">
+            
+                <a href="../linux-wang-luo-bian-cheng/">
+            
+                    
+                    linux网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../linux-wang-luo-bian-cheng/untitled.html">
+            
+                <a href="../linux-wang-luo-bian-cheng/untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../linux-web-fu-wu-qi/">
+            
+                <a href="../linux-web-fu-wu-qi/">
+            
+                    
+                    linux-Web服务器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../linux-web-fu-wu-qi/untitled.html">
+            
+                <a href="../linux-web-fu-wu-qi/untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../html/html.html">
+            
+                <a href="../html/html.html">
+            
+                    
+                    HTML基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    HTTP协议
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../http/http.html">
+            
+                <a href="../http/http.html">
+            
+                    
+                    HTTP基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../she-ji-mo-shi/">
+            
+                <a href="../she-ji-mo-shi/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../she-ji-mo-shi/she-ji-yuan-ze.html">
+            
+                <a href="../she-ji-mo-shi/she-ji-yuan-ze.html">
+            
+                    
+                    设计原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../she-ji-mo-shi/she-ji-mo-shi.html">
+            
+                <a href="../she-ji-mo-shi/she-ji-mo-shi.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../shell/">
+            
+                <a href="../shell/">
+            
+                    
+                    shell编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../shell/shell.html">
+            
+                <a href="../shell/shell.html">
+            
+                    
+                    shell基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../python/">
+            
+                <a href="../python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../python/python.html">
+            
+                <a href="../python/python.html">
+            
+                    
+                    Python基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../vim/">
+            
+                <a href="../vim/">
+            
+                    
+                    vim编辑器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../vim/vim.html">
+            
+                <a href="../vim/vim.html">
+            
+                    
+                    vim编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../markdown/">
+            
+                <a href="../markdown/">
+            
+                    
+                    MarkDown
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../markdown/markdown.html">
+            
+                <a href="../markdown/markdown.html">
+            
+                    
+                    MarkDown笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../gitbook/gitbook.html">
+            
+                <a href="../gitbook/gitbook.html">
+            
+                    
+                    GitBook笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../git/git.html">
+            
+                <a href="../git/git.html">
+            
+                    
+                    Git&GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../jetson/">
+            
+                <a href="../jetson/">
+            
+                    
+                    NVIDIA-jetson
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../jetson/jetson.html">
+            
+                <a href="../jetson/jetson.html">
+            
+                    
+                    jetson笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    OpenCV
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.17.1" data-path="opencv.html">
+            
+                <a href="opencv.html">
+            
+                    
+                    OpenCV笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../shu-ju-ku/">
+            
+                <a href="../shu-ju-ku/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../shu-ju-ku/shu-ju-ku.html">
+            
+                <a href="../shu-ju-ku/shu-ju-ku.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../shu-ju-ku/shu-ju-ku-2.html">
+            
+                <a href="../shu-ju-ku/shu-ju-ku-2.html">
+            
+                    
+                    数据库2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >OpenCV笔记</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#opencv&#x6559;&#x7A0B;"><b></b>OpenCV&#x6559;&#x7A0B;</a></li></ul></div><h1 id="opencv&#x6559;&#x7A0B;"><a name="opencv&#x6559;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#opencv&#x6559;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>OpenCV&#x6559;&#x7A0B;</h1>
+<h4 id="clionopencv-&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x642D;&#x5EFA;"><a name="clionopencv-&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x642D;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#clionopencv-&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x642D;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>CLion+OpenCV &#x5F00;&#x53D1;&#x73AF;&#x5883;&#x642D;&#x5EFA;</h4>
+<p><a href="https://blog.csdn.net/weixin_40744915/article/details/82836125" target="_blank">&#x53C2;&#x8003;&#x94FE;&#x63A5;</a></p>
+<p><a href="https://blog.csdn.net/tqcai666/article/details/87034285" target="_blank">&#x53C2;&#x8003;</a></p>
+<p>OpenCV&#x5B89;&#x88C5;&#x597D;&#x540E;&#x53EA;&#x9700;CLion&#x91CC;&#x7F16;&#x5199;CMakeList.txt&#x6587;&#x4EF6;&#x6307;&#x5B9A;opencv&#x8DEF;&#x5F84;&#x5373;&#x53EF;,&#x4E0D;&#x9700;&#x8981;&#x7279;&#x6B8A;&#x8BBE;&#x7F6E;</p>
+<p>CMakeList.txt </p>
+<blockquote>
+<pre><code>#&#x8BBE;&#x7F6E;&#x6700;&#x4F4E;&#x7248;&#x672C;&#x7684;cmake&#x8981;&#x6C42;
+cmake_minimum_required(VERSION 3.14)
+#&#x8BBE;&#x7F6E;&#x9879;&#x76EE;&#x4FE1;&#x606F;
+project(cvtest00)
+#set(PROJECT_NAME cvtest00)
+#project(${PROJECT_NAME})
+
+#&#x8BBE;&#x7F6E;&#x7F16;&#x8BD1;&#x5668;&#x7248;&#x672C;
+set(CMAKE_CXX_STANDARD 14)
+
+#&#x8BBE;&#x7F6E;&#x6E90;&#x6587;&#x4EF6;&#xFF08;&#x4E3B;&#x6587;&#x4EF6;&#x540D;&#xFF09;
+#set(SOURCE_FILES main.cpp)
+#&#x8BBE;&#x7F6E;&#x8981;&#x751F;&#x6210;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x6587;&#x4EF6;&#x540D;
+#add_executable(cvtest00 ${SOURCE_FILES})
+#&#x4E3B;&#x51FD;&#x6570;&#x751F;&#x6210;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;
+add_executable(cvtest00 main.cpp)
+
+#&#x5BFB;&#x627E;opencv&#x5E93;
+find_package(OpenCV REQUIRED)
+#&#x6DFB;&#x52A0;&#x5934;&#x6587;&#x4EF6;
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+#&#x6253;&#x5370;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;
+MESSAGE(STATUS &quot;Project:cvtest00&quot;)
+MESSAGE(STATUS &quot;Project Dirrectory: ${PROJECT_SOURCE_DIR}&quot;)
+
+#&#x8BBE;&#x7F6E;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#xFF0C;debug&#x4F1A;&#x8F93;&#x51FA;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;
+SET(CMAKE_BUILD_TYPE DEBUG)
+
+#&#x6DFB;&#x52A0;&#x81EA;&#x5DF1;&#x5199;&#x7684;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#x6587;&#x4EF6;&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x4E2A;&#x540D;&#x5B57;&#x4E0D;&#x80FD;&#x548C;&#x5DE5;&#x7A0B;&#x540D;&#x51B2;&#x7A81;
+#ADD_LIBRARY( STATIC imgfeatures.cpp imgfeatures.h kdtree.h kdtree.cpp minpq.h minpq.cpp sift.h sift.cpp utils.cpp utils.h xform.h xform.cpp)
+
+#&#x8BBE;&#x7F6E;&#x94FE;&#x63A5;&#x5E93;
+target_link_libraries(cvtest00 ${OpenCV_LIBS})
+</code></pre></blockquote>
+<p>main.cpp&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</p>
+<blockquote>
+<pre><code>#include &lt;opencv2/opencv.hpp&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace cv;
+using namespace std;
+int main(int argc,char **argv)
+{
+    Mat img = imread(&quot;/home/chao/Desktop/test.jpg&quot;);    //  &#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+    Mat img = imread(&quot;../test.jpg&quot;);    //  &#x6309;&#x7167;&#x7F16;&#x8BD1;&#x540E;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x8DEF;&#x5F84;&#x5F00;&#x59CB;&#x7B97;???
+    cout&lt;&lt;img;
+    if(img.empty())
+    {
+        cout&lt;&lt;&quot;error&quot;;
+        return -1;
+    }
+    cout&lt;&lt;&quot;\nMy picture: &quot;&lt;&lt; img.size() &lt;&lt;endl;
+    imshow(&quot;image&quot;,img);
+    waitKey();
+    return 0;
+}
+</code></pre></blockquote>
+<p><strong>&#x62A5;&#x9519;:</strong> <code>Gtk-WARNING **: 22:16:16.681: Unable to locate theme engine in module_path:</code></p>
+<p>&#x539F;&#x56E0;&#x662F;&#x7F3A;&#x5C11;gnome&#x7EC4;&#x4EF6;</p>
+<pre><code>sudo apt install gnome-themes-standard
+</code></pre><p><strong>&#x62A5;&#x9519;:</strong> <code>terminate called after throwing an instance of &apos;cv::Exception&apos;</code>
+  what():  OpenCV(3.4.5) /home/chao/opencv/opencv-3.4.5/modules/highgui/src/window_gtk.cpp:1257: error: (-215:Assertion failed) found &amp;&amp; &quot;Can&apos;t destroy non-registered window&quot; in function &apos;cvDestroyWindow&apos;</p>
+<p>&#x539F;&#x56E0;&#x662F;&#x56FE;&#x7247;&#x6CA1;&#x6709;&#x6B63;&#x786E;&#x8BFB;&#x53D6;,&#x8BF7;&#x5148;&#x6D4B;&#x8BD5;&#x56FE;&#x7247;&#x662F;&#x5426;&#x6B63;&#x786E;&#x52A0;&#x8F7D;,(&#x6587;&#x4EF6;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x4F3C;&#x4E4E;&#x662F;&#x6309;&#x7167;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x7B97;??)</p>
+<p><strong>&#x62A5;&#x9519;:</strong> <code>CMake throws Error: could not load cache</code></p>
+<p>&#x539F;&#x56E0;&#x662F; CLion&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x7684;CMake&#x7684; cmake-build-debug &#x7F16;&#x8BD1;&#x6587;&#x4EF6;&#x53D7;&#x635F;&#x4E0D;&#x5B8C;&#x6574;,&#x76F4;&#x63A5; <code>File</code>---&quot;<code>Reload CMake Project</code>&quot;</p>
+<p>Mat&#x7C7B;&#x5206;&#x4E3A;&#x4E86;&#x4E24;&#x4E2A;&#x90E8;&#x5206;:&#x77E9;&#x9635;&#x5934;&#x548C;&#x6307;&#x5411;&#x77E9;&#x9635;&#x6570;&#x636E;&#x90E8;&#x5206;&#x7684;&#x6307;&#x9488;&#xFF0C;data&#x5C31;&#x662F;&#x6307;&#x5411;&#x77E9;&#x9635;&#x6570;&#x636E;&#x7684;&#x6307;&#x9488;</p>
+<p><a href="assets/&#x7070;&#x5EA6;&#x56FE;&#x5185;&#x5B58;&#x63CF;&#x8FF0;.png" data-lightbox="4fe50439-4b5a-4016-aeb9-935b94343899" data-title="img"><img src="assets/&#x7070;&#x5EA6;&#x56FE;&#x5185;&#x5B58;&#x63CF;&#x8FF0;.png" alt="img"></a></p>
+<p><a href="assets/1556782140205.png" data-lightbox="522920ab-eb41-45e4-8904-8d297e88bd3e" data-title="1556782140205"><img src="assets/1556782140205.png" alt="1556782140205"></a></p>
+<p>depth&#x6570;&#x503C;    &#x5177;&#x4F53;&#x7C7B;&#x578B;        &#x53D6;&#x503C;&#x8303;&#x56F4;
+CV_8U    8 &#x4F4D;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;    &#xFF08;0&#x2026;&#x2026;255&#xFF09;
+CV_8S    8 &#x4F4D;&#x7B26;&#x53F7;&#x6574;&#x6570;    &#xFF08;-128&#x2026;&#x2026;127&#xFF09;
+CV_16U    16 &#x4F4D;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;    &#xFF08;0&#x2026;&#x2026;65535&#xFF09;
+CV_16S    16 &#x4F4D;&#x7B26;&#x53F7;&#x6574;&#x6570;    &#xFF08;-32768&#x2026;&#x2026;32767&#xFF09;
+CV_32S    32 &#x4F4D;&#x7B26;&#x53F7;&#x6574;&#x6570;    &#xFF08;-2147483648&#x2026;&#x2026;2147483647&#xFF09;
+CV_32F    32 &#x4F4D;&#x6D6E;&#x70B9;&#x6570;    &#xFF08;-FLT_MAX &#x2026;&#x2026;&#x2026;FLT_MAX&#xFF0C;INF&#xFF0C;NAN)
+CV_64F    64 &#x4F4D;&#x6D6E;&#x70B9;&#x6570;    &#xFF08;-DBL_MAX &#x2026;&#x2026;&#x2026;.DBL_MAX&#xFF0C;INF&#xFF0C;NAN)</p>
+<p>type&#x7C7B;&#x578B;</p>
+<table>
+<thead>
+<tr>
+<th>CV_8UC1</th>
+<th>CV_8UC2</th>
+<th>CV_8UC3</th>
+<th>CV_8UC4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CV_8SC1</td>
+<td>CV_8SC2</td>
+<td>CV_8SC3</td>
+<td>CV_8SC4</td>
+</tr>
+<tr>
+<td>CV_16UC1</td>
+<td>CV_16UC2</td>
+<td>CV_16UC3</td>
+<td>CV_16UC4</td>
+</tr>
+<tr>
+<td>CV_16SC1</td>
+<td>CV_16SC2</td>
+<td>CV_16SC3</td>
+<td>CV_16SC4</td>
+</tr>
+<tr>
+<td>CV_32SC1</td>
+<td>CV_32SC2</td>
+<td>CV_32SC3</td>
+<td>CV_32SC4</td>
+</tr>
+<tr>
+<td>CV_32FC1</td>
+<td>CV_32FC2</td>
+<td>CV_32FC3</td>
+<td>CV_32FC4</td>
+</tr>
+<tr>
+<td>CV_64FC1</td>
+<td>CV_64FC2</td>
+<td>CV_64FC3</td>
+<td>CV_64FC4</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mat&#x7C7B;"><a name="mat&#x7C7B;" class="anchor-navigation-ex-anchor" href="#mat&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>Mat&#x7C7B;</h4>
+<p>Mat&#x7C7B;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x591A;&#x7EF4;&#x7684;&#x5355;&#x901A;&#x9053;&#x6216;&#x8005;&#x591A;&#x901A;&#x9053;&#x7684;&#x7A20;&#x5BC6;&#x6570;&#x7EC4;&#x3002;&#x80FD;&#x591F;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x5B9E;&#x6570;&#x6216;&#x590D;&#x6570;&#x7684;&#x5411;&#x91CF;&#x3001;&#x77E9;&#x9635;&#xFF0C;&#x7070;&#x5EA6;&#x6216;&#x5F69;&#x8272;&#x56FE;&#x50CF;&#xFF0C;&#x7ACB;&#x4F53;&#x5143;&#x7D20;&#xFF0C;&#x70B9;&#x4E91;&#xFF0C;&#x5F20;&#x91CF;&#x4EE5;&#x53CA;&#x76F4;&#x65B9;&#x56FE;&#xFF08;&#x9AD8;&#x7EF4;&#x7684;&#x76F4;&#x65B9;&#x56FE;&#x4F7F;&#x7528;SparseMat&#x4FDD;&#x5B58;&#x6BD4;&#x8F83;&#x597D;&#xFF09;&#x3002;&#x7B80;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;Mat&#x5C31;&#x662F;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x591A;&#x7EF4;&#x7684;&#x77E9;&#x9635;&#x7684;&#x3002;Mat&#x5BF9;&#x8C61;OpenCV2.0&#x4E4B;&#x540E;&#x5F15;&#x8FDB;&#x7684;&#x56FE;&#x50CF;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3001;&#x81EA;&#x52A8;&#x5206;&#x914D;&#x5185;&#x5B58;&#x3001;&#x4E0D;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</p>
+<p>Mat&#x7C7B;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;&#x77E9;&#x9635;&#x5934;&#x548C;&#x6307;&#x5411;&#x50CF;&#x7D20;&#x6570;&#x636E;&#x7684;&#x77E9;&#x9635;&#x6307;&#x9488;</p>
+<p>&#x77E9;&#x9635;&#x5934;: &#x5305;&#x62EC;&#x6570;&#x5B57;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x9635;&#x5C3A;&#x5BF8;&#x3001;&#x5B58;&#x50A8;&#x65B9;&#x6CD5;&#x3001;&#x5B58;&#x50A8;&#x5730;&#x5740;&#x548C;&#x5F15;&#x7528;&#x6B21;&#x6570;&#x7B49;&#xFF0C;&#x77E9;&#x9635;&#x5934;&#x56FA;&#x5B9A;&#x683C;&#x5F0F;&#xFF0C;&#x4E0D;&#x4F1A;&#x968F;&#x7740;&#x56FE;&#x50CF;&#x7684;&#x5927;&#x5C0F;&#x800C;&#x6539;&#x53D8;
+&#x6570;&#x636E;&#x6307;&#x9488;: &#x6307;&#x5411;&#x50CF;&#x7D20;&#x6570;&#x636E;&#x7684;&#x77E9;&#x9635;&#x6307;&#x9488;</p>
+<p>OpenCV&#x884C;&#x56FE;&#x50CF;&#x590D;&#x5236;&#x548C;&#x4F20;&#x9012;&#x65F6;&#xFF0C;&#x4E0D;&#x518D;&#x590D;&#x5236;&#x6574;&#x4E2A;Mat&#x6570;&#x636E;&#xFF0C;&#x800C;&#x53EA;&#x662F;&#x590D;&#x5236;&#x77E9;&#x9635;&#x5934;&#x548C;&#x6307;&#x5411;&#x50CF;&#x7D20;&#x77E9;&#x9635;&#x7684;&#x6307;&#x9488;</p>
+<h4 id="&#x6784;&#x9020;&#x51FD;&#x6570;"><a name="&#x6784;&#x9020;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6784;&#x9020;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6784;&#x9020;&#x51FD;&#x6570;</h4>
+<blockquote>
+<p>cv::Mat::Mat(int rows, int cols, int type)    # &#x77E9;&#x9635;&#x7684;rows&#x884C;&#x6570;,cols &#x5217;&#x6570;,&#x5B58;&#x50A8;&#x7C7B;&#x578B;type</p>
+<p>cv::Mat::Mat(int rows, int cols,i nt type, const Scalar &amp;s)    # &#x77E9;&#x9635;&#x7684;rows&#x884C;&#x6570;,cols &#x5217;&#x6570;,&#x5B58;&#x50A8;&#x7C7B;&#x578B;type,Scalar &amp;s &#x901A;&#x8FC7;Scalar&#x6570;&#x636E;&#x7C7B;&#x6765;&#x521D;&#x59CB;&#x5316;&#x6BCF;&#x4E2A;&#x901A;&#x9053;&#x5143;&#x7D20;&#x503C;,&#x5411;&#x91CF;&#x957F;&#x5EA6;&#x5BF9;&#x5E94;&#x901A;&#x9053;&#x6570;&#x76EE;&#x4E00;&#x81F4;</p>
+<p>&#x200B;    Mat M(2,2,CV_8UC3)      # &#x8868;&#x793A;M&#x662F;&#x4E00;&#x4E2A;3,4&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x6BCF;&#x4E2A;&#x901A;&#x9053;&#x662F;8&#x4F4D;Unsigned Char&#x7C7B;&#x578B;,3&#x901A;&#x9053;,
+        [  0, 0, 0,     0, 0, 0,     0, 0, 0;
+                0, 0, 0,     0, 0, 0,     0, 0, 0]</p>
+<p>&#x200B;    Mat M(2,2,CV_8UC3, Scalar(0,0,255))
+        [  0, 100, 255,     0, 100, 255,     0, 100, 255;
+              0, 100, 255,     0, 100, 255,     0, 100, 255]</p>
+<p>cv::Mat::Mat(Size size, int type)    # &#x77E9;&#x9635;&#x7684;&#x5927;&#x5C0F;(Size),&#x4EE5;&#x53CA;&#x5B58;&#x50A8;&#x7C7B;&#x578B;(type) </p>
+<p>cv::Mat::Mat(Size size, int type, const Scalar &amp;s)    # &#x77E9;&#x9635;&#x7684;&#x5927;&#x5C0F;(Size),&#x5B58;&#x50A8;&#x7C7B;&#x578B;(type) ,Scalar &amp;s</p>
+<p>Mat src2(Size(30, 40), CV_32FC3)    # &#x8868;&#x793A;src&#x662F;&#x4E00;&#x4E2A;Size(30,40)&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x4E14;&#x77E9;&#x9635;&#x5143;&#x7D20;&#x4EE5;32&#x4F4D;float&#x578B;&#x5B58;&#x50A8;</p>
+<p>cv::Mat::Mat(int ndims, const int *  sizes, int type)     # &#x77E9;&#x9635;&#x7684;&#x7EF4;&#x6570;(ndims),&#x6307;&#x5B9A;&#x7EF4;&#x6570;&#x7EC4;&#x5F62;&#x72B6;&#x7684;&#x6574;&#x6570;&#x6570;&#x7EC4;(sizes)??,&#x6570;&#x7EC4;&#x7684;&#x7C7B;&#x578B;(type)</p>
+<p>cv::Mat::Mat(int ndims, const int *  sizes,int type, const Scalar&amp; s)     # </p>
+<p>Mat src1(300, 400, CV_8UC3,Scalar(255,255,255))    # Scalar(255,255,255)&#x4EE5;8&#x4F4D;&#x65E0;&#x7B26;&#x53F7;&#x6570;&#x5B58;&#x50A8;&#xFF0C;&#x5BF9;&#x5E94;RGB&#x901A;&#x9053;&#x503C;&#x3002;</p>
+<p>cv::Mat::create &#x521B;&#x5EFA;Mat&#x5BF9;&#x8C61; &#x77E9;&#x9635;</p>
+<p>Mat M;
+M.create(4, 3, CV_8UC3);
+M = Scalar(1,125,255);
+cout &lt;&lt; &quot;M = &quot; &lt;&lt; endl &lt;&lt; &quot; &quot; &lt;&lt; M &lt;&lt; endl &lt;&lt; endl;
+uchar<em> firstRow = M.ptr<uchar>(0);
+printf(&quot;%d&quot;, </uchar></em>firstRow);</p>
+<p>cv::Mat::Mat(const Mat &amp; m)     # &#x5F15;&#x7528;m&#x77E9;&#x9635;</p>
+<p>&#x5B9A;&#x4E49;&#x5C0F;&#x6570;&#x7EC4;</p>
+<p>// Mat<em><char>(,) &lt;&lt;  &#x521B;&#x5EFA;&#x5C0F;&#x6570;&#x7EC4;
+Mat kernel = (Mat</char></em><char>(3, 3) &lt;&lt; 0, -1, 0, -1, 5, -1, 0, -1, 0);
+cout &lt;&lt; &quot;kernel =&quot; &lt;&lt; endl &lt;&lt; kernel &lt;&lt; endl;</char></p>
+<p>int sz[3] = {2,2,2};??
+Mat  L(3,sz, CV_8UC1, Scalar::all(0));     ??
+cout &lt;&lt; &quot;L = &quot; &lt;&lt; endl &lt;&lt; &quot; &quot; &lt;&lt; L &lt;&lt; endl &lt;&lt; endl;??</p>
+</blockquote>
+<h4 id="mat&#x5C5E;&#x6027;"><a name="mat&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#mat&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>Mat&#x5C5E;&#x6027;</h4>
+<h4 id="rows--&#x77E9;&#x9635;&#x7684;&#x884C;&#x6570;"><a name="rows--&#x77E9;&#x9635;&#x7684;&#x884C;&#x6570;" class="anchor-navigation-ex-anchor" href="#rows--&#x77E9;&#x9635;&#x7684;&#x884C;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>rows  &#x77E9;&#x9635;&#x7684;&#x884C;&#x6570;</h4>
+<h4 id="cols---&#x77E9;&#x9635;&#x7684;&#x5217;&#x6570;"><a name="cols---&#x77E9;&#x9635;&#x7684;&#x5217;&#x6570;" class="anchor-navigation-ex-anchor" href="#cols---&#x77E9;&#x9635;&#x7684;&#x5217;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>cols   &#x77E9;&#x9635;&#x7684;&#x5217;&#x6570;</h4>
+<h4 id="size-&#x77E9;&#x9635;&#x7684;&#x5927;&#x5C0F;"><a name="size-&#x77E9;&#x9635;&#x7684;&#x5927;&#x5C0F;" class="anchor-navigation-ex-anchor" href="#size-&#x77E9;&#x9635;&#x7684;&#x5927;&#x5C0F;"><i class="fa fa-link" aria-hidden="true"></i></a>size &#x77E9;&#x9635;&#x7684;&#x5927;&#x5C0F;</h4>
+<p>size(cols,rows),&#x5982;&#x679C;&#x77E9;&#x9635;&#x7684;&#x7EF4;&#x6570;&#x5927;&#x4E8E;2&#xFF0C;&#x5219;&#x662F;size(-1,-1)</p>
+<h4 id="dims-&#x77E9;&#x9635;&#x7684;&#x7EF4;&#x5EA6;"><a name="dims-&#x77E9;&#x9635;&#x7684;&#x7EF4;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#dims-&#x77E9;&#x9635;&#x7684;&#x7EF4;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>dims &#x77E9;&#x9635;&#x7684;&#x7EF4;&#x5EA6;</h4>
+<p>&#x4F8B;&#x5982;5*6&#x77E9;&#x9635;&#x662F;&#x4E8C;&#x7EF4;&#x77E9;&#x9635;&#xFF0C;&#x5219;dims=2&#xFF0C;&#x4E09;&#x7EF4;&#x77E9;&#x9635;dims=3</p>
+<h4 id="channels-&#x901A;&#x9053;&#x6570;"><a name="channels-&#x901A;&#x9053;&#x6570;" class="anchor-navigation-ex-anchor" href="#channels-&#x901A;&#x9053;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>channels &#x901A;&#x9053;&#x6570;</h4>
+<p>&#x77E9;&#x9635;&#x5143;&#x7D20;&#x62E5;&#x6709;&#x7684;&#x901A;&#x9053;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#x5E38;&#x89C1;&#x7684;&#x5F69;&#x8272;&#x56FE;&#x50CF;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#x7531;RGB&#x4E09;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF0C;&#x5219;channels = 3</p>
+<h4 id="data-&#x6570;&#x636E;&#x6307;&#x9488;"><a name="data-&#x6570;&#x636E;&#x6307;&#x9488;" class="anchor-navigation-ex-anchor" href="#data-&#x6570;&#x636E;&#x6307;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>data &#x6570;&#x636E;&#x6307;&#x9488;</h4>
+<p>uchar&#x578B;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x6307;&#x5411;&#x77E9;&#x9635;&#x6570;&#x636E;&#x7684;&#x6307;&#x9488;</p>
+<h4 id="type-&#x56FE;&#x50CF;&#x7C7B;&#x578B;"><a name="type-&#x56FE;&#x50CF;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#type-&#x56FE;&#x50CF;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>type &#x56FE;&#x50CF;&#x7C7B;&#x578B;</h4>
+<p>&#x8868;&#x793A;&#x77E9;&#x9635;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4EE5;&#x53CA;&#x77E9;&#x9635;&#x7684;&#x901A;&#x9053;&#x6570;&#xFF0C;&#x5982;CV<em>8UC3&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x5E38;&#x91CF;&#xFF0C;&#x5176;&#x547D;&#x540D;&#x89C4;&#x5219;&#x4E3A;CV</em>(&#x4F4D;&#x6570;&#xFF09;+&#xFF08;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF09;+&#xFF08;&#x901A;&#x9053;&#x6570;&#xFF09;</p>
+<table>
+<thead>
+<tr>
+<th>CV_8UC1</th>
+<th>CV_8UC2</th>
+<th>CV_8UC3</th>
+<th>CV_8UC4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CV_8SC1</td>
+<td>CV_8SC2</td>
+<td>CV_8SC3</td>
+<td>CV_8SC4</td>
+</tr>
+<tr>
+<td>CV_16UC1</td>
+<td>CV_16UC2</td>
+<td>CV_16UC3</td>
+<td>CV_16UC4</td>
+</tr>
+<tr>
+<td>CV_16SC1</td>
+<td>CV_16SC2</td>
+<td>CV_16SC3</td>
+<td>CV_16SC4</td>
+</tr>
+<tr>
+<td>CV_32SC1</td>
+<td>CV_32SC2</td>
+<td>CV_32SC3</td>
+<td>CV_32SC4</td>
+</tr>
+<tr>
+<td>CV_32FC1</td>
+<td>CV_32FC2</td>
+<td>CV_32FC3</td>
+<td>CV_32FC4</td>
+</tr>
+<tr>
+<td>CV_64FC1</td>
+<td>CV_64FC2</td>
+<td>CV_64FC3</td>
+<td>CV_64FC4</td>
+</tr>
+</tbody>
+</table>
+<p>U&#xFF08;unsigned integer&#xFF09;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#xFF0C;S&#xFF08;signed integer&#xFF09;&#x6709;&#x7B26;&#x53F7;&#x6574;&#x6570;&#xFF0C;F&#xFF08;float&#xFF09;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;C&#xFF08;channels&#xFF09;&#x901A;&#x9053;&#x6570;</p>
+<h4 id="depth-&#x56FE;&#x50CF;&#x6DF1;&#x5EA6;&#x7CBE;&#x5EA6;"><a name="depth-&#x56FE;&#x50CF;&#x6DF1;&#x5EA6;&#x7CBE;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#depth-&#x56FE;&#x50CF;&#x6DF1;&#x5EA6;&#x7CBE;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>depth &#x56FE;&#x50CF;&#x6DF1;&#x5EA6;(&#x7CBE;&#x5EA6;)</h4>
+<p>&#x77E9;&#x9635;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x7528;&#x6765;&#x5EA6;&#x91CF;&#x6BCF;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#x4E2D;&#x6BCF;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x7684;&#x7CBE;&#x5EA6;&#xFF0C;&#x5982;CV_8U&#x3001;CV_8S&#x3001;CV_16U&#x3001;CV_16S&#x3001;CV_32S&#x3001;CV_32F&#x3001;CV_64F</p>
+<p>depth&#x548C;type&#x662F;&#x76F8;&#x5173;&#x7684;,&#x5C06;type&#x7684;&#x9884;&#x5B9A;&#x4E49;&#x503C;&#x53BB;&#x6389;&#x901A;&#x9053;&#x4FE1;&#x606F;&#x5C31;&#x662F;depth&#x503C;,&#x4F8B;&#x5982; type&#x4E3A; CV_16SC2&#xFF0C;&#x4E00;&#x4E2A;2&#x901A;&#x9053;&#x7684;16&#x4F4D;&#x7684;&#x6709;&#x7B26;&#x53F7;&#x6574;&#x6570;,&#x90A3;&#x4E48;depth&#x5219;&#x662F;CV_16S</p>
+<p>elemSize &#x77E9;&#x9635;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5360;&#x7528;&#x7684;&#x5B57;&#x8282;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;type&#x662F;CV_16SC3&#xFF0C;&#x90A3;&#x4E48;elemSize = 3 * 16 / 8 = 6 bytes</p>
+<p>elemSize1 &#x77E9;&#x9635;&#x5143;&#x7D20;&#x4E00;&#x4E2A;&#x901A;&#x9053;&#x5360;&#x7528;&#x7684;&#x5B57;&#x8282;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;type&#x662F;CV_16CS3&#xFF0C;&#x90A3;&#x4E48;elemSize1 = 16  / 8 = 2 bytes = elemSize / channe</p>
+<p>step </p>
+<p>step1 &#x89C4;&#x6574;&#x5316;&#x7684;step&#xFF0C;&#x503C;&#x4E3A;step / elemSize1</p>
+<h4 id="mat-&#x65B9;&#x6CD5;"><a name="mat-&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#mat-&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Mat &#x65B9;&#x6CD5;</h4>
+<h4 id="create-&#x521B;&#x5EFA;mat&#x5BF9;&#x8C61;-&#x521B;&#x5EFA;&#x77E9;&#x9635;"><a name="create-&#x521B;&#x5EFA;mat&#x5BF9;&#x8C61;-&#x521B;&#x5EFA;&#x77E9;&#x9635;" class="anchor-navigation-ex-anchor" href="#create-&#x521B;&#x5EFA;mat&#x5BF9;&#x8C61;-&#x521B;&#x5EFA;&#x77E9;&#x9635;"><i class="fa fa-link" aria-hidden="true"></i></a>create &#x521B;&#x5EFA;Mat&#x5BF9;&#x8C61; (&#x521B;&#x5EFA;&#x77E9;&#x9635;)</h4>
+<blockquote>
+<p>Mat M;
+M.create(4, 3, CV_8UC3);
+M = Scalar(1,125,255);</p>
+</blockquote>
+<p>total &#x8FD4;&#x56DE;&#x77E9;&#x9635;&#x7684;&#x5143;&#x7D20;&#x603B;&#x4E2A;&#x6570;</p>
+<h4 id="cvtcolor-&#x989C;&#x8272;&#x7A7A;&#x95F4;&#x8F6C;&#x6362;"><a name="cvtcolor-&#x989C;&#x8272;&#x7A7A;&#x95F4;&#x8F6C;&#x6362;" class="anchor-navigation-ex-anchor" href="#cvtcolor-&#x989C;&#x8272;&#x7A7A;&#x95F4;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>cvtColor &#x989C;&#x8272;&#x7A7A;&#x95F4;&#x8F6C;&#x6362;</h4>
+<h4 id="convertto-&#x77E9;&#x9635;&#x5B58;&#x50A8;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><a name="convertto-&#x77E9;&#x9635;&#x5B58;&#x50A8;&#x7C7B;&#x578B;&#x8F6C;&#x6362;" class="anchor-navigation-ex-anchor" href="#convertto-&#x77E9;&#x9635;&#x5B58;&#x50A8;&#x7C7B;&#x578B;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>convertTo &#x77E9;&#x9635;&#x5B58;&#x50A8;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h4>
+<blockquote>
+<p>Mat src = imread(&quot;test.png&quot;,IMREAD_COLOR);
+src.convertTo(dst, CV_32FC3);    # src&#x8F6C;&#x6362;&#x4E3A;32&#x4F4D;&#x6D6E;&#x70B9;&#x578B;,&#x5B58;&#x5230;dst</p>
+</blockquote>
+<h4 id="atij-&#x8BBF;&#x95EE;&#x77E9;&#x9635;&#x5143;&#x7D20;"><a name="atij-&#x8BBF;&#x95EE;&#x77E9;&#x9635;&#x5143;&#x7D20;" class="anchor-navigation-ex-anchor" href="#atij-&#x8BBF;&#x95EE;&#x77E9;&#x9635;&#x5143;&#x7D20;"><i class="fa fa-link" aria-hidden="true"></i></a>at<type>(i,j) &#x8BBF;&#x95EE;&#x77E9;&#x9635;&#x5143;&#x7D20;</type></h4>
+<blockquote>
+<p>&#x8BFB;&#x5199;<strong>&#x5355;&#x901A;&#x9053;</strong>&#x7070;&#x5EA6;GRAY&#x50CF;&#x7D20;&#x70B9;&#x7684;&#x50CF;&#x7D20;&#x503C;</p>
+<p>Mat src = imread(&quot;test.jpg&quot;);    // &#xFF08;CV_8UC1&#xFF09;
+int pixel = src.at<int>(y, x);    # &#x8BBF;&#x95EE;test.jpg&#x56FE;&#x50CF;&#x7684;(y, x)&#x5143;&#x7D20;</int></p>
+<p>&#x8BFB;&#x5199;<strong>&#x4E09;&#x901A;&#x9053;</strong>&#x5F69;&#x8272;BGR&#x50CF;&#x7D20;&#x70B9;&#x7684;&#x50CF;&#x7D20;&#x503C;</p>
+<p>Mat img = imread(&quot;test.jpg&quot;);
+Vec3f pixel = img.at<vec3f>(y, x);     // &#x4E09;&#x4E2A;&#x901A;&#x9053;&#x50CF;&#x7D20;&#x503C;&#x5B58;&#x5230;pixel&#x6570;&#x7EC4;
+float blue = pixel.val[0];     // pixel.val[0/1/2]  &#x5BF9;&#x5E94;bgr&#x50CF;&#x7D20;&#x503C;
+float green = pixel.val[1]; 
+float red = pixel.val[2];</vec3f></p>
+<p>img.at<vec3b>(y,x)[index]=value &#x7ED9;&#x6BCF;&#x4E2A;&#x50CF;&#x7D20;&#x70B9;&#x6BCF;&#x4E2A;&#x901A;&#x9053;&#x8D4B;&#x503C;</vec3b></p>
+<p>at &#x5404;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x56FE;&#x50CF;&#x5BF9;&#x5E94;&#x8868;??</p>
+<p><uchar>  ---------CV_8U</uchar></p>
+<p><char>  -----------CV_8S</char></p>
+<p><short>  ---------CV_16S</short></p>
+<p><ushort>  --------CV_16U</ushort></p>
+<p><int>  -----------CV_32S</int></p>
+<p><float>  ----------CV_32F</float></p>
+<p><double>  --------CV_64F</double></p>
+<p><vec3b>  --------CV_8UC3</vec3b></p>
+<p><vec3f>  --------CV_32FC3</vec3f></p>
+</blockquote>
+<p>ptr<type> ??</type></p>
+<p>empty() ??</p>
+<h4 id="clone-&#x77E9;&#x9635;&#x5B8C;&#x5168;&#x590D;&#x5236;"><a name="clone-&#x77E9;&#x9635;&#x5B8C;&#x5168;&#x590D;&#x5236;" class="anchor-navigation-ex-anchor" href="#clone-&#x77E9;&#x9635;&#x5B8C;&#x5168;&#x590D;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>clone &#x77E9;&#x9635;&#x5B8C;&#x5168;&#x590D;&#x5236;</h4>
+<blockquote>
+<p>&#x201C;&#x6DF1;&#x62F7;&#x8D1D;&#x201D;&#xFF0C;&#x628A;Mat&#x5BF9;&#x8C61;&#x7684;&#x5934;&#x90E8;&#x548C;&#x6570;&#x636E;&#x90E8;&#x5206;&#x4E00;&#x8D77;&#x590D;&#x5236;
+Mat image1 = imread(&quot;test.png&quot;,IMREAD_COLOR);
+Mat image2 = image1.clone(); </p>
+<p>&#x201C;&#x201D;&#x6D45;&#x62F7;&#x8D1D;&#x201C;&#x201D;&#x8D4B;&#x503C;&#xFF0C;&#x53EA;&#x4F1A;&#x590D;&#x5236;Mat&#x5BF9;&#x8C61;&#x7684;&#x5934;&#x548C;&#x6307;&#x9488;&#x90E8;&#x5206;&#xFF0C;&#x4E0D;&#x4F1A;&#x590D;&#x5236;&#x6570;&#x636E;&#x90E8;&#x5206;,&#x5373;image2&#x5B9E;&#x9645;&#x4E0A;&#x6307;&#x5411;&#x7684;&#x662F;image1&#x7684;&#x5185;&#x5B58;&#x5355;&#x5143;&#x3002;&#x5F53;image1&#x63D0;&#x524D;&#x88AB;&#x91CA;&#x653E;&#x6389;&#xFF0C;image2&#x8BBF;&#x95EE;&#x65E0;&#x6548;&#x3002;
+Mat image1 = imread(&quot;test.png&quot;,IMREAD_COLOR);
+Mat image2 = image1;</p>
+</blockquote>
+<h4 id="copyto-&#x77E9;&#x9635;&#x5B8C;&#x5168;&#x590D;&#x5236;"><a name="copyto-&#x77E9;&#x9635;&#x5B8C;&#x5168;&#x590D;&#x5236;" class="anchor-navigation-ex-anchor" href="#copyto-&#x77E9;&#x9635;&#x5B8C;&#x5168;&#x590D;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>copyTo &#x77E9;&#x9635;&#x5B8C;&#x5168;&#x590D;&#x5236;</h4>
+<p>&#x4E0E;clone&#x4F5C;&#x7528;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F7F;&#x7528;&#x5F62;&#x5F0F;&#x4E0D;&#x7528;</p>
+<blockquote>
+<p>Mat image3;
+image1.copyTo(image3);</p>
+</blockquote>
+<p>mul &#x77E9;&#x9635;&#x7684;&#x4E58;&#x6CD5;</p>
+<p>inv &#x77E9;&#x9635;&#x6C42;&#x9006;</p>
+<p>t &#x77E9;&#x9635;&#x8F6C;&#x7F6E;</p>
+<h4 id="zeros-&#x96F6;&#x77E9;&#x9635;"><a name="zeros-&#x96F6;&#x77E9;&#x9635;" class="anchor-navigation-ex-anchor" href="#zeros-&#x96F6;&#x77E9;&#x9635;"><i class="fa fa-link" aria-hidden="true"></i></a>zeros() &#x96F6;&#x77E9;&#x9635;</h4>
+<blockquote>
+<p>Mat image = Mat::zeros( image.size(), image.type() );  &#x521B;&#x5EFA;&#x4E00;&#x5F20;&#x8DDF;&#x539F;&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#x548C;&#x7C7B;&#x578B;&#x4E00;&#x81F4;&#x7684;&#x7A7A;&#x767D;&#x56FE;&#x50CF;</p>
+</blockquote>
+<p>ones &#x5168;&#x4E00;&#x9635;</p>
+<p>eye &#x5BF9;&#x89D2;&#x9635;</p>
+<h4 id="imread-&#x8BFB;&#x53D6;&#x56FE;&#x50CF;"><a name="imread-&#x8BFB;&#x53D6;&#x56FE;&#x50CF;" class="anchor-navigation-ex-anchor" href="#imread-&#x8BFB;&#x53D6;&#x56FE;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>imread() &#x8BFB;&#x53D6;&#x56FE;&#x50CF;</h4>
+<blockquote>
+<p>Mat img = imread(&quot;../test.jpg&quot;);  //  &#x6309;&#x7167;&#x7F16;&#x8BD1;&#x540E;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x8DEF;&#x5F84;&#x5F00;&#x59CB;&#x7B97;???
+Mat img1 = imread(&quot;../test.jpg&quot;, IMREAD_UNCHANGED);  // &#x52A0;&#x8F7D;&#x539F;&#x56FE;&#x4E0D;&#x505A;&#x4EFB;&#x4F55;&#x6539;&#x53D8;
+Mat img2 = imread(&quot;../test.jpg&quot;, IMREAD_GRAYSCALE);  // &#x628A;&#x539F;&#x56FE;&#x4F5C;&#x4E3A;&#x7070;&#x5EA6;&#x56FE;&#x50CF;&#x52A0;&#x8F7D;&#x8FDB;&#x6765;
+Mat img3 = imread(&quot;../test.jpg&quot;, IMREAD_COLOR);  // &#x628A;&#x539F;&#x56FE;&#x4F5C;&#x4E3A;RGB&#x56FE;&#x50CF;&#x52A0;&#x8F7D;&#x8FDB;&#x6765;</p>
+</blockquote>
+<h4 id="namedwindos-&#x521B;&#x5EFA;&#x7A97;&#x53E3;"><a name="namedwindos-&#x521B;&#x5EFA;&#x7A97;&#x53E3;" class="anchor-navigation-ex-anchor" href="#namedwindos-&#x521B;&#x5EFA;&#x7A97;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>namedWindos() &#x521B;&#x5EFA;&#x7A97;&#x53E3;</h4>
+<blockquote>
+<p>namedWindow(&quot;Window WINDOW_AUTOSIZE&quot;, WINDOW_AUTOSIZE);    // &#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x5927;&#x5C0F;
+namedWindow(&quot;Window WINDOW_NORMAL&quot;, WINDOW_NORMAL);    // &#x53EF;&#x62D6;&#x52A8;&#x6539;&#x53D8;&#x5927;&#x5C0F;</p>
+</blockquote>
+<h4 id="destroywindow-&#x9500;&#x6BC1;&#x7A97;&#x53E3;"><a name="destroywindow-&#x9500;&#x6BC1;&#x7A97;&#x53E3;" class="anchor-navigation-ex-anchor" href="#destroywindow-&#x9500;&#x6BC1;&#x7A97;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>destroyWindow() &#x9500;&#x6BC1;&#x7A97;&#x53E3;</h4>
+<blockquote>
+<p>destroyWindow(&quot;My Test&quot;);</p>
+</blockquote>
+<h4 id="imshow-&#x8F93;&#x51FA;&#x56FE;&#x50CF;"><a name="imshow-&#x8F93;&#x51FA;&#x56FE;&#x50CF;" class="anchor-navigation-ex-anchor" href="#imshow-&#x8F93;&#x51FA;&#x56FE;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>imshow() &#x8F93;&#x51FA;&#x56FE;&#x50CF;</h4>
+<blockquote>
+<p>imshow(&quot;image01&quot;, img);
+imshow(image01, img);</p>
+</blockquote>
+<h4 id="imwrite-&#x4FDD;&#x5B58;&#x56FE;&#x50CF;"><a name="imwrite-&#x4FDD;&#x5B58;&#x56FE;&#x50CF;" class="anchor-navigation-ex-anchor" href="#imwrite-&#x4FDD;&#x5B58;&#x56FE;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>imwrite() &#x4FDD;&#x5B58;&#x56FE;&#x50CF;</h4>
+<blockquote>
+<p>imwrite(&quot;../newimage.png&quot;,img);    // &#x8DEF;&#x5F84;&#x6309;&#x7167;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x7B97;</p>
+</blockquote>
+<h4 id="waitkey-&#x7B49;&#x5F85;&#x952E;&#x76D8;&#x89E6;&#x53D1;"><a name="waitkey-&#x7B49;&#x5F85;&#x952E;&#x76D8;&#x89E6;&#x53D1;" class="anchor-navigation-ex-anchor" href="#waitkey-&#x7B49;&#x5F85;&#x952E;&#x76D8;&#x89E6;&#x53D1;"><i class="fa fa-link" aria-hidden="true"></i></a>waitKey() &#x7B49;&#x5F85;&#x952E;&#x76D8;&#x89E6;&#x53D1;</h4>
+<blockquote>
+<p>waitKey();    // &#x7B49;&#x5F85;&#x952E;&#x76D8;&#x89E6;&#x53D1;ms,&#x9ED8;&#x8BA4;0,&#x4E00;&#x76F4;&#x7B49;&#x5F85;
+waitKey(3000);    // &#x7B49;&#x5F85;3000ms</p>
+</blockquote>
+<h4 id="gettickcount-&#x83B7;&#x53D6;&#x65F6;&#x95F4;"><a name="gettickcount-&#x83B7;&#x53D6;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#gettickcount-&#x83B7;&#x53D6;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>getTickCount() &#x83B7;&#x53D6;&#x65F6;&#x95F4;</h4>
+<h4 id="cvassert-&#x65AD;&#x8A00;"><a name="cvassert-&#x65AD;&#x8A00;" class="anchor-navigation-ex-anchor" href="#cvassert-&#x65AD;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>CV_Assert() &#x65AD;&#x8A00;</h4>
+<p>&#x82E5;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x503C;&#x4E3A;false&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</p>
+<blockquote>
+<p>CV_Assert(testImage.depth() == CV_8U);    // &#x82E5;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x503C;&#x4E3A;false&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</p>
+</blockquote>
+<h4 id="filter2d-&#x4E8C;&#x7EF4;&#x6EE4;&#x6CE2;"><a name="filter2d-&#x4E8C;&#x7EF4;&#x6EE4;&#x6CE2;" class="anchor-navigation-ex-anchor" href="#filter2d-&#x4E8C;&#x7EF4;&#x6EE4;&#x6CE2;"><i class="fa fa-link" aria-hidden="true"></i></a>filter2D() &#x4E8C;&#x7EF4;&#x6EE4;&#x6CE2;</h4>
+<h4 id="saturatecast-&#x622A;&#x65AD;&#x9632;&#x6B62;&#x6EA2;&#x51FA;0255"><a name="saturatecast-&#x622A;&#x65AD;&#x9632;&#x6B62;&#x6EA2;&#x51FA;0255" class="anchor-navigation-ex-anchor" href="#saturatecast-&#x622A;&#x65AD;&#x9632;&#x6B62;&#x6EA2;&#x51FA;0255"><i class="fa fa-link" aria-hidden="true"></i></a>saturate_cast<uchar> &#x622A;&#x65AD;,&#x9632;&#x6B62;&#x6EA2;&#x51FA;(0~255)</uchar></h4>
+<h4 id="bitwisenot-&#x50CF;&#x7D20;&#x6309;&#x4F4D;&#x53D6;&#x53CD;"><a name="bitwisenot-&#x50CF;&#x7D20;&#x6309;&#x4F4D;&#x53D6;&#x53CD;" class="anchor-navigation-ex-anchor" href="#bitwisenot-&#x50CF;&#x7D20;&#x6309;&#x4F4D;&#x53D6;&#x53CD;"><i class="fa fa-link" aria-hidden="true"></i></a>bitwise_not &#x50CF;&#x7D20;&#x6309;&#x4F4D;&#x53D6;&#x53CD;</h4>
+<h4 id="addweighted-&#x56FE;&#x50CF;&#x6DF7;&#x5408;"><a name="addweighted-&#x56FE;&#x50CF;&#x6DF7;&#x5408;" class="anchor-navigation-ex-anchor" href="#addweighted-&#x56FE;&#x50CF;&#x6DF7;&#x5408;"><i class="fa fa-link" aria-hidden="true"></i></a>addWeighted &#x56FE;&#x50CF;&#x6DF7;&#x5408;</h4>
+<p>&#x4E24;&#x5F20;&#x56FE;&#x50CF;&#x7684;Size&#x5927;&#x5C0F;&#x548C;type&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x4E00;&#x81F4;&#x624D;&#x53EF;&#x4EE5;&#x6DF7;&#x5408;</p>
+<h4 id="rng-&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x5668;&#x7C7B;"><a name="rng-&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x5668;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#rng-&#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x5668;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>RNG &#x968F;&#x673A;&#x6570;&#x751F;&#x6210;&#x5668;&#x7C7B;</h4>
+<p>RNG &#x53EF;&#x4EE5;&#x4EA7;&#x751F;3&#x79CD;&#x968F;&#x673A;&#x6570;,
+RNG(int seed)  &#x4F7F;&#x7528;&#x79CD;&#x5B50;seed&#x4EA7;&#x751F;&#x4E00;&#x4E2A;64&#x4F4D;int&#x968F;&#x673A;&#x6574;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x79CD;&#x5B50;-1
+RNG::uniform  &#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x7684;&#x5747;&#x5300;&#x5206;&#x5E03;&#x968F;&#x673A;&#x6570;,
+RNG::gaussian  &#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x9AD8;&#x65AF;&#x968F;&#x5206;&#x5E03;&#x673A;&#x6570;,</p>
+<p>RNG::uniform(a, b )  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;[a,b)&#x8303;&#x56F4;&#x7684;&#x5747;&#x5300;&#x5206;&#x5E03;&#x7684;&#x968F;&#x673A;&#x6570;&#xFF0C;a,b&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8981;&#x4E00;&#x81F4;&#xFF0C;&#x800C;&#x4E14;&#x5FC5;&#x987B;&#x662F;int&#x3001;float&#x3001;double&#x4E2D;&#x7684;&#x4E00;&#x79CD;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;int&#x3002;</p>
+<p>RNG::gaussian( &#x3C3;)   &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5747;&#x503C;&#x4E3A;0&#xFF0C;&#x6807;&#x51C6;&#x5DEE;&#x4E3A;&#x3C3;&#x7684;&#x968F;&#x673A;&#x6570;&#x3002;</p>
+<blockquote>
+<p>//&#x521B;&#x5EFA;RNG&#x5BF9;&#x8C61;&#xFF0C;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x79CD;&#x5B50;&#x201C;-1&#x201D;<br>RNG rng;    // rng&#x65E2;&#x662F;&#x4E00;&#x4E2A;RNG&#x5BF9;&#x8C61;&#xFF0C;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6574;&#x6570;</p>
+<p>//&#x4EA7;&#x751F;64&#x4F4D;&#x6574;&#x6570;<br>int N1 = rng;  </p>
+<p>//&#x6CE8;&#x610F;: &#x603B;&#x662F;&#x5F97;&#x5230;double&#x7C7B;&#x578B;&#x6570;&#x636E;0.00&#xFF0C;&#x56E0;&#x4E3A;&#x4F1A;&#x8C03;&#x7528;uniform(int,int),&#x53EA;&#x4F1A;&#x53D6;&#x6574;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x4EA7;&#x751F;0<br>double N1a = rng.uniform(0,1);    // &#x8F93;&#x5165;&#x4E3A;int&#x578B;&#x53C2;&#x6570;,&#x4F1A;&#x8C03;&#x7528;uniform&#xFF08;int&#xFF0C;int&#xFF09;&#xFF0C;&#x53EA;&#x80FD;&#x4EA7;&#x751F;0</p>
+<p>//&#x4EA7;&#x751F;[0,1)&#x8303;&#x56F4;&#x5185;&#x5747;&#x5300;&#x5206;&#x5E03;&#x7684;double&#x7C7B;&#x578B;&#x6570;&#x636E;<br>double N1b = rng.uniform((double)0,(double)1);  </p>
+<p>//&#x4EA7;&#x751F;[0,1)&#x8303;&#x56F4;&#x5185;&#x5747;&#x5300;&#x5206;&#x5E03;&#x7684;double&#x7C7B;&#x578B;&#x6570;&#x636E;&#x3002;<br>double N1d = rng.uniform(0.,1.);  </p>
+<p>//&#x4EA7;&#x751F;&#x7B26;&#x5408;&#x5747;&#x503C;&#x4E3A;0&#xFF0C;&#x6807;&#x51C6;&#x5DEE;&#x4E3A;2&#x7684;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x7684;&#x968F;&#x673A;&#x6570;<br>double N1g = rng.gaussian(2); </p>
+</blockquote>
+<p>RNG::next &#x53D6;&#x51FA;&#x4E0B;&#x4E00;&#x4E2A;64&#x4F4D;&#x968F;&#x673A;&#x6574;&#x6570;,</p>
+<blockquote>
+<p>RNG rng;<br>int N2 = rng.next();    //&#x8FD4;&#x56DE;&#x4E0B;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6574;&#x6570;&#xFF0C;&#x5373;N1.next();  </p>
+</blockquote>
+<p>RNG:: operator  &#x8FD4;&#x56DE;&#x4E0B;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x968F;&#x673A;&#x6570;</p>
+<blockquote>
+<p>int N2a = rng.operator uchar();    //&#x8FD4;&#x56DE;&#x4E0B;&#x4E00;&#x4E2A;&#x65E0;&#x7B26;&#x53F7;&#x5B57;&#x7B26;&#x6570;<br>int N2g = rng.operator float();    //&#x8FD4;&#x56DE;&#x4E0B;&#x4E00;&#x4E2A;&#x6D6E;&#x70B9;&#x6570;<br>int N2h = rng.operator double();    /&#x8FD4;&#x56DE;&#x4E0B;&#x4E00;&#x4E2A;double&#x578B;&#x6570;<br>int N2i = rng.operator ()();    /&#x548C;rng.next( )&#x7B49;&#x4EF7;<br>int N2j = rng.operator ()(100);    //&#x8FD4;&#x56DE;[0,100)&#x8303;&#x56F4;&#x5185;&#x7684;&#x968F;&#x673A;&#x6570; </p>
+</blockquote>
+<p>RNG::fill &#x7528;&#x968F;&#x673A;&#x6570;&#x586B;&#x5145;&#x77E9;</p>
+<blockquote>
+<p>//&#x4EA7;&#x751F;[1,1000)&#x5747;&#x5300;&#x5206;&#x5E03;&#x7684;int&#x968F;&#x673A;&#x6570;&#x586B;&#x5145; ff &#x77E9;&#x9635;
+Mat <int>ff(3,3);<br>rng.fill(ff,RNG::UNIFORM,1,1000);<br>cout &lt;&lt; &quot;ff = &quot; &lt;&lt; ff &lt;&lt; endl ; </int></p>
+</blockquote>
+<h4 id="size-&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#x7C7B;"><a name="size-&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#size-&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>Size &#x56FE;&#x50CF;&#x5927;&#x5C0F;&#x7C7B;</h4>
+<p>Size&#x7C7B;&#x6210;&#x5458;&#x4E3A;width &#x548C; height&#xFF0C;&#x5206;&#x5225;&#x8868;&#x793A;&#x5BEC;&#x548C;&#x9577;</p>
+<blockquote>
+<p>Size&#x7C7B;&#x64CD;&#x4F5C;</p>
+<p>&#x9ED8;&#x8BA4;&#x6784;&#x9020;   Size sz;Size2i sz; Size2f p2;
+&#x62F7;&#x8D1D;&#x6784;&#x9020;   Size sz2(sz1);
+&#x6570;&#x503C;&#x521D;&#x59CB;&#x5316;   Size sz(w,h);
+&#x6210;&#x5458;&#x8BBF;&#x95EE;   sz.width; sz.height;
+&#x8BA1;&#x7B97;&#x533A;&#x57DF;&#x9762;&#x79EF;   sz.area();</p>
+<p>Size size1 =  Size(200,100);
+//Size size1(200, 100);    // &#x6216;&#x8005;
+Size size2;
+size2.width = 150;
+size2.height = 50;
+int myArea = size2.area();
+cout &lt;&lt; &quot;Size size1 =&quot; &lt;&lt; &quot; &quot; &lt;&lt; size1 &lt;&lt; endl;</p>
+<p>// &#x8F93;&#x51FA;Size&#x7ED3;&#x679C;&#x6570;&#x636E;&#x683C;&#x5F0F; Size size1 = [200 x 100]</p>
+</blockquote>
+<h4 id="scalar-&#x6807;&#x91CF;&#x957F;&#x5EA6;&#x4E3A;4&#x7684;&#x5411;&#x91CF;"><a name="scalar-&#x6807;&#x91CF;&#x957F;&#x5EA6;&#x4E3A;4&#x7684;&#x5411;&#x91CF;" class="anchor-navigation-ex-anchor" href="#scalar-&#x6807;&#x91CF;&#x957F;&#x5EA6;&#x4E3A;4&#x7684;&#x5411;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>Scalar &#x6807;&#x91CF;??&#x957F;&#x5EA6;&#x4E3A;4&#x7684;&#x5411;&#x91CF;</h4>
+<p>&#x7528;&#x6765;&#x5B58;&#x653E;4&#x4E2A;double&#x578B;&#x7684;&#x6570;&#x7EC4;,&#x4E00;&#x822C;&#x50CF;&#x7D20;&#x5404;&#x4E2A;&#x901A;&#x9053;&#x7684;&#x989C;&#x8272;&#x503C;&#xFF0C;&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x5B58;&#x653E;4&#x4E2A;&#x901A;&#x9053;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;0</p>
+<blockquote>
+<p>// OpenCV&#x4E2D; Scalar &#x7684;&#x5B9A;&#x4E49;
+typedef struct Scalar
+{
+    double val[4];
+}Scalar;</p>
+<p>Scalar&#x7C7B;&#x7684;&#x64CD;&#x4F5C;:</p>
+<p>1 &#x9ED8;&#x8BA4;&#x6784;&#x9020;      Scalar s;
+2 &#x62F7;&#x8D1D;&#x6784;&#x9020;      Scalar s2(s1);
+3 &#x6570;&#x503C;&#x521D;&#x59CB;&#x5316;    Scalar s(x0); Scalar s(x0,x1,x2,s3);
+4 &#x6570;&#x7EC4;&#x5143;&#x7D20;&#x76F8;&#x4E58;  s1.mul(s2);
+5 &#x5171;&#x8F6D;             s1.conj();</p>
+<p>Scalar color = Scalar(11, 22, 255);     // &#x989C;&#x8272;
+//Scalar color(11, 22, 255);    // &#x6216;&#x8005;<br>cout &lt;&lt; &quot;Scalar color =&quot; &lt;&lt; &quot; &quot; &lt;&lt; color &lt;&lt; endl;</p>
+<p>// &#x8F93;&#x51FA;Scalar&#x7ED3;&#x679C;&#x6570;&#x636E;&#x683C;&#x5F0F; Scalar color = [11, 22, 255, 0]</p>
+</blockquote>
+<h4 id="point-&#x70B9;&#x7C7B;"><a name="point-&#x70B9;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#point-&#x70B9;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>Point &#x70B9;&#x7C7B;</h4>
+<p>&#x6210;&#x54E1;&#x6709;x&#x548C;y,&#x4F4D;&#x7F6E;&#x5750;&#x6807;,&#x8981;&#x662F;&#x8F38;&#x5165;&#x6D6E;&#x9EDE;&#x6578;&#x7684;&#x8A71;&#xFF0C;&#x5247;&#x56DB;&#x6368;&#x4E94;&#x5165;&#x53D6;&#x6574;&#x6578;</p>
+<blockquote>
+<p>Point&#x7C7B;&#x7684;&#x64CD;&#x4F5C;&#xFF1A; </p>
+<p>&#x9ED8;&#x8BA4;&#x6784;&#x9020;    Point2i p1;Point3f p2;
+&#x62F7;&#x8D1D;&#x6784;&#x9020;    Point3f p2(p1);
+&#x6570;&#x503C;&#x521D;&#x59CB;&#x5316;  Point2i p1(x0,x1);Point3f p2(x0,x1,x2);
+&#x8F6C;&#x6362;&#x5230;Vector&#x7C7B;&#x578B;  (Vec3f) p;
+&#x6210;&#x5458;&#x8BBF;&#x95EE;   p.x; p.y;
+&#x70B9;&#x79EF;&#x8FD0;&#x7B97;   float x = p1.dot(p2);
+&#x53CC;&#x7CBE;&#x5EA6;&#x70B9;&#x79EF; double x = p1.ddot(p2);
+&#x5411;&#x91CF;&#x79EF;(&#x4EC5;&#x9002;&#x7528;&#x4E09;&#x7EF4;)     p1.cross(p2);
+&#x67E5;&#x8BE2;&#x662F;&#x5426;&#x5728;&#x67D0;&#x533A;&#x57DF;(rectangle)&#x5185;(&#x4EC5;&#x9002;&#x7528;&#x4E8C;&#x7EF4;)     p.inside(r);</p>
+<p>Point(int x, int y)    // &#x5EFA;&#x69CB;&#x5F0F;
+Point p1 = Point(20, 30);    // &#x5B9A;&#x4E49;&#x70B9;
+//Point p1(20, 30);    // &#x6216;&#x8005;
+Point p2;    // &#x5B9A;&#x4E49;&#x70B9;
+p2.x = 200;
+p2.y = 300;</p>
+</blockquote>
+<h4 id="rect-&#x77E9;&#x5F62;&#x7C7B;"><a name="rect-&#x77E9;&#x5F62;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#rect-&#x77E9;&#x5F62;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>Rect &#x77E9;&#x5F62;&#x7C7B;</h4>
+<p>&#x6210;&#x54E1;&#x6709;x&#x3001;y&#x3001;width&#x3001;height&#xFF0C;&#x5206;&#x5225;&#x8868;&#x793A;&#x5DE6;&#x4E0A;&#x89D2;&#x9802;&#x9EDE;&#x7684;x&#x5EA7;&#x6A19;&#xFF0C;&#x5DE6;&#x4E0A;&#x89D2;&#x9802;&#x9EDE;&#x7684;y&#x5EA7;&#x6A19;&#xFF0C;&#x77E9;&#x5F62;&#x5BEC;&#x3001;&#x77E9;&#x5F62;&#x9AD8;&#xFF0C;&#x53EF;&#x7528;area()&#x51FD;&#x5F0F;&#x5F97;&#x5230;&#x9762;&#x7A4D;</p>
+<blockquote>
+<p>Rect&#x7C7B;&#x64CD;&#x4F5C; </p>
+<p>1 &#x9ED8;&#x8BA4;&#x6784;&#x9020;   Rect r;
+ 2 &#x62F7;&#x8D1D;&#x6784;&#x9020;   Rect r2(r1);
+ 3 &#x6570;&#x503C;&#x521D;&#x59CB;&#x5316;   Rect r(x, y, w , h);
+ 4 &#x70B9;&#x5750;&#x6807;&#x53CA;&#x5927;&#x5C0F;&#x521D;&#x59CB;&#x5316;&#x6784;&#x9020; Rect r(p,sz);
+ 5 &#x4E24;&#x70B9;&#x521D;&#x59CB;&#x5316;&#x6784;&#x9020; Rect r(p1, p2);
+ 6 &#x6210;&#x5458;&#x8BBF;&#x95EE;   r.x; r.y; r.width; r.height;
+ 7 &#x8BA1;&#x7B97;&#x533A;&#x57DF;&#x9762;&#x79EF; r.area();
+ 8 &#x63D0;&#x53D6;&#x5DE6;&#x4E0A;&#x89D2;&#x70B9; r.tl();
+ 9 &#x63D0;&#x53D6;&#x53F3;&#x4E0B;&#x89D2;&#x70B9; r.br();
+10 &#x5224;&#x65AD;&#x70B9;&#x662F;&#x5426;&#x5728;&#x67D0;&#x533A;&#x57DF;&#x5185;  r.contains(p);
+11 
+12 &#x91CD;&#x8F7D;&#x64CD;&#x4F5C;&#x7B26;&#x5BF9;&#x8C61;&#x95F4;&#x7684;&#x8FD0;&#x7B97;&#xFF1A;
+13 &#x77E9;&#x5F62;1&#x4E0E;&#x77E9;&#x5F62;2&#x7684;&#x4EA4;&#x96C6;              Rect r3 = r1 &amp; r2;
+14 &#x5305;&#x542B;&#x77E9;&#x5F62;1&#x4E0E;&#x77E9;&#x5F62;2&#x7684;&#x6700;&#x5C0F;&#x77E9;&#x5F62;   Rect r3 = r1 | r2;
+15 &#x5E73;&#x79FB;&#x5DE6;&#x4E0A;&#x89D2;&#x5750;&#x6807;&#x77E9;&#x5F62;&#x5927;&#x5C0F;&#x4E0D;&#x53D8;    Rect r2 = r1 + p;
+16 &#x653E;&#x5927;&#x6216;&#x7F29;&#x5C0F;&#x77E9;&#x5F62;&#x5927;&#x5C0F;&#xFF0C;&#x5DE6;&#x4E0A;&#x89D2;&#x70B9;&#x4E0D;&#x53D8; Rect r2 = r1 + sz;
+17 &#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x77E9;&#x5F62;&#x662F;&#x5426;&#x76F8;&#x7B49;  bool eq = ( r1 == r2);bool ne = ( r1 != r2);</p>
+<p>Rect(int x, int y, int width, int height)    //&#x5EFA;&#x69CB;&#x5F0F;
+Rect rect1 = Rect(100, 40, 150, 300);    // &#x5B9A;&#x4E49;&#x77E9;&#x5F62;&#x4F4D;&#x7F6E;&#x548C;&#x957F;&#x5BBD;
+Rect rect2;
+rect2.x = 20;
+rect2.y = 30;
+rect2.width = 250;
+rect2.height = 100;
+int myRectArea = rect2.area();
+Scalar color = Scalar(255, 0, 0);    // &#x989C;&#x8272;
+rectangle(bgImage, rect1, color, 2, LINE_8);    // &#x5728;bgImage&#x4E0A;&#x753B;&#x77E9;&#x5F62;</p>
+</blockquote>
+<h4 id="rotatedrec-&#x659C;&#x77E9;&#x5F62;&#x7C7B;"><a name="rotatedrec-&#x659C;&#x77E9;&#x5F62;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#rotatedrec-&#x659C;&#x77E9;&#x5F62;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>RotatedRec &#x659C;&#x77E9;&#x5F62;&#x7C7B;</h4>
+<p>&#x6210;&#x54E1;&#x6709;&#x77E9;&#x5F62;&#x7684;&#x8CEA;&#x5FC3;center(Point2f&#x985E;&#x5225;)&#xFF0C;&#x56DB;&#x5468;&#x9577;size(Size2f&#x985E;&#x5225;)&#x3001;&#x65CB;&#x8F49;&#x89D2;&#x5EA6;angle(float&#x985E;&#x5225;)&#xFF0C;&#x53EF;&#x7528;points()&#x51FD;&#x5F0F;&#x5F97;&#x5230;&#x56DB;&#x500B;&#x9802;&#x9EDE;</p>
+<blockquote>
+<p>RotatedRect&#x7C7B;&#x64CD;&#x4F5C;</p>
+<p>1 &#x9ED8;&#x8BA4;&#x6784;&#x9020;     RotatedRect rr();
+2 &#x62F7;&#x8D1D;&#x6784;&#x9020;     RotatedRect rr2(rr1);
+3 &#x6570;&#x503C;&#x521D;&#x59CB;&#x5316;   RotatedRect rr(p,sz,theta);
+4 &#x4E24;&#x70B9;&#x521D;&#x59CB;&#x5316;   RotatedRect rr(p1&#xFF0C;p2);
+5 &#x6210;&#x5458;&#x8BBF;&#x95EE;     rr.center; rr.size; rr.angle;
+6 &#x8FD4;&#x56DE;4&#x89D2;&#x70B9;&#x5750;&#x6807; rr.points(pts[4]);</p>
+<p>RotatedRect(const Point2f &amp;center, const Size2f &amp;size, float angle)    //&#x5EFA;&#x69CB;&#x5F0F;
+RotatedRect rRect1(Point2f(150,150), Size2f(100,50), 30.0);
+RotatedRect rRect2; 
+rRect2.center = Point2f(150,150);
+rRect2.size = Size2f(100,50);
+rRect2.angle = 30.0;
+Point2f vertices[4];
+rRect2.points(vertices);</p>
+</blockquote>
+<h4 id="line-&#x753B;&#x76F4;&#x7EBF;"><a name="line-&#x753B;&#x76F4;&#x7EBF;" class="anchor-navigation-ex-anchor" href="#line-&#x753B;&#x76F4;&#x7EBF;"><i class="fa fa-link" aria-hidden="true"></i></a>line &#x753B;&#x76F4;&#x7EBF;</h4>
+<blockquote>
+<p>line(bgImage, p1, p2, color, 1, LINE_AA);    // &#x5728;bgImage&#x4E0A;&#x753B;&#x76F4;&#x7EBF;</p>
+</blockquote>
+<h4 id="rectangle-&#x753B;&#x77E9;&#x5F62;"><a name="rectangle-&#x753B;&#x77E9;&#x5F62;" class="anchor-navigation-ex-anchor" href="#rectangle-&#x753B;&#x77E9;&#x5F62;"><i class="fa fa-link" aria-hidden="true"></i></a>rectangle &#x753B;&#x77E9;&#x5F62;</h4>
+<blockquote>
+<p>Rect rect1 = Rect(100, 40, 150, 300);    // &#x5B9A;&#x4E49;&#x77E9;&#x5F62;&#x4F4D;&#x7F6E;&#x548C;&#x957F;&#x5BBD;
+Scalar color = Scalar(255, 0, 0);    // &#x989C;&#x8272;
+rectangle(bgImage, rect1, color, 2, LINE_8);    // &#x5728;bgImage&#x4E0A;&#x753B;&#x77E9;&#x5F62;</p>
+</blockquote>
+<h4 id="circle-&#x753B;&#x5706;"><a name="circle-&#x753B;&#x5706;" class="anchor-navigation-ex-anchor" href="#circle-&#x753B;&#x5706;"><i class="fa fa-link" aria-hidden="true"></i></a>circle() &#x753B;&#x5706;</h4>
+<blockquote>
+<p>Scalar color = Scalar(0, 255, 255);    // &#x989C;&#x8272;
+Point center = Point(bgImage.cols / 2, bgImage.rows / 2);    // &#x5706;&#x5FC3;
+circle(bgImage, center, 150, color, 2, 8);    // &#x5728;bgImage&#x4E0A;&#x753B;&#x5706;</p>
+</blockquote>
+<h4 id="ellipse-&#x753B;&#x692D;&#x5706;"><a name="ellipse-&#x753B;&#x692D;&#x5706;" class="anchor-navigation-ex-anchor" href="#ellipse-&#x753B;&#x692D;&#x5706;"><i class="fa fa-link" aria-hidden="true"></i></a>ellipse() &#x753B;&#x692D;&#x5706;</h4>
+<blockquote>
+<p>Scalar color = Scalar(0, 255, 0);    // &#x989C;&#x8272;
+Point center = Point(bgImage.cols / 2, bgImage.rows / 2);    // &#x692D;&#x5706;&#x4E2D;&#x5FC3;
+ellipse(bgImage, center, Size(200,100), 90, 0, 360,color, 2, LINE_8);</p>
+</blockquote>
+<h4 id="polylines"><a name="polylines" class="anchor-navigation-ex-anchor" href="#polylines"><i class="fa fa-link" aria-hidden="true"></i></a>polylines</h4>
+<h4 id="fillpoly--&#x586B;&#x5145;&#x591A;&#x8FB9;&#x5F62;"><a name="fillpoly--&#x586B;&#x5145;&#x591A;&#x8FB9;&#x5F62;" class="anchor-navigation-ex-anchor" href="#fillpoly--&#x586B;&#x5145;&#x591A;&#x8FB9;&#x5F62;"><i class="fa fa-link" aria-hidden="true"></i></a>fillPoly  &#x586B;&#x5145;&#x591A;&#x8FB9;&#x5F62;??</h4>
+<blockquote>
+<p>Point pts[1][5];
+pts[0][0] = Point(100, 100);
+pts[0][1] = Point(100, 200);
+pts[0][2] = Point(200, 200);
+pts[0][3] = Point(200, 100);
+pts[0][4] = Point(150, 150);
+const Point *ppts[] = {pts[0]};
+int npt[] = {5};
+Scalar color = Scalar(255, 12, 255);
+fillPoly(bgImage, ppts, npt, 1, color, 8);</p>
+</blockquote>
+<h4 id="puttext-&#x56FE;&#x7247;&#x6DFB;&#x52A0;&#x6587;&#x5B57;"><a name="puttext-&#x56FE;&#x7247;&#x6DFB;&#x52A0;&#x6587;&#x5B57;" class="anchor-navigation-ex-anchor" href="#puttext-&#x56FE;&#x7247;&#x6DFB;&#x52A0;&#x6587;&#x5B57;"><i class="fa fa-link" aria-hidden="true"></i></a>putText() &#x56FE;&#x7247;&#x6DFB;&#x52A0;&#x6587;&#x5B57;</h4>
+<blockquote>
+<p>putText(image, &quot;OpenCV Tutorial&quot;, Point( 200, 100),CV_FONT_HERSHEY_PLAIN, 2.0, Scalar(0, 255, 0), 3, LINE_8);</p>
+</blockquote>
+<h4 id="blur-&#x5747;&#x503C;&#x6EE4;&#x6CE2;&#x6A21;&#x7CCA;"><a name="blur-&#x5747;&#x503C;&#x6EE4;&#x6CE2;&#x6A21;&#x7CCA;" class="anchor-navigation-ex-anchor" href="#blur-&#x5747;&#x503C;&#x6EE4;&#x6CE2;&#x6A21;&#x7CCA;"><i class="fa fa-link" aria-hidden="true"></i></a>blur() &#x5747;&#x503C;&#x6EE4;&#x6CE2;&#x6A21;&#x7CCA;</h4>
+<blockquote>
+<p>blur(Mat src, Mat dst, Size(xradius, yradius), Point(-1,-1));
+blur(src, dst, Size(11, 11), Point(-1, -1));    // &#x5747;&#x503C;&#x6EE4;&#x6CE2;&#x6A21;&#x7CCA;</p>
+</blockquote>
+<h4 id="gaussianblur-&#x9AD8;&#x65AF;&#x6A21;&#x7CCA;"><a name="gaussianblur-&#x9AD8;&#x65AF;&#x6A21;&#x7CCA;" class="anchor-navigation-ex-anchor" href="#gaussianblur-&#x9AD8;&#x65AF;&#x6A21;&#x7CCA;"><i class="fa fa-link" aria-hidden="true"></i></a>GaussianBlur() &#x9AD8;&#x65AF;&#x6A21;&#x7CCA;</h4>
+<blockquote>
+<p>GaussianBlur(Mat src, Mat dst, Size(11, 11), sigmax, sigmay);  // &#x5176;&#x4E2D;Size&#xFF08;x, y&#xFF09;, x, y &#x5FC5;&#x987B;&#x662F;&#x6B63;&#x6570;&#x800C;&#x4E14;&#x662F;&#x5947;&#x6570;
+GaussianBlur(src, gblur, Size(11, 11), 11, 11);  // &#x9AD8;&#x65AF;&#x6A21;&#x7CCA;</p>
+</blockquote>
+<h4 id="medianblur-&#x4E2D;&#x503C;&#x6A21;&#x7CCA;"><a name="medianblur-&#x4E2D;&#x503C;&#x6A21;&#x7CCA;" class="anchor-navigation-ex-anchor" href="#medianblur-&#x4E2D;&#x503C;&#x6A21;&#x7CCA;"><i class="fa fa-link" aria-hidden="true"></i></a>medianBlur() &#x4E2D;&#x503C;&#x6A21;&#x7CCA;</h4>
+<blockquote>
+<p>medianBlur&#xFF08;Mat src, Mat dest, ksize&#xFF09;</p>
+</blockquote>
+<h4 id="bilateralfilter-&#x53CC;&#x8FB9;&#x6A21;&#x7CCA;"><a name="bilateralfilter-&#x53CC;&#x8FB9;&#x6A21;&#x7CCA;" class="anchor-navigation-ex-anchor" href="#bilateralfilter-&#x53CC;&#x8FB9;&#x6A21;&#x7CCA;"><i class="fa fa-link" aria-hidden="true"></i></a>bilateralFilter() &#x53CC;&#x8FB9;&#x6A21;&#x7CCA;</h4>
+<blockquote>
+<p>bilateralFilter(src, dest, d=15, 150, 3);</p>
+</blockquote>
+<h4 id="getstructuringelement-&#x83B7;&#x53D6;&#x7ED3;&#x6784;&#x5316;&#x5143;&#x7D20;"><a name="getstructuringelement-&#x83B7;&#x53D6;&#x7ED3;&#x6784;&#x5316;&#x5143;&#x7D20;" class="anchor-navigation-ex-anchor" href="#getstructuringelement-&#x83B7;&#x53D6;&#x7ED3;&#x6784;&#x5316;&#x5143;&#x7D20;"><i class="fa fa-link" aria-hidden="true"></i></a>getStructuringElement() &#x83B7;&#x53D6;&#x7ED3;&#x6784;&#x5316;&#x5143;&#x7D20;</h4>
+<blockquote>
+<p>getStructuringElement(int shape, Size ksize, Point anchor)</p>
+<ul>
+<li>&#x5F62;&#x72B6; (MORPH_RECT &#x77E9;&#x5F62; / MORPH_CROSS &#x4EA4;&#x53C9;&#x5F62; / MORPH_ELLIPSE &#x692D;&#x5706;&#x5F62;) </li>
+<li>&#x5927;&#x5C0F;</li>
+<li>&#x951A;&#x70B9; &#x9ED8;&#x8BA4;&#x662F;Point(-1, -1)&#x610F;&#x601D;&#x5C31;&#x662F;&#x4E2D;&#x5FC3;&#x50CF;&#x7D20;</li>
+</ul>
+<p>Mat structureElement = getStructuringElement(MORPH_RECT, Size(s, s), Point(-1, -1));</p>
+</blockquote>
+<h4 id="dilate-&#x81A8;&#x80C0;"><a name="dilate-&#x81A8;&#x80C0;" class="anchor-navigation-ex-anchor" href="#dilate-&#x81A8;&#x80C0;"><i class="fa fa-link" aria-hidden="true"></i></a>dilate() &#x81A8;&#x80C0;</h4>
+<blockquote>
+<p>dilate(src, dst, structureElement, Point(-1, -1), 1);</p>
+</blockquote>
+<h4 id="erode-&#x8150;&#x8680;"><a name="erode-&#x8150;&#x8680;" class="anchor-navigation-ex-anchor" href="#erode-&#x8150;&#x8680;"><i class="fa fa-link" aria-hidden="true"></i></a>erode() &#x8150;&#x8680;</h4>
+<blockquote>
+<p>erode(src, dst, structureElement);</p>
+</blockquote>
+<h4 id="createtrackbar-&#x521B;&#x5EFA;&#x6ED1;&#x52A8;&#x6761;"><a name="createtrackbar-&#x521B;&#x5EFA;&#x6ED1;&#x52A8;&#x6761;" class="anchor-navigation-ex-anchor" href="#createtrackbar-&#x521B;&#x5EFA;&#x6ED1;&#x52A8;&#x6761;"><i class="fa fa-link" aria-hidden="true"></i></a>createTrackbar() &#x521B;&#x5EFA;&#x6ED1;&#x52A8;&#x6761;</h4>
+<blockquote>
+<p>createTrackbar(const String &amp; trackbarname, const String winName,  int<em> value, int count, Trackbarcallback func, void</em> userdata=0)</p>
+</blockquote>
+<pre><code>namedWindow(&quot;&#x7A97;&#x4F53;&#x540D;&quot;, CV_WINDOW_AUTOSIZE);  // &#x521B;&#x5EFA;&#x7A97;&#x4F53;
+createTrackbar(&quot;&#x6807;&#x7B7E;:&quot;, &quot;&#x7A97;&#x4F53;&#x540D;&quot;, &amp;&#x6ED1;&#x52A8;&#x540E;&#x7684;&#x503C;, &#x6ED1;&#x52A8;&#x6761;&#x7684;&#x6700;&#x5927;&#x503C;, &#x56DE;&#x8C03;&#x51FD;&#x6570; );  // &#x5728;&#x521B;&#x5EFA;&#x7684;&#x7A97;&#x4F53;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6ED1;&#x52A8;&#x6761;&#x63A7;&#x4EF6;,&#x6BCF;&#x5F53;&#x6ED1;&#x52A8;&#x6761;&#x7684;&#x503C;&#x6539;&#x53D8;, &#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+</code></pre><h4 id="morphologyex"><a name="morphologyex" class="anchor-navigation-ex-anchor" href="#morphologyex"><i class="fa fa-link" aria-hidden="true"></i></a>morphologyEx</h4>
+<blockquote>
+<p>morphologyEx( InputArray src, OutputArray dst,
+                                int op, InputArray kernel,
+                                Point anchor = Point(-1,-1), int iterations = 1,
+                                int borderType = BORDER_CONSTANT,
+                                const Scalar&amp; borderValue = morphologyDefaultBorderValue() );</p>
+<ul>
+<li>src &#x2013; &#x8F93;&#x5165;&#x56FE;&#x50CF;</li>
+<li>dest &#x2013; &#x8F93;&#x51FA;&#x7ED3;&#x679C;</li>
+<li>op &#x2013;   &#x5F62;&#x6001;&#x5B66;&#x64CD;&#x4F5C;&#x7C7B;&#x578B;</li>
+<li>kernel &#x2013; &#x7ED3;&#x6784;&#x5143;&#x7D20;</li>
+<li>anchor &#x951A;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#xFF08;-1&#xFF0C;-1&#xFF09;&#xFF0C;&#x951A;&#x4F4D;&#x4E8E;&#x4E2D;&#x5FC3;</li>
+<li>iteration &#x8FED;&#x4EE3;&#x6B21;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;1</li>
+<li>borderType &#x7528;&#x4E8E;&#x63A8;&#x65AD;&#x56FE;&#x50CF;&#x5916;&#x90E8;&#x50CF;&#x7D20;&#x7684;&#x67D0;&#x79CD;&#x8FB9;&#x754C;&#x6A21;&#x5F0F;&#x3002;&#x6709;&#x9ED8;&#x8BA4;&#x503C;BORDER_CONSTANT</li>
+<li>borderValue &#x5F53;&#x8FB9;&#x754C;&#x4E3A;&#x5E38;&#x6570;&#x65F6;&#x7684;&#x8FB9;&#x754C;&#x503C;&#xFF0C;&#x6709;&#x9ED8;&#x8BA4;&#x503C;morphologyDefaultBorderValue()</li>
+</ul>
+</blockquote>
+<ol>
+<li><h5 id="morphdilate-&#x81A8;&#x80C0;"><a name="morphdilate-&#x81A8;&#x80C0;" class="anchor-navigation-ex-anchor" href="#morphdilate-&#x81A8;&#x80C0;"><i class="fa fa-link" aria-hidden="true"></i></a>MORPH_DILATE &#x81A8;&#x80C0;</h5>
+<p>&#x4EAE;&#x8272;&#x90E8;&#x5206;&#x88AB;&#x8150;&#x8680;,&#x5206;&#x5272;&#x72EC;&#x7ACB;&#x7684;&#x56FE;&#x50CF;&#x5143;&#x7D20;</p>
+</li>
+<li><h5 id="morpherode-&#x8150;&#x8680;"><a name="morpherode-&#x8150;&#x8680;" class="anchor-navigation-ex-anchor" href="#morpherode-&#x8150;&#x8680;"><i class="fa fa-link" aria-hidden="true"></i></a>MORPH_ERODE &#x8150;&#x8680;</h5>
+<p>&#x4EAE;&#x8272;&#x90E8;&#x5206;&#x81A8;&#x80C0;,&#x8FDE;&#x63A5;&#x76F8;&#x90BB;&#x7684;&#x5143;&#x7D20; </p>
+</li>
+<li><h5 id="morphopen-&#x5F00;&#x8FD0;&#x7B97;"><a name="morphopen-&#x5F00;&#x8FD0;&#x7B97;" class="anchor-navigation-ex-anchor" href="#morphopen-&#x5F00;&#x8FD0;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a>MORPH_OPEN &#x5F00;&#x8FD0;&#x7B97;</h5>
+<p>&#x5148;&#x8150;&#x8680;&#x540E;&#x81A8;&#x80C0;,&#x53EF;&#x4EE5;&#x53BB;&#x6389;&#x5C0F;&#x7684;&#x4EAE;&#x5BF9;&#x8C61;</p>
+</li>
+<li><h5 id="morphclose-&#x95ED;&#x8FD0;&#x7B97;"><a name="morphclose-&#x95ED;&#x8FD0;&#x7B97;" class="anchor-navigation-ex-anchor" href="#morphclose-&#x95ED;&#x8FD0;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a>MORPH_CLOSE &#x95ED;&#x8FD0;&#x7B97;</h5>
+<p>&#x5148;&#x81A8;&#x80C0;&#x540E;&#x8150;&#x8680;,&#x53EF;&#x4EE5;&#x53BB;&#x6389;&#x5C0F;&#x7684;&#x9ED1;&#x70B9;</p>
+</li>
+<li><h5 id="morphgradient-&#x5F62;&#x6001;&#x5B66;&#x68AF;&#x5EA6;"><a name="morphgradient-&#x5F62;&#x6001;&#x5B66;&#x68AF;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#morphgradient-&#x5F62;&#x6001;&#x5B66;&#x68AF;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>MORPH_GRADIENT &#x5F62;&#x6001;&#x5B66;&#x68AF;&#x5EA6;</h5>
+<p>&#x5F62;&#x6001;&#x5B66;&#x68AF;&#x5EA6;=&#x81A8;&#x80C0;&#x56FE;-&#x8150;&#x8680;&#x56FE;,&#x4FDD;&#x7559;&#x56FE;&#x50CF;&#x8FB9;&#x7F18;</p>
+</li>
+<li><h5 id="morphtophat-&#x9876;&#x5E3D;"><a name="morphtophat-&#x9876;&#x5E3D;" class="anchor-navigation-ex-anchor" href="#morphtophat-&#x9876;&#x5E3D;"><i class="fa fa-link" aria-hidden="true"></i></a>MORPH_TOPHAT &#x9876;&#x5E3D;</h5>
+<p>&#x9876;&#x5E3D;=&#x539F;&#x56FE;-&#x5F00;&#x8FD0;&#x7B97;,&#x5206;&#x79BB;&#x90BB;&#x8FD1;&#x70B9;&#x4EAE;&#x4E00;&#x4E9B;&#x7684;&#x6591;&#x5757;&#xFF0C;&#x8FDB;&#x884C;&#x80CC;&#x666F;&#x63D0;&#x53D6;</p>
+</li>
+<li><h5 id="morphblackhat-&#x9ED1;&#x5E3D;"><a name="morphblackhat-&#x9ED1;&#x5E3D;" class="anchor-navigation-ex-anchor" href="#morphblackhat-&#x9ED1;&#x5E3D;"><i class="fa fa-link" aria-hidden="true"></i></a>MORPH_BLACKHAT &#x9ED1;&#x5E3D;</h5>
+<p>&#x9ED1;&#x5E3D;=&#x95ED;&#x8FD0;&#x7B97;-&#x539F;&#x56FE;,&#x5206;&#x79BB;&#x6BD4;&#x90BB;&#x8FD1;&#x70B9;&#x6697;&#x4E00;&#x4E9B;&#x7684;&#x6591;&#x5757;</p>
+</li>
+</ol>
+<h4 id="adaptivethreshold-&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x503C;&#x56FE;&#x50CF;"><a name="adaptivethreshold-&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x503C;&#x56FE;&#x50CF;" class="anchor-navigation-ex-anchor" href="#adaptivethreshold-&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x503C;&#x56FE;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>adaptiveThreshold &#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x503C;&#x56FE;&#x50CF;</h4>
+<p>&#x63D0;&#x53D6;&#x76F4;&#x7EBF;: &#x5F00;&#x8FD0;&#x7B97;(&#x7528;&#x76F4;&#x7EBF;&#x7ED3;&#x6784;&#x5143;&#x7D20;)</p>
+<p>&#x53BB;&#x9664;&#x80CC;&#x666F;&#x76F4;&#x7EBF;: &#x5F00;&#x8FD0;&#x7B97;(&#x7528;&#x77E9;&#x5F62;&#x7ED3;&#x6784;&#x5143;&#x7D20;)</p>
+<p>pyrUp &#x4E0A;&#x91C7;&#x6837;</p>
+<p>pyrUp(Mat src, Mat dst, Size(src.cols<em>2, src.rows</em>2))   // &#x751F;&#x6210;&#x7684;&#x56FE;&#x50CF;&#x662F;&#x539F;&#x56FE;&#x5728;&#x5BBD;&#x4E0E;&#x9AD8;&#x5404;&#x653E;&#x5927;&#x4E24;&#x500D;</p>
+<p>&#x964D;&#x91C7;&#x6837;pyrDown</p>
+<p>pyrDown(Mat src, Mat dst, Size(src.cols/2, src.rows/2))  // &#x751F;&#x6210;&#x7684;&#x56FE;&#x50CF;&#x662F;&#x539F;&#x56FE;&#x5728;&#x5BBD;&#x4E0E;&#x9AD8;&#x5404;&#x7F29;&#x5C0F;1/2</p>
+<p>&#x9AD8;&#x65AF;&#x4E0D;&#x540C;(Difference of Gaussian-DOG)</p>
+<p>&#x628A;&#x540C;&#x4E00;&#x5F20;&#x56FE;&#x50CF;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#x4E0B;&#x505A;&#x9AD8;&#x65AF;&#x6A21;&#x7CCA;&#x4E4B;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x76F8;&#x51CF;&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x8F93;&#x51FA;&#x56FE;&#x50CF;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: OpenCV">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../shu-ju-ku/" class="navigation navigation-next " aria-label="Next page: 数据库">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"OpenCV笔记","level":"1.17.1","depth":2,"next":{"title":"数据库","level":"1.18","depth":1,"path":"shu-ju-ku/README.md","ref":"shu-ju-ku/README.md","articles":[{"title":"数据库","level":"1.18.1","depth":2,"path":"shu-ju-ku/shu-ju-ku.md","ref":"shu-ju-ku/shu-ju-ku.md","articles":[]},{"title":"数据库2","level":"1.18.2","depth":2,"path":"shu-ju-ku/shu-ju-ku-2.md","ref":"shu-ju-ku/shu-ju-ku-2.md","articles":[]}]},"previous":{"title":"OpenCV","level":"1.17","depth":1,"path":"opencv/README.md","ref":"opencv/README.md","articles":[{"title":"OpenCV笔记","level":"1.17.1","depth":2,"path":"opencv/opencv.md","ref":"opencv/opencv.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["todo","back-to-top-button","chapter-fold","splitter","github","anchor-navigation-ex","simple-page-toc","search-pro","-lunr","-search","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/robotchaoX/gitbook"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":false,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"gitbook title","language":"zh-hans","links":{"sidebar":{"GitHub":"https://robotchaox.github.io/"}},"gitbook":"*","description":"gitbook description"},"file":{"path":"opencv/opencv.md","mtime":"2020-03-28T14:53:13.566Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-28T15:47:48.075Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
