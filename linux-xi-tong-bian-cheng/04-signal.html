@@ -1,0 +1,1576 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>信号 · robotchaoX</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05-daemon.html" />
+    
+    
+    <link rel="prev" href="02-Inter-Process-Communication.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/robotchaoX" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../c++/">
+            
+                <a href="../c++/">
+            
+                    
+                    C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../c++/c++-ji-chu.html">
+            
+                <a href="../c++/c++-ji-chu.html">
+            
+                    
+                    C++基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../c++/stl.html">
+            
+                <a href="../c++/stl.html">
+            
+                    
+                    STL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../linux-ji-chu/">
+            
+                <a href="../linux-ji-chu/">
+            
+                    
+                    linux基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../linux-ji-chu/linux-command.html">
+            
+                <a href="../linux-ji-chu/linux-command.html">
+            
+                    
+                    Linux基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../linux-ji-chu/gcc.html">
+            
+                <a href="../linux-ji-chu/gcc.html">
+            
+                    
+                    GCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../linux-ji-chu/gdb.html">
+            
+                <a href="../linux-ji-chu/gdb.html">
+            
+                    
+                    GDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../linux-ji-chu/make.html">
+            
+                <a href="../linux-ji-chu/make.html">
+            
+                    
+                    make
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../linux-ji-chu/json.html">
+            
+                <a href="../linux-ji-chu/json.html">
+            
+                    
+                    json
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    linux系统编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="01-process.html">
+            
+                <a href="01-process.html">
+            
+                    
+                    进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="02-Inter-Process-Communication.html">
+            
+                <a href="02-Inter-Process-Communication.html">
+            
+                    
+                    进程间通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="04-signal.html">
+            
+                <a href="04-signal.html">
+            
+                    
+                    信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="05-daemon.html">
+            
+                <a href="05-daemon.html">
+            
+                    
+                    守护进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="06-thread.html">
+            
+                <a href="06-thread.html">
+            
+                    
+                    线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="07-thread-synchronization.html">
+            
+                <a href="07-thread-synchronization.html">
+            
+                    
+                    线程同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../linux-wang-luo-bian-cheng/">
+            
+                <a href="../linux-wang-luo-bian-cheng/">
+            
+                    
+                    linux网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../linux-wang-luo-bian-cheng/wang-luo-ji-chu.html">
+            
+                <a href="../linux-wang-luo-bian-cheng/wang-luo-ji-chu.html">
+            
+                    
+                    网络基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../linux-wang-luo-bian-cheng/tcp-udp.html">
+            
+                <a href="../linux-wang-luo-bian-cheng/tcp-udp.html">
+            
+                    
+                    TCP/UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../linux-wang-luo-bian-cheng/duo-jin-cheng-bing-fa.html">
+            
+                <a href="../linux-wang-luo-bian-cheng/duo-jin-cheng-bing-fa.html">
+            
+                    
+                    多进程线程并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../linux-wang-luo-bian-cheng/duo-lu-IO-zhuan-jie.html">
+            
+                <a href="../linux-wang-luo-bian-cheng/duo-lu-IO-zhuan-jie.html">
+            
+                    
+                    多路IO转接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../web-fu-wu-qi/">
+            
+                <a href="../web-fu-wu-qi/">
+            
+                    
+                    Web服务器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../web-fu-wu-qi/untitled.html">
+            
+                <a href="../web-fu-wu-qi/untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../html/html.html">
+            
+                <a href="../html/html.html">
+            
+                    
+                    HTML基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    HTTP协议
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../http/http.html">
+            
+                <a href="../http/http.html">
+            
+                    
+                    HTTP基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../she-ji-mo-shi/">
+            
+                <a href="../she-ji-mo-shi/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../she-ji-mo-shi/uml.html">
+            
+                <a href="../she-ji-mo-shi/uml.html">
+            
+                    
+                    UML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../she-ji-mo-shi/she-ji-mo-shi.html">
+            
+                <a href="../she-ji-mo-shi/she-ji-mo-shi.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../shell/">
+            
+                <a href="../shell/">
+            
+                    
+                    shell编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../shell/shell.html">
+            
+                <a href="../shell/shell.html">
+            
+                    
+                    shell基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../python/">
+            
+                <a href="../python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../python/python.html">
+            
+                <a href="../python/python.html">
+            
+                    
+                    Python基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../vim/">
+            
+                <a href="../vim/">
+            
+                    
+                    vim编辑器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../vim/vim.html">
+            
+                <a href="../vim/vim.html">
+            
+                    
+                    vim编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../markdown/">
+            
+                <a href="../markdown/">
+            
+                    
+                    MarkDown
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../markdown/markdown.html">
+            
+                <a href="../markdown/markdown.html">
+            
+                    
+                    MarkDown笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../gitbook/gitbook.html">
+            
+                <a href="../gitbook/gitbook.html">
+            
+                    
+                    GitBook笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../git/git.html">
+            
+                <a href="../git/git.html">
+            
+                    
+                    Git&GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../jetson/">
+            
+                <a href="../jetson/">
+            
+                    
+                    NVIDIA-jetson
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../jetson/jetson.html">
+            
+                <a href="../jetson/jetson.html">
+            
+                    
+                    jetson笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../opencv/">
+            
+                <a href="../opencv/">
+            
+                    
+                    OpenCV
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../opencv/opencv.html">
+            
+                <a href="../opencv/opencv.html">
+            
+                    
+                    OpenCV笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../shu-ju-ku/">
+            
+                <a href="../shu-ju-ku/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../shu-ju-ku/mysql.html">
+            
+                <a href="../shu-ju-ku/mysql.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../shu-ju-ku/mongodb.html">
+            
+                <a href="../shu-ju-ku/mongodb.html">
+            
+                    
+                    MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >信号</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4FE1;&#x53F7;"><b></b>&#x4FE1;&#x53F7;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4FE1;&#x53F7;&#x7684;&#x6982;&#x5FF5;"><b></b>&#x4FE1;&#x53F7;&#x7684;&#x6982;&#x5FF5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4FE1;&#x53F7;&#x7684;&#x673A;&#x5236;"><b></b>&#x4FE1;&#x53F7;&#x7684;&#x673A;&#x5236;</a></li><li><span class="title-icon "></span><a href="#&#x4E0E;&#x4FE1;&#x53F7;&#x76F8;&#x5173;&#x7684;&#x4E8B;&#x4EF6;&#x548C;&#x72B6;&#x6001;"><b></b>&#x4E0E;&#x4FE1;&#x53F7;&#x76F8;&#x5173;&#x7684;&#x4E8B;&#x4EF6;&#x548C;&#x72B6;&#x6001;</a></li><li><span class="title-icon "></span><a href="#&#x4FE1;&#x53F7;&#x7684;&#x7F16;&#x53F7;"><b></b>&#x4FE1;&#x53F7;&#x7684;&#x7F16;&#x53F7;</a></li><li><span class="title-icon "></span><a href="#&#x4FE1;&#x53F7;4&#x8981;&#x7D20;"><b></b>&#x4FE1;&#x53F7;4&#x8981;&#x7D20;</a></li><li><span class="title-icon "></span><a href="#linux&#x5E38;&#x89C4;&#x4FE1;&#x53F7;&#x4E00;&#x89C8;&#x8868;"><b></b>Linux&#x5E38;&#x89C4;&#x4FE1;&#x53F7;&#x4E00;&#x89C8;&#x8868;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4FE1;&#x53F7;&#x7684;&#x4EA7;&#x751F;"><b></b>&#x4FE1;&#x53F7;&#x7684;&#x4EA7;&#x751F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7EC8;&#x7AEF;&#x6309;&#x952E;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><b></b>&#x7EC8;&#x7AEF;&#x6309;&#x952E;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</a></li><li><span class="title-icon "></span><a href="#&#x786C;&#x4EF6;&#x5F02;&#x5E38;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><b></b>&#x786C;&#x4EF6;&#x5F02;&#x5E38;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</a></li><li><span class="title-icon "></span><a href="#kill&#x547D;&#x4EE4;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><b></b>kill&#x547D;&#x4EE4;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</a></li><li><span class="title-icon "></span><a href="#killraiseabort&#x7CFB;&#x7EDF;&#x8C03;&#x7528;"><b></b>kill/raise/abort&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x8F6F;&#x4EF6;&#x6761;&#x4EF6;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><b></b>&#x8F6F;&#x4EF6;&#x6761;&#x4EF6;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4FE1;&#x53F7;&#x96C6;&#x64CD;&#x4F5C;&#x51FD;&#x6570;"><b></b>&#x4FE1;&#x53F7;&#x96C6;&#x64CD;&#x4F5C;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5B9A;&#x4FE1;&#x53F7;&#x96C6;"><b></b>&#x8BBE;&#x5B9A;&#x4FE1;&#x53F7;&#x96C6;</a></li><li><span class="title-icon "></span><a href="#sigprocmask&#x51FD;&#x6570;"><b></b>sigprocmask&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#sigpending&#x51FD;&#x6570;"><b></b>sigpending&#x51FD;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4FE1;&#x53F7;&#x6355;&#x6349;"><b></b>&#x4FE1;&#x53F7;&#x6355;&#x6349;</a></li><ul><li><span class="title-icon "></span><a href="#signal&#x51FD;&#x6570;"><b></b>signal&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#sigaction&#x51FD;&#x6570;"><b></b>sigaction&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x5185;&#x6838;&#x5B9E;&#x73B0;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x8FC7;&#x7A0B;&#xFF1A;"><b></b>&#x5185;&#x6838;&#x5B9E;&#x73B0;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x8FC7;&#x7A0B;&#xFF1A;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7ADE;&#x6001;&#x6761;&#x4EF6;&#x65F6;&#x5E8F;&#x7ADE;&#x6001;&#xFF1A;"><b></b>&#x7ADE;&#x6001;&#x6761;&#x4EF6;(&#x65F6;&#x5E8F;&#x7ADE;&#x6001;)&#xFF1A;</a></li><ul><li><span class="title-icon "></span><a href="#pause&#x51FD;&#x6570;"><b></b>pause&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x5BFC;&#x4F8B;"><b></b>&#x524D;&#x5BFC;&#x4F8B;</a></li><li><span class="title-icon "></span><a href="#&#x65F6;&#x5E8F;&#x95EE;&#x9898;&#x5206;&#x6790;"><b></b>&#x65F6;&#x5E8F;&#x95EE;&#x9898;&#x5206;&#x6790;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x51B3;&#x65F6;&#x5E8F;&#x7ADE;&#x6001;&#x95EE;&#x9898;"><b></b>&#x89E3;&#x51B3;&#x65F6;&#x5E8F;&#x7ADE;&#x6001;&#x95EE;&#x9898;</a></li><li><span class="title-icon "></span><a href="#sigsuspend&#x51FD;&#x6570;"><b></b>sigsuspend&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>&#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x5F02;&#x6B65;io"><b></b>&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x5F02;&#x6B65;I/O</a></li><li><span class="title-icon "></span><a href="#&#x53EF;&#x4E0D;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;"><b></b>&#x53EF;/&#x4E0D;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#sigchld&#x4FE1;&#x53F7;"><b></b>SIGCHLD&#x4FE1;&#x53F7;</a></li><ul><li><span class="title-icon "></span><a href="#sigchld&#x7684;&#x4EA7;&#x751F;&#x6761;&#x4EF6;"><b></b>SIGCHLD&#x7684;&#x4EA7;&#x751F;&#x6761;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x501F;&#x52A9;sigchld&#x4FE1;&#x53F7;&#x56DE;&#x6536;&#x5B50;&#x8FDB;&#x7A0B;"><b></b>&#x501F;&#x52A9;SIGCHLD&#x4FE1;&#x53F7;&#x56DE;&#x6536;&#x5B50;&#x8FDB;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x5B50;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;status&#x5904;&#x7406;&#x65B9;&#x5F0F;"><b></b>&#x5B50;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;status&#x5904;&#x7406;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#sigchld&#x4FE1;&#x53F7;&#x6CE8;&#x610F;&#x95EE;&#x9898;"><b></b>SIGCHLD&#x4FE1;&#x53F7;&#x6CE8;&#x610F;&#x95EE;&#x9898;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4FE1;&#x53F7;&#x4F20;&#x53C2;"><b></b>&#x4FE1;&#x53F7;&#x4F20;&#x53C2;</a></li><ul><li><span class="title-icon "></span><a href="#&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x4F20;&#x53C2;"><b></b>&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x4F20;&#x53C2;</a></li><li><span class="title-icon "></span><a href="#&#x6355;&#x6349;&#x51FD;&#x6570;&#x4F20;&#x53C2;"><b></b>&#x6355;&#x6349;&#x51FD;&#x6570;&#x4F20;&#x53C2;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E2D;&#x65AD;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;"><b></b>&#x4E2D;&#x65AD;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</a></li></ul></ul></div><h1 id="&#x4FE1;&#x53F7;"><a name="&#x4FE1;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x53F7;</h1>
+<hr>
+<p>[TOC]</p>
+<!-- toc -->
+<ul>
+<li><a href="#%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%A6%82%E5%BF%B5">&#x4FE1;&#x53F7;&#x7684;&#x6982;&#x5FF5;</a><ul>
+<li><a href="#%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%9C%BA%E5%88%B6">&#x4FE1;&#x53F7;&#x7684;&#x673A;&#x5236;</a></li>
+<li><a href="#%E4%B8%8E%E4%BF%A1%E5%8F%B7%E7%9B%B8%E5%85%B3%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%8A%B6%E6%80%81">&#x4E0E;&#x4FE1;&#x53F7;&#x76F8;&#x5173;&#x7684;&#x4E8B;&#x4EF6;&#x548C;&#x72B6;&#x6001;</a></li>
+<li><a href="#%E4%BF%A1%E5%8F%B7%E7%9A%84%E7%BC%96%E5%8F%B7">&#x4FE1;&#x53F7;&#x7684;&#x7F16;&#x53F7;</a></li>
+<li><a href="#%E4%BF%A1%E5%8F%B74%E8%A6%81%E7%B4%A0">&#x4FE1;&#x53F7;4&#x8981;&#x7D20;</a></li>
+<li><a href="#linux%E5%B8%B8%E8%A7%84%E4%BF%A1%E5%8F%B7%E4%B8%80%E8%A7%88%E8%A1%A8">Linux&#x5E38;&#x89C4;&#x4FE1;&#x53F7;&#x4E00;&#x89C8;&#x8868;</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BF%A1%E5%8F%B7%E7%9A%84%E4%BA%A7%E7%94%9F">&#x4FE1;&#x53F7;&#x7684;&#x4EA7;&#x751F;</a><ul>
+<li><a href="#%E7%BB%88%E7%AB%AF%E6%8C%89%E9%94%AE%E4%BA%A7%E7%94%9F%E4%BF%A1%E5%8F%B7">&#x7EC8;&#x7AEF;&#x6309;&#x952E;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</a></li>
+<li><a href="#%E7%A1%AC%E4%BB%B6%E5%BC%82%E5%B8%B8%E4%BA%A7%E7%94%9F%E4%BF%A1%E5%8F%B7">&#x786C;&#x4EF6;&#x5F02;&#x5E38;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</a></li>
+<li><a href="#kill%E5%91%BD%E4%BB%A4%E4%BA%A7%E7%94%9F%E4%BF%A1%E5%8F%B7">kill&#x547D;&#x4EE4;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</a></li>
+<li><a href="#killraiseabort%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8">kill/raise/abort&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</a></li>
+<li><a href="#%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6%E4%BA%A7%E7%94%9F%E4%BF%A1%E5%8F%B7">&#x8F6F;&#x4EF6;&#x6761;&#x4EF6;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BF%A1%E5%8F%B7%E9%9B%86%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0">&#x4FE1;&#x53F7;&#x96C6;&#x64CD;&#x4F5C;&#x51FD;&#x6570;</a><ul>
+<li><a href="#%E8%AE%BE%E5%AE%9A%E4%BF%A1%E5%8F%B7%E9%9B%86">&#x8BBE;&#x5B9A;&#x4FE1;&#x53F7;&#x96C6;</a></li>
+<li><a href="#sigprocmask%E5%87%BD%E6%95%B0">sigprocmask&#x51FD;&#x6570;</a></li>
+<li><a href="#sigpending%E5%87%BD%E6%95%B0">sigpending&#x51FD;&#x6570;</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BF%A1%E5%8F%B7%E6%8D%95%E6%8D%89">&#x4FE1;&#x53F7;&#x6355;&#x6349;</a><ul>
+<li><a href="#signal%E5%87%BD%E6%95%B0">signal&#x51FD;&#x6570;</a></li>
+<li><a href="#sigaction%E5%87%BD%E6%95%B0">sigaction&#x51FD;&#x6570;</a></li>
+<li><a href="#%E5%86%85%E6%A0%B8%E5%AE%9E%E7%8E%B0%E4%BF%A1%E5%8F%B7%E6%8D%95%E6%8D%89%E8%BF%87%E7%A8%8B">&#x5185;&#x6838;&#x5B9E;&#x73B0;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x8FC7;&#x7A0B;&#xFF1A;</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AB%9E%E6%80%81%E6%9D%A1%E4%BB%B6%E6%97%B6%E5%BA%8F%E7%AB%9E%E6%80%81">&#x7ADE;&#x6001;&#x6761;&#x4EF6;(&#x65F6;&#x5E8F;&#x7ADE;&#x6001;)&#xFF1A;</a><ul>
+<li><a href="#pause%E5%87%BD%E6%95%B0">pause&#x51FD;&#x6570;</a></li>
+<li><a href="#%E5%89%8D%E5%AF%BC%E4%BE%8B">&#x524D;&#x5BFC;&#x4F8B;</a></li>
+<li><a href="#%E6%97%B6%E5%BA%8F%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90">&#x65F6;&#x5E8F;&#x95EE;&#x9898;&#x5206;&#x6790;</a></li>
+<li><a href="#%E8%A7%A3%E5%86%B3%E6%97%B6%E5%BA%8F%E7%AB%9E%E6%80%81%E9%97%AE%E9%A2%98">&#x89E3;&#x51B3;&#x65F6;&#x5E8F;&#x7ADE;&#x6001;&#x95EE;&#x9898;</a></li>
+<li><a href="#sigsuspend%E5%87%BD%E6%95%B0">sigsuspend&#x51FD;&#x6570;</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">&#x603B;&#x7ED3;</a></li>
+<li><a href="#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E5%BC%82%E6%AD%A5io">&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x5F02;&#x6B65;I/O</a></li>
+<li><a href="#%E5%8F%AF%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%85%A5%E5%87%BD%E6%95%B0">&#x53EF;/&#x4E0D;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;</a></li>
+</ul>
+</li>
+<li><a href="#sigchld%E4%BF%A1%E5%8F%B7">SIGCHLD&#x4FE1;&#x53F7;</a><ul>
+<li><a href="#sigchld%E7%9A%84%E4%BA%A7%E7%94%9F%E6%9D%A1%E4%BB%B6">SIGCHLD&#x7684;&#x4EA7;&#x751F;&#x6761;&#x4EF6;</a></li>
+<li><a href="#%E5%80%9F%E5%8A%A9sigchld%E4%BF%A1%E5%8F%B7%E5%9B%9E%E6%94%B6%E5%AD%90%E8%BF%9B%E7%A8%8B">&#x501F;&#x52A9;SIGCHLD&#x4FE1;&#x53F7;&#x56DE;&#x6536;&#x5B50;&#x8FDB;&#x7A0B;</a></li>
+<li><a href="#%E5%AD%90%E8%BF%9B%E7%A8%8B%E7%BB%93%E6%9D%9Fstatus%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F">&#x5B50;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;status&#x5904;&#x7406;&#x65B9;&#x5F0F;</a></li>
+<li><a href="#sigchld%E4%BF%A1%E5%8F%B7%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98">SIGCHLD&#x4FE1;&#x53F7;&#x6CE8;&#x610F;&#x95EE;&#x9898;</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BF%A1%E5%8F%B7%E4%BC%A0%E5%8F%82">&#x4FE1;&#x53F7;&#x4F20;&#x53C2;</a><ul>
+<li><a href="#%E5%8F%91%E9%80%81%E4%BF%A1%E5%8F%B7%E4%BC%A0%E5%8F%82">&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x4F20;&#x53C2;</a></li>
+<li><a href="#%E6%8D%95%E6%8D%89%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82">&#x6355;&#x6349;&#x51FD;&#x6570;&#x4F20;&#x53C2;</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8">&#x4E2D;&#x65AD;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</a></li>
+</ul>
+<!-- tocstop -->
+<hr>
+<h2 id="&#x4FE1;&#x53F7;&#x7684;&#x6982;&#x5FF5;"><a name="&#x4FE1;&#x53F7;&#x7684;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x53F7;&#x7684;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x53F7;&#x7684;&#x6982;&#x5FF5;</h2>
+<p>&#x4FE1;&#x53F7;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x751F;&#x6D3B;&#x4E2D;&#x968F;&#x5904;&#x53EF;&#x89C1;&#xFF0C; &#x5982;&#xFF1A;&#x53E4;&#x4EE3;&#x6218;&#x4E89;&#x4E2D;&#x6454;&#x676F;&#x4E3A;&#x53F7;&#xFF1B;&#x73B0;&#x4EE3;&#x6218;&#x4E89;&#x4E2D;&#x7684;&#x4FE1;&#x53F7;&#x5F39;&#xFF1B;&#x4F53;&#x80B2;&#x6BD4;&#x8D5B;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x4FE1;&#x53F7;&#x67AA;......&#x4ED6;&#x4EEC;&#x90FD;&#x6709;&#x5171;&#x6027;&#xFF1A;1. &#x7B80;&#x5355; 2. &#x4E0D;&#x80FD;&#x643A;&#x5E26;&#x5927;&#x91CF;&#x4FE1;&#x606F; 3. &#x6EE1;&#x8DB3;&#x67D0;&#x4E2A;&#x7279;&#x8BBE;&#x6761;&#x4EF6;&#x624D;&#x53D1;&#x9001;&#x3002;</p>
+<p>&#x4FE1;&#x53F7;&#x662F;&#x4FE1;&#x606F;&#x7684;&#x8F7D;&#x4F53;&#xFF0C;Linux/UNIX &#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x53E4;&#x8001;&#x3001;&#x7ECF;&#x5178;&#x7684;&#x901A;&#x4FE1;&#x65B9;&#x5F0F;&#xFF0C; &#x73B0;&#x4E0B;&#x4F9D;&#x7136;&#x662F;&#x4E3B;&#x8981;&#x7684;&#x901A;&#x4FE1;&#x624B;&#x6BB5;&#x3002;</p>
+<p>Unix&#x65E9;&#x671F;&#x7248;&#x672C;&#x5C31;&#x63D0;&#x4F9B;&#x4E86;&#x4FE1;&#x53F7;&#x673A;&#x5236;&#xFF0C;&#x4F46;&#x4E0D;&#x53EF;&#x9760;&#xFF0C;&#x4FE1;&#x53F7;&#x53EF;&#x80FD;&#x4E22;&#x5931;&#x3002;Berkeley &#x548C; AT&amp;T&#x90FD;&#x5BF9;&#x4FE1;&#x53F7;&#x6A21;&#x578B;&#x505A;&#x4E86;&#x66F4;&#x6539;&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x53EF;&#x9760;&#x4FE1;&#x53F7;&#x673A;&#x5236;&#x3002;&#x4F46;&#x5F7C;&#x6B64;&#x4E0D;&#x517C;&#x5BB9;&#x3002;POSIX.1&#x5BF9;&#x53EF;&#x9760;&#x4FE1;&#x53F7;&#x4F8B;&#x7A0B;&#x8FDB;&#x884C;&#x4E86;&#x6807;&#x51C6;&#x5316;&#x3002;</p>
+<h3 id="&#x4FE1;&#x53F7;&#x7684;&#x673A;&#x5236;"><a name="&#x4FE1;&#x53F7;&#x7684;&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x53F7;&#x7684;&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x53F7;&#x7684;&#x673A;&#x5236;</h3>
+<p>A&#x7ED9;B&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#xFF0C;B&#x6536;&#x5230;&#x4FE1;&#x53F7;&#x4E4B;&#x524D;&#x6267;&#x884C;&#x81EA;&#x5DF1;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6536;&#x5230;&#x4FE1;&#x53F7;&#x540E;&#xFF0C;&#x4E0D;&#x7BA1;&#x6267;&#x884C;&#x5230;&#x7A0B;&#x5E8F;&#x7684;&#x4EC0;&#x4E48;&#x4F4D;&#x7F6E;&#xFF0C;&#x90FD;&#x8981;&#x6682;&#x505C;&#x8FD0;&#x884C;&#xFF0C;&#x53BB;&#x5904;&#x7406;&#x4FE1;&#x53F7;&#xFF0C;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#x518D;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x3002;&#x4E0E;&#x786C;&#x4EF6;&#x4E2D;&#x65AD;&#x7C7B;&#x4F3C;&#x2014;&#x2014;&#x5F02;&#x6B65;&#x6A21;&#x5F0F;&#x3002;&#x4F46;&#x4FE1;&#x53F7;&#x662F;&#x8F6F;&#x4EF6;&#x5C42;&#x9762;&#x4E0A;&#x5B9E;&#x73B0;&#x7684;&#x4E2D;&#x65AD;&#xFF0C;&#x65E9;&#x671F;&#x5E38;&#x88AB;&#x79F0;&#x4E3A;&#x201C;&#x8F6F;&#x4E2D;&#x65AD;&#x201D;&#x3002;</p>
+<p><strong>&#x4FE1;&#x53F7;&#x7684;&#x7279;&#x8D28;</strong>&#xFF1A;&#x7531;&#x4E8E;&#x4FE1;&#x53F7;&#x662F;&#x901A;&#x8FC7;&#x8F6F;&#x4EF6;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#xFF0C;&#x5176;&#x5B9E;&#x73B0;&#x624B;&#x6BB5;&#x5BFC;&#x81F4;&#x4FE1;&#x53F7;&#x6709;&#x5F88;&#x5F3A;&#x7684;&#x5EF6;&#x65F6;&#x6027;&#x3002;&#x4F46;&#x5BF9;&#x4E8E;&#x7528;&#x6237;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E2A;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x975E;&#x5E38;&#x77ED;&#xFF0C;&#x4E0D;&#x6613;&#x5BDF;&#x89C9;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x6536;&#x5230;&#x7684;&#x6240;&#x6709;&#x4FE1;&#x53F7;&#xFF0C;&#x90FD;&#x662F;&#x7531;<strong>&#x5185;&#x6838;</strong>&#x8D1F;&#x8D23;<strong>&#x53D1;&#x9001;</strong>&#x7684;&#xFF0C;<strong>&#x5185;&#x6838;&#x5904;&#x7406;</strong>&#x3002;</p>
+<h3 id="&#x4E0E;&#x4FE1;&#x53F7;&#x76F8;&#x5173;&#x7684;&#x4E8B;&#x4EF6;&#x548C;&#x72B6;&#x6001;"><a name="&#x4E0E;&#x4FE1;&#x53F7;&#x76F8;&#x5173;&#x7684;&#x4E8B;&#x4EF6;&#x548C;&#x72B6;&#x6001;" class="anchor-navigation-ex-anchor" href="#&#x4E0E;&#x4FE1;&#x53F7;&#x76F8;&#x5173;&#x7684;&#x4E8B;&#x4EF6;&#x548C;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E0E;&#x4FE1;&#x53F7;&#x76F8;&#x5173;&#x7684;&#x4E8B;&#x4EF6;&#x548C;&#x72B6;&#x6001;</h3>
+<p><strong>&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</strong>:</p>
+<ul>
+<li>&#x6309;&#x952E;&#x4EA7;&#x751F;&#xFF0C;&#x5982;&#xFF1A;Ctrl+c&#x3001;Ctrl+z&#x3001;Ctrl+\</li>
+<li>&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x4EA7;&#x751F;&#xFF0C;&#x5982;&#xFF1A;kill&#x3001;raise&#x3001;abort</li>
+<li>&#x8F6F;&#x4EF6;&#x6761;&#x4EF6;&#x4EA7;&#x751F;&#xFF0C;&#x5982;&#xFF1A;&#x5B9A;&#x65F6;&#x5668;alarm</li>
+<li>&#x786C;&#x4EF6;&#x5F02;&#x5E38;&#x4EA7;&#x751F;&#xFF0C;&#x5982;&#xFF1A;&#x975E;&#x6CD5;&#x8BBF;&#x95EE;&#x5185;&#x5B58;(&#x6BB5;&#x9519;&#x8BEF;)&#x3001;&#x9664;0(&#x6D6E;&#x70B9;&#x6570;&#x4F8B;&#x5916;)&#x3001;&#x5185;&#x5B58;&#x5BF9;&#x9F50;&#x51FA;&#x9519;(&#x603B;&#x7EBF;&#x9519;&#x8BEF;)</li>
+<li>&#x547D;&#x4EE4;&#x4EA7;&#x751F;&#xFF0C;&#x5982;&#xFF1A;kill&#x547D;&#x4EE4;</li>
+</ul>
+<p><strong>&#x9012;&#x8FBE;</strong>&#xFF1A;&#x9012;&#x9001;&#x5E76;&#x4E14;&#x5230;&#x8FBE;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p><strong>&#x672A;&#x51B3;</strong>&#xFF1A;&#x4EA7;&#x751F;&#x548C;&#x9012;&#x8FBE;&#x4E4B;&#x95F4;&#x7684;&#x72B6;&#x6001;&#x3002;&#x4E3B;&#x8981;&#x7531;&#x4E8E;&#x963B;&#x585E;(&#x5C4F;&#x853D;)&#x5BFC;&#x81F4;&#x8BE5;&#x72B6;&#x6001;&#x3002;</p>
+<p><strong>&#x4FE1;&#x53F7;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;:</strong></p>
+<ul>
+<li>&#x6267;&#x884C;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;</li>
+<li>&#x5FFD;&#x7565;(&#x4E22;&#x5F03;)(&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x4E3A;&#x5FFD;&#x7565;)</li>
+<li>&#x6355;&#x6349;(&#x8C03;&#x7528;&#x6237;&#x5904;&#x7406;&#x51FD;&#x6570;)</li>
+</ul>
+<p>Linux&#x5185;&#x6838;&#x7684;&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;PCB&#x662F;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#xFF0C;<code>task_struct</code>, &#x9664;&#x4E86;&#x5305;&#x542B;&#x8FDB;&#x7A0B;id&#xFF0C;&#x72B6;&#x6001;&#xFF0C;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF0C;&#x7528;&#x6237;id&#xFF0C;&#x7EC4;id&#xFF0C;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x8868;&#xFF0C;&#x8FD8;&#x5305;&#x542B;&#x4E86;&#x4FE1;&#x53F7;&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4E3B;&#x8981;&#x6307;&#x963B;&#x585E;&#x4FE1;&#x53F7;&#x96C6;&#x548C;&#x672A;&#x51B3;&#x4FE1;&#x53F7;&#x96C6;&#x3002;</p>
+<p><strong>&#x963B;&#x585E;&#x4FE1;&#x53F7;&#x96C6;(&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x5B57;)</strong>&#xFF1A; &#x5C06;&#x67D0;&#x4E9B;&#x4FE1;&#x53F7;&#x52A0;&#x5165;&#x96C6;&#x5408;&#xFF0C;&#x5BF9;&#x4ED6;&#x4EEC;&#x8BBE;&#x7F6E;&#x5C4F;&#x853D;&#xFF0C;&#x5F53;<strong>&#x5C4F;&#x853D;</strong>x&#x4FE1;&#x53F7;&#x540E;&#xFF0C;&#x518D;&#x6536;&#x5230;&#x8BE5;&#x4FE1;&#x53F7;&#xFF0C;&#x8BE5;&#x4FE1;&#x53F7;&#x7684;&#x5904;&#x7406;&#x5C06;<strong>&#x63A8;&#x540E;</strong>(&#x89E3;&#x9664;&#x5C4F;&#x853D;&#x540E;)</p>
+<p><strong>&#x672A;&#x51B3;&#x4FE1;&#x53F7;&#x96C6;</strong>:</p>
+<ol>
+<li>&#x4FE1;&#x53F7;&#x4EA7;&#x751F;&#xFF0C;&#x672A;&#x51B3;&#x4FE1;&#x53F7;&#x96C6;&#x4E2D;&#x63CF;&#x8FF0;&#x8BE5;&#x4FE1;&#x53F7;&#x7684;&#x4F4D;&#x7ACB;&#x523B;&#x7FFB;&#x8F6C;&#x4E3A;1&#xFF0C;&#x8868;&#x4FE1;&#x53F7;&#x5904;&#x4E8E;&#x672A;&#x51B3;&#x72B6;&#x6001;&#x3002;&#x5F53;&#x4FE1;&#x53F7;&#x88AB;&#x5904;&#x7406;&#x5BF9;&#x5E94;&#x4F4D;&#x7FFB;&#x8F6C;&#x56DE;&#x4E3A;0&#x3002;&#x8FD9;&#x4E00;&#x65F6;&#x523B;&#x5F80;&#x5F80;&#x975E;&#x5E38;&#x77ED;&#x6682;&#x3002;</li>
+<li>&#x4FE1;&#x53F7;&#x4EA7;&#x751F;&#x540E;&#x7531;&#x4E8E;&#x67D0;&#x4E9B;&#x539F;&#x56E0;(&#x4E3B;&#x8981;&#x662F;&#x963B;&#x585E;)&#x4E0D;&#x80FD;&#x9012;&#x8FBE;&#x3002;&#x8FD9;&#x7C7B;&#x4FE1;&#x53F7;&#x7684;&#x96C6;&#x5408;&#x79F0;&#x4E4B;&#x4E3A;&#x672A;&#x51B3;&#x4FE1;&#x53F7;&#x96C6;&#x3002;&#x5728;&#x5C4F;&#x853D;&#x89E3;&#x9664;&#x524D;&#xFF0C;&#x4FE1;&#x53F7;&#x4E00;&#x76F4;&#x5904;&#x4E8E;&#x672A;&#x51B3;&#x72B6;&#x6001;&#x3002;</li>
+</ol>
+<h3 id="&#x4FE1;&#x53F7;&#x7684;&#x7F16;&#x53F7;"><a name="&#x4FE1;&#x53F7;&#x7684;&#x7F16;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x53F7;&#x7684;&#x7F16;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x53F7;&#x7684;&#x7F16;&#x53F7;</h3>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>kill &#x2013;l</code>&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x53EF;&#x4F7F;&#x7528;&#x7684;&#x4FE1;&#x53F7;&#x6709;&#x54EA;&#x4E9B;&#x3002;</p>
+<pre><code>kill &#x2013;l    # &#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x53EF;&#x4F7F;&#x7528;&#x7684;&#x4FE1;&#x53F7;
+</code></pre><blockquote>
+<p>1) SIGHUP 2) SIGINT 3) SIGQUIT 4) SIGILL 5) SIGTRAP
+6) SIGABRT 7) SIGBUS 8) SIGFPE 9) SIGKILL 10) SIGUSR1
+11) SIGSEGV 12) SIGUSR2 13) SIGPIPE 14) SIGALRM 15) SIGTERM
+16) SIGSTKFLT 17) SIGCHLD 18) SIGCONT 19) SIGSTOP 20) SIGTSTP
+21) SIGTTIN 22) SIGTTOU 23) SIGURG 24) SIGXCPU 25) SIGXFSZ
+26) SIGVTALRM 27) SIGPROF 28) SIGWINCH 29) SIGIO 30) SIGPWR
+31) SIGSYS 34) SIGRTMIN 35) SIGRTMIN+1 36) SIGRTMIN+2 37) SIGRTMIN+3
+38) SIGRTMIN+4 39) SIGRTMIN+5 40) SIGRTMIN+6 41) SIGRTMIN+7 42) SIGRTMIN+8
+43) SIGRTMIN+9 44) SIGRTMIN+10 45) SIGRTMIN+11 46) SIGRTMIN+12 47) SIGRTMIN+13
+48) SIGRTMIN+14 49) SIGRTMIN+15 50) SIGRTMAX-14 51) SIGRTMAX-13 52) SIGRTMAX-12
+53) SIGRTMAX-11 54) SIGRTMAX-10 55) SIGRTMAX-9 56) SIGRTMAX-8 57) SIGRTMAX-7
+58) SIGRTMAX-6 59) SIGRTMAX-5 60) SIGRTMAX-4 61) SIGRTMAX-3 62) SIGRTMAX-2
+63) SIGRTMAX-1 64) SIGRTMAX</p>
+</blockquote>
+<p>&#x4E0D;&#x5B58;&#x5728;&#x7F16;&#x53F7;&#x4E3A;0&#x7684;&#x4FE1;&#x53F7;&#x3002;&#x5176;&#x4E2D;<strong>1-31</strong>&#x53F7;&#x4FE1;&#x53F7;&#x79F0;&#x4E4B;&#x4E3A;<strong>&#x5E38;&#x89C4;</strong>&#x4FE1;&#x53F7;&#xFF08;&#x4E5F;&#x53EB;&#x666E;&#x901A;&#x4FE1;&#x53F7;&#x6216;&#x6807;&#x51C6;&#x4FE1;&#x53F7;&#xFF09;&#xFF0C;34-64&#x79F0;&#x4E4B;&#x4E3A;<strong>&#x5B9E;&#x65F6;</strong>&#x4FE1;&#x53F7;&#xFF0C;&#x9A71;&#x52A8;&#x7F16;&#x7A0B;&#x4E0E;&#x786C;&#x4EF6;&#x76F8;&#x5173;&#x3002;&#x540D;&#x5B57;&#x4E0A;&#x533A;&#x522B;&#x4E0D;&#x5927;&#x3002;&#x800C;&#x524D;32&#x4E2A;&#x540D;&#x5B57;&#x5404;&#x4E0D;&#x76F8;&#x540C;&#x3002;</p>
+<h3 id="&#x4FE1;&#x53F7;4&#x8981;&#x7D20;"><a name="&#x4FE1;&#x53F7;4&#x8981;&#x7D20;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x53F7;4&#x8981;&#x7D20;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x53F7;4&#x8981;&#x7D20;</h3>
+<p>&#x4E0E;&#x53D8;&#x91CF;&#x4E09;&#x8981;&#x7D20;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x6BCF;&#x4E2A;&#x4FE1;&#x53F7;&#x4E5F;&#x6709;&#x5176;&#x5FC5;&#x5907;4&#x8981;&#x7D20;&#xFF0C;&#x5206;&#x522B;&#x662F;&#xFF1A;</p>
+<ol>
+<li>&#x7F16;&#x53F7; </li>
+<li>&#x540D;&#x79F0;</li>
+<li>&#x4E8B;&#x4EF6; </li>
+<li>&#x9ED8;&#x8BA4;&#x5904;&#x7406;&#x52A8;&#x4F5C;</li>
+</ol>
+<p>&#x53EF;&#x901A;&#x8FC7;<code>man 7 signal</code>&#x67E5;&#x770B;&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x83B7;&#x53D6;&#x3002;</p>
+<pre><code>man 7 signal  # &#x67E5;&#x770B;&#x5E2E;&#x52A9;&#x6587;&#x6863;
+</code></pre><blockquote>
+<p>Signal         Value     Action   Comment</p>
+<p>&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;</p>
+<p>SIGHUP          1       Term    Hangup detected on controlling terminal or death of controlling process</p>
+<p>SIGINT           2       Term    Interrupt from keyboard</p>
+<p>SIGQUIT          3       Core    Quit from keyboard</p>
+<p>SIGILL            4       Core    Illegal Instruction</p>
+<p>SIGFPE           8       Core    Floating point exception</p>
+<p>SIGKILL           9       Term    Kill signal</p>
+<p>SIGSEGV         11      Core    Invalid memory reference</p>
+<p>SIGPIPE       13      Term    Broken pipe: write to pipe with no readers</p>
+<p>SIGALRM        14      Term    Timer signal from alarm(2)</p>
+<p>SIGTERM         15      Term    Termination signal</p>
+<p>SIGUSR1   30,10,16    Term    User-defined signal 1</p>
+<p>SIGUSR2   31,12,17    Term    User-defined signal 2</p>
+<p>SIGCHLD   20,17,18    Ign     Child stopped or terminated</p>
+<p>SIGCONT   19,18,25    Cont    Continue if stopped</p>
+<p>SIGSTOP   17,19,23    Stop    Stop process</p>
+<p>SIGTSTP   18,20,24    Stop    Stop typed at terminal</p>
+<p>SIGTTIN   21,21,26    Stop    Terminal input for background process</p>
+<p>SIGTTOU   22,22,27   Stop    Terminal output for background process</p>
+<p>The signals SIGKILL and SIGSTOP cannot be caught, blocked, or ignored.   </p>
+</blockquote>
+<p>&#x5728;&#x6807;&#x51C6;&#x4FE1;&#x53F7;&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E9B;&#x4FE1;&#x53F7;&#x662F;&#x6709;&#x4E09;&#x4E2A;&#x201C;Value&#x201D;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x901A;&#x5E38;&#x5BF9;alpha&#x548C;sparc&#x67B6;&#x6784;&#x6709;&#x6548;&#xFF0C;&#x4E2D;&#x95F4;&#x503C;&#x9488;&#x5BF9;x86&#x3001;arm&#x548C;&#x5176;&#x4ED6;&#x67B6;&#x6784;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x4E8E;mips&#x67B6;&#x6784;&#x3002;&#x4E00;&#x4E2A;&#x2018;-&#x2019;&#x8868;&#x793A;&#x5728;&#x5BF9;&#x5E94;&#x67B6;&#x6784;&#x4E0A;&#x5C1A;&#x672A;&#x5B9A;&#x4E49;&#x8BE5;&#x4FE1;&#x53F7;&#x3002;</p>
+<p>&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5B9A;&#x4E49;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x7CFB;&#x7EDF;&#x4FE1;&#x53F7;&#x3002;&#x56E0;&#x6B64;&#x6709;&#x4E9B;&#x4FE1;&#x53F7;&#x51FA;&#x73B0;&#x5728;Unix&#x7CFB;&#x7EDF;&#x5185;&#xFF0C;&#x4E5F;&#x51FA;&#x73B0;&#x5728;Linux&#x4E2D;&#xFF0C;&#x800C;&#x6709;&#x7684;&#x4FE1;&#x53F7;&#x51FA;&#x73B0;&#x5728;FreeBSD&#x6216;Mac OS&#x4E2D;&#x5374;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x5728;Linux&#x4E0B;&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EA;&#x7814;&#x7A76;Linux&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x4FE1;&#x53F7;&#x3002;</p>
+<p><strong>&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#xFF1A;</strong></p>
+<ul>
+<li>Term&#xFF1A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;</li>
+<li>Ign&#xFF1A; &#x5FFD;&#x7565;&#x4FE1;&#x53F7; (&#x9ED8;&#x8BA4;&#x5373;&#x65F6;&#x5BF9;&#x8BE5;&#x79CD;&#x4FE1;&#x53F7;&#x5FFD;&#x7565;&#x64CD;&#x4F5C;)</li>
+<li>Core&#xFF1A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#xFF0C;&#x751F;&#x6210;Core&#x6587;&#x4EF6;&#x3002;(&#x67E5;&#x9A8C;&#x8FDB;&#x7A0B;&#x6B7B;&#x4EA1;&#x539F;&#x56E0;&#xFF0C; &#x7528;&#x4E8E;gdb&#x8C03;&#x8BD5;)</li>
+<li>Stop&#xFF1A;&#x505C;&#x6B62;&#xFF08;&#x6682;&#x505C;&#xFF09;&#x8FDB;&#x7A0B;</li>
+<li>Cont&#xFF1A;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;&#x8FDB;&#x7A0B;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#x4ECE;man 7 signal&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x4E2D;&#x53EF;&#x770B;&#x5230; : The signals SIGKILL and SIGSTOP cannot be caught, blocked, or ignored.</p>
+<p>&#x8FD9;&#x91CC;&#x7279;&#x522B;&#x5F3A;&#x8C03;&#x4E86;<strong>9) SIGKILL &#x548C;19) SIGSTOP&#x4FE1;&#x53F7;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x5FFD;&#x7565;&#x548C;&#x6355;&#x6349;&#xFF0C;&#x53EA;&#x80FD;&#x6267;&#x884C;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x3002;&#x751A;&#x81F3;&#x4E0D;&#x80FD;&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;&#x963B;&#x585E;&#x3002;</strong></p>
+<p>&#x53E6;&#x5916;&#x9700;&#x6E05;&#x695A;&#xFF0C;&#x53EA;&#x6709;&#x6BCF;&#x4E2A;&#x4FE1;&#x53F7;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x4E86;&#xFF0C;&#x8BE5;&#x4FE1;&#x53F7;&#x624D;&#x4F1A;&#x88AB;&#x9012;&#x9001;(&#x4F46;&#x4E0D;&#x4E00;&#x5B9A;&#x9012;&#x8FBE;)&#xFF0C;&#x4E0D;&#x5E94;&#x4E71;&#x53D1;&#x4FE1;&#x53F7;!!</p>
+<h3 id="linux&#x5E38;&#x89C4;&#x4FE1;&#x53F7;&#x4E00;&#x89C8;&#x8868;"><a name="linux&#x5E38;&#x89C4;&#x4FE1;&#x53F7;&#x4E00;&#x89C8;&#x8868;" class="anchor-navigation-ex-anchor" href="#linux&#x5E38;&#x89C4;&#x4FE1;&#x53F7;&#x4E00;&#x89C8;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>Linux&#x5E38;&#x89C4;&#x4FE1;&#x53F7;&#x4E00;&#x89C8;&#x8868;</h3>
+<p>1) SIGHUP: &#x5F53;&#x7528;&#x6237;&#x9000;&#x51FA;shell&#x65F6;&#xFF0C;&#x7531;&#x8BE5;shell&#x542F;&#x52A8;&#x7684;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x5C06;&#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#xFF0C;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;</p>
+<p>2) SIGINT&#xFF1A;&#x5F53;&#x7528;&#x6237;&#x6309;&#x4E0B;&#x4E86;<code>Ctrl+C</code>&#x7EC4;&#x5408;&#x952E;&#x65F6;&#xFF0C;&#x7528;&#x6237;&#x7EC8;&#x7AEF;&#x5411;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x7531;&#x8BE5;&#x7EC8;&#x7AEF;&#x542F;&#x52A8;&#x7684;&#x7A0B;&#x5E8F;&#x53D1;&#x51FA;&#x6B64;&#x4FE1;&#x53F7;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>3) SIGQUIT&#xFF1A;&#x5F53;&#x7528;&#x6237;&#x6309;&#x4E0B;<code>ctrl+\</code>&#x7EC4;&#x5408;&#x952E;&#x65F6;&#x4EA7;&#x751F;&#x8BE5;&#x4FE1;&#x53F7;&#xFF0C;&#x7528;&#x6237;&#x7EC8;&#x7AEF;&#x5411;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x7531;&#x8BE5;&#x7EC8;&#x7AEF;&#x542F;&#x52A8;&#x7684;&#x7A0B;&#x5E8F;&#x53D1;&#x51FA;&#x4E9B;&#x4FE1;&#x53F7;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>4) SIGILL&#xFF1A;CPU&#x68C0;&#x6D4B;&#x5230;&#x67D0;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x4E86;&#x975E;&#x6CD5;&#x6307;&#x4EE4;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x5E76;&#x4EA7;&#x751F;core&#x6587;&#x4EF6;</p>
+<p>5) SIGTRAP&#xFF1A;&#x8BE5;&#x4FE1;&#x53F7;&#x7531;&#x65AD;&#x70B9;&#x6307;&#x4EE4;&#x6216;&#x5176;&#x4ED6; trap&#x6307;&#x4EE4;&#x4EA7;&#x751F;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x91CC;&#x7A0B; &#x5E76;&#x4EA7;&#x751F;core&#x6587;&#x4EF6;&#x3002;</p>
+<p>6) SIGABRT: &#x8C03;&#x7528;abort&#x51FD;&#x6570;&#x65F6;&#x4EA7;&#x751F;&#x8BE5;&#x4FE1;&#x53F7;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x5E76;&#x4EA7;&#x751F;core&#x6587;&#x4EF6;&#x3002;</p>
+<p>7) SIGBUS&#xFF1A;&#x975E;&#x6CD5;&#x8BBF;&#x95EE;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x5305;&#x62EC;&#x5185;&#x5B58;&#x5BF9;&#x9F50;&#x51FA;&#x9519;&#xFF0C;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x5E76;&#x4EA7;&#x751F;core&#x6587;&#x4EF6;&#x3002;</p>
+<p>8) SIGFPE&#xFF1A;&#x5728;&#x53D1;&#x751F;&#x81F4;&#x547D;&#x7684;&#x8FD0;&#x7B97;&#x9519;&#x8BEF;&#x65F6;&#x53D1;&#x51FA;&#x3002;&#x4E0D;&#x4EC5;&#x5305;&#x62EC;&#x6D6E;&#x70B9;&#x8FD0;&#x7B97;&#x9519;&#x8BEF;&#xFF0C;&#x8FD8;&#x5305;&#x62EC;&#x6EA2;&#x51FA;&#x53CA;&#x9664;&#x6570;&#x4E3A;0&#x7B49;&#x6240;&#x6709;&#x7684;&#x7B97;&#x6CD5;&#x9519;&#x8BEF;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x5E76;&#x4EA7;&#x751F;core&#x6587;&#x4EF6;&#x3002;</p>
+<p>9) SIGKILL&#xFF1A;&#x65E0;&#x6761;&#x4EF6;<strong>&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;</strong>&#x3002;&#x672C;&#x4FE1;&#x53F7;&#x4E0D;&#x80FD;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x5904;&#x7406;&#x548C;&#x963B;&#x585E;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;&#x5B83;&#x5411;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x63D0;&#x4F9B;&#x4E86;&#x53EF;&#x4EE5;&#x6740;&#x6B7B;&#x4EFB;&#x4F55;&#x8FDB;&#x7A0B;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>10) SIGUSE1&#xFF1A;&#x7528;&#x6237;&#x5B9A;&#x4E49; &#x7684;&#x4FE1;&#x53F7;&#x3002;&#x5373;&#x7A0B;&#x5E8F;&#x5458;&#x53EF;&#x4EE5;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x5B9A;&#x4E49;&#x5E76;&#x4F7F;&#x7528;&#x8BE5;&#x4FE1;&#x53F7;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>11) SIGSEGV&#xFF1A;&#x6307;&#x793A;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#x4E86;<strong>&#x65E0;&#x6548;&#x5185;&#x5B58;&#x8BBF;&#x95EE;</strong>&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x5E76;&#x4EA7;&#x751F;core&#x6587;&#x4EF6;&#x3002;</p>
+<p>12) SIGUSR2&#xFF1A;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x4FE1;&#x53F7;&#xFF0C;&#x7A0B;&#x5E8F;&#x5458;&#x53EF;&#x4EE5;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x5B9A;&#x4E49;&#x5E76;&#x4F7F;&#x7528;&#x8BE5;&#x4FE1;&#x53F7;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>13) SIGPIPE&#xFF1A;Broken pipe&#x5411;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x8BFB;&#x7AEF;&#x7684;&#x7BA1;&#x9053;&#x5199;&#x6570;&#x636E;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>14) SIGALRM: &#x5B9A;&#x65F6;&#x5668;&#x8D85;&#x65F6;&#xFF0C;&#x8D85;&#x65F6;&#x7684;&#x65F6;&#x95F4; &#x7531;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;alarm&#x8BBE;&#x7F6E;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>15) SIGTERM&#xFF1A;&#x7A0B;&#x5E8F;&#x7ED3;&#x675F;&#x4FE1;&#x53F7;&#xFF0C;&#x4E0E;SIGKILL&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x8BE5;&#x4FE1;&#x53F7;&#x53EF;&#x4EE5;&#x88AB;&#x963B;&#x585E;&#x548C;&#x7EC8;&#x6B62;&#x3002;&#x901A;&#x5E38;&#x7528;&#x6765;&#x8981;&#x793A;&#x7A0B;&#x5E8F;&#x6B63;&#x5E38;&#x9000;&#x51FA;&#x3002;&#x6267;&#x884C;shell&#x547D;&#x4EE4;Kill&#x65F6;&#xFF0C;&#x7F3A;&#x7701;&#x4EA7;&#x751F;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>16) SIGSTKFLT&#xFF1A;Linux&#x65E9;&#x671F;&#x7248;&#x672C;&#x51FA;&#x73B0;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x73B0;&#x4ECD;&#x4FDD;&#x7559;&#x5411;&#x540E;&#x517C;&#x5BB9;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>17) SIGCHLD&#xFF1A;<strong>&#x5B50;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;</strong>&#x65F6;&#xFF0C;&#x7236;&#x8FDB;&#x7A0B;&#x4F1A;&#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x5FFD;&#x7565;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#x3002;</p>
+<p>18) SIGCONT&#xFF1A;&#x5982;&#x679C;&#x8FDB;&#x7A0B;&#x5DF2;&#x505C;&#x6B62;&#xFF0C;&#x5219;&#x4F7F;&#x5176;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EE7;&#x7EED;/&#x5FFD;&#x7565;&#x3002;</p>
+<p>19) SIGSTOP&#xFF1A;&#x505C;&#x6B62;&#x8FDB;&#x7A0B;&#x7684;&#x6267;&#x884C;&#x3002;&#x4FE1;&#x53F7;&#x4E0D;&#x80FD;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x5904;&#x7406;&#x548C;&#x963B;&#x585E;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x6682;&#x505C;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>20) SIGTSTP&#xFF1A;&#x505C;&#x6B62;&#x7EC8;&#x7AEF;&#x4EA4;&#x4E92;&#x8FDB;&#x7A0B;&#x7684;&#x8FD0;&#x884C;&#x3002;&#x6309;&#x4E0B;<code>ctrl+z</code>&#x7EC4;&#x5408;&#x952E;&#x65F6;&#x53D1;&#x51FA;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x6682;&#x505C;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>21) SIGTTIN&#xFF1A;&#x540E;&#x53F0;&#x8FDB;&#x7A0B;&#x8BFB;&#x7EC8;&#x7AEF;&#x63A7;&#x5236;&#x53F0;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x6682;&#x505C;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>22) SIGTTOU: &#x8BE5;&#x4FE1;&#x53F7;&#x7C7B;&#x4F3C;&#x4E8E;SIGTTIN&#xFF0C;&#x5728;&#x540E;&#x53F0;&#x8FDB;&#x7A0B;&#x8981;&#x5411;&#x7EC8;&#x7AEF;&#x8F93;&#x51FA;&#x6570;&#x636E;&#x65F6;&#x53D1;&#x751F;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x6682;&#x505C;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>23) SIGURG&#xFF1A;&#x5957;&#x63A5;&#x5B57;&#x4E0A;&#x6709;&#x7D27;&#x6025;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5411;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x53D1;&#x51FA;&#x4E9B;&#x4FE1;&#x53F7;&#xFF0C;&#x62A5;&#x544A;&#x6709;&#x7D27;&#x6025;&#x6570;&#x636E;&#x5230;&#x8FBE;&#x3002;&#x5982;&#x7F51;&#x7EDC;&#x5E26;&#x5916;&#x6570;&#x636E;&#x5230;&#x8FBE;&#xFF0C;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x5FFD;&#x7565;&#x8BE5;&#x4FE1;&#x53F7;&#x3002;</p>
+<p>24) SIGXCPU&#xFF1A;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x8D85;&#x8FC7;&#x4E86;&#x5206;&#x914D;&#x7ED9;&#x8BE5;&#x8FDB;&#x7A0B;&#x7684;CPU&#x65F6;&#x95F4; &#xFF0C;&#x7CFB;&#x7EDF;&#x4EA7;&#x751F;&#x8BE5;&#x4FE1;&#x53F7;&#x5E76;&#x53D1;&#x9001;&#x7ED9;&#x8BE5;&#x8FDB;&#x7A0B;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>25) SIGXFSZ&#xFF1A;&#x8D85;&#x8FC7;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x8BBE;&#x7F6E;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>26) SIGVTALRM&#xFF1A;&#x865A;&#x62DF;&#x65F6;&#x949F;&#x8D85;&#x65F6;&#x65F6;&#x4EA7;&#x751F;&#x8BE5;&#x4FE1;&#x53F7;&#x3002;&#x7C7B;&#x4F3C;&#x4E8E;SIGALRM&#xFF0C;&#x4F46;&#x662F;&#x8BE5;&#x4FE1;&#x53F7;&#x53EA;&#x8BA1;&#x7B97;&#x8BE5;&#x8FDB;&#x7A0B;&#x5360;&#x7528;CPU&#x7684;&#x4F7F;&#x7528;&#x65F6;&#x95F4;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>27) SGIPROF&#xFF1A;&#x7C7B;&#x4F3C;&#x4E8E;SIGVTALRM&#xFF0C;&#x5B83;&#x4E0D;&#x516C;&#x5305;&#x62EC;&#x8BE5;&#x8FDB;&#x7A0B;&#x5360;&#x7528;CPU&#x65F6;&#x95F4;&#x8FD8;&#x5305;&#x62EC;&#x6267;&#x884C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x65F6;&#x95F4;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>28) SIGWINCH&#xFF1A;&#x7A97;&#x53E3;&#x53D8;&#x5316;&#x5927;&#x5C0F;&#x65F6;&#x53D1;&#x51FA;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x5FFD;&#x7565;&#x8BE5;&#x4FE1;&#x53F7;&#x3002;</p>
+<p>29) SIGIO&#xFF1A;&#x6B64;&#x4FE1;&#x53F7;&#x5411;&#x8FDB;&#x7A0B;&#x6307;&#x793A;&#x53D1;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;IO&#x4E8B;&#x4EF6;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x5FFD;&#x7565;&#x3002;</p>
+<p>30) SIGPWR&#xFF1A;&#x5173;&#x673A;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>31) SIGSYS&#xFF1A;&#x65E0;&#x6548;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x3002;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x5E76;&#x4EA7;&#x751F;core&#x6587;&#x4EF6;&#x3002;</p>
+<p>34) SIGRTMIN &#xFF5E; (64) SIGRTMAX&#xFF1A;LINUX&#x7684;&#x5B9E;&#x65F6;&#x4FE1;&#x53F7;&#xFF0C;&#x5B83;&#x4EEC;&#x6CA1;&#x6709;&#x56FA;&#x5B9A;&#x7684;&#x542B;&#x4E49;&#xFF08;&#x53EF;&#x4EE5;&#x7531;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#xFF09;&#x3002;&#x6240;&#x6709;&#x7684;&#x5B9E;&#x65F6;&#x4FE1;&#x53F7;&#x7684;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x90FD;&#x4E3A;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#x3002;</p>
+<h2 id="&#x4FE1;&#x53F7;&#x7684;&#x4EA7;&#x751F;"><a name="&#x4FE1;&#x53F7;&#x7684;&#x4EA7;&#x751F;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x53F7;&#x7684;&#x4EA7;&#x751F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x53F7;&#x7684;&#x4EA7;&#x751F;</h2>
+<h3 id="&#x7EC8;&#x7AEF;&#x6309;&#x952E;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><a name="&#x7EC8;&#x7AEF;&#x6309;&#x952E;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x7EC8;&#x7AEF;&#x6309;&#x952E;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC8;&#x7AEF;&#x6309;&#x952E;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</h3>
+<ul>
+<li><strong>Ctrl + C</strong>  &#x2192;  <strong>2) SIGINT</strong>&#xFF08;&#x7EC8;&#x6B62;/&#x4E2D;&#x65AD;&#xFF09;  &quot;INT&quot; ----Interrupt</li>
+<li>Ctrl + Z   &#x2192;  20) SIGTSTP&#xFF08;&#x6682;&#x505C;/&#x505C;&#x6B62;&#xFF09;  &quot;T&quot; ----Terminal &#x7EC8;&#x7AEF;&#x3002;</li>
+<li>Ctrl + \    &#x2192;  3) SIGQUIT&#xFF08;&#x9000;&#x51FA;&#xFF09;</li>
+</ul>
+<h3 id="&#x786C;&#x4EF6;&#x5F02;&#x5E38;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><a name="&#x786C;&#x4EF6;&#x5F02;&#x5E38;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x786C;&#x4EF6;&#x5F02;&#x5E38;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x786C;&#x4EF6;&#x5F02;&#x5E38;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</h3>
+<ul>
+<li>&#x9664;0&#x64CD;&#x4F5C;           &#x2192;    8) SIGFPE (&#x6D6E;&#x70B9;&#x6570;&#x4F8B;&#x5916;) &quot;F&quot; -----float &#x6D6E;&#x70B9;&#x6570;&#x3002;</li>
+<li><strong>&#x975E;&#x6CD5;&#x8BBF;&#x95EE;&#x5185;&#x5B58;</strong>   &#x2192;   <strong>11) SIGSEGV (&#x6BB5;&#x9519;&#x8BEF;)</strong></li>
+<li>&#x603B;&#x7EBF;&#x9519;&#x8BEF;          &#x2192;    7) SIGBUS</li>
+</ul>
+<h3 id="kill&#x547D;&#x4EE4;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><a name="kill&#x547D;&#x4EE4;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;" class="anchor-navigation-ex-anchor" href="#kill&#x547D;&#x4EE4;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>kill&#x547D;&#x4EE4;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</h3>
+<p>kill&#x547D;&#x4EE4;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;&#xFF1A;</p>
+<pre><code>kill -SIGKILL pid    # &#x7ED9;pid&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x4FE1;&#x53F7;
+</code></pre><h3 id="killraiseabort&#x7CFB;&#x7EDF;&#x8C03;&#x7528;"><a name="killraiseabort&#x7CFB;&#x7EDF;&#x8C03;&#x7528;" class="anchor-navigation-ex-anchor" href="#killraiseabort&#x7CFB;&#x7EDF;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>kill/raise/abort&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</h3>
+<h4 id="kill&#x51FD;&#x6570;"><a name="kill&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#kill&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>kill&#x51FD;&#x6570;</h4>
+<p>kill&#x51FD;&#x6570;&#xFF1A;&#x7ED9;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x6307;&#x5B9A;&#x4FE1;&#x53F7;(&#x4E0D;&#x4E00;&#x5B9A;&#x6740;&#x6B7B;)</p>
+<blockquote>
+<p>int kill(pid_t pid, int sig); 
+&#x6210;&#x529F;&#xFF1A;0&#xFF1B;
+&#x5931;&#x8D25;&#xFF1A;-1 (ID&#x975E;&#x6CD5;&#xFF0C;&#x4FE1;&#x53F7;&#x975E;&#x6CD5;&#xFF0C;&#x666E;&#x901A;&#x7528;&#x6237;&#x6740;init&#x8FDB;&#x7A0B;&#x7B49;&#x6743;&#x7EA7;&#x95EE;&#x9898;)&#xFF0C;&#x8BBE;&#x7F6E;errno</p>
+</blockquote>
+<p>pid &gt; 0: &#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x8FDB;&#x7A0B;&#x3002;
+pid = 0: &#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7ED9; &#x4E0E;&#x8C03;&#x7528;kill&#x51FD;&#x6570;&#x8FDB;&#x7A0B;&#x5C5E;&#x4E8E;<strong>&#x540C;&#x4E00;&#x8FDB;&#x7A0B;&#x7EC4;</strong>&#x7684;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x3002;
+pid &lt; 0: &#x53D6;|pid|&#x53D1;&#x7ED9;&#x5BF9;&#x5E94;&#x8FDB;&#x7A0B;&#x7EC4;&#x3002;
+pid = -1&#xFF1A;&#x53D1;&#x9001;&#x7ED9;&#x8FDB;&#x7A0B;&#x6709;&#x6743;&#x9650;&#x53D1;&#x9001;&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p>sig&#xFF1A;&#x4E0D;&#x63A8;&#x8350;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x6570;&#x5B57;&#xFF0C;&#x5E94;&#x4F7F;&#x7528;&#x5B8F;&#x540D;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x540C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4FE1;&#x53F7;&#x7F16;&#x53F7;&#x53EF;&#x80FD;&#x4E0D;&#x540C;&#xFF0C;&#x4F46;&#x540D;&#x79F0;&#x4E00;&#x81F4;&#x3002;</p>
+<p>&#x8FDB;&#x7A0B;&#x7EC4;&#xFF1A;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x90FD;&#x5C5E;&#x4E8E;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x7EC4;&#xFF0C;&#x8FDB;&#x7A0B;&#x7EC4;&#x662F;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x8FDB;&#x7A0B;&#x96C6;&#x5408;&#xFF0C;&#x4ED6;&#x4EEC;&#x76F8;&#x4E92;&#x5173;&#x8054;&#xFF0C;&#x5171;&#x540C;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#x4EFB;&#x52A1;&#xFF0C;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x7EC4;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x7EC4;&#x957F;&#xFF0C;&#x9ED8;&#x8BA4;&#x8FDB;&#x7A0B;&#x7EC4;ID&#x4E0E;&#x8FDB;&#x7A0B;&#x7EC4;&#x957F;ID&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x6743;&#x9650;&#x4FDD;&#x62A4;&#xFF1A;super&#x7528;&#x6237;(root)&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7ED9;&#x4EFB;&#x610F;&#x7528;&#x6237;&#xFF0C;&#x666E;&#x901A;&#x7528;&#x6237;&#x662F;&#x4E0D;&#x80FD;&#x5411;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7684;&#x3002; kill -9 (root&#x7528;&#x6237;&#x7684;pid) &#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x7684;&#x3002;&#x540C;&#x6837;&#xFF0C;&#x666E;&#x901A;&#x7528;&#x6237;&#x4E5F;&#x4E0D;&#x80FD;&#x5411;&#x5176;&#x4ED6;&#x666E;&#x901A;&#x7528;&#x6237;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#xFF0C;&#x7EC8;&#x6B62;&#x5176;&#x8FDB;&#x7A0B;&#x3002; &#x53EA;&#x80FD;&#x5411;&#x81EA;&#x5DF1;&#x521B;&#x5EFA;&#x7684;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x3002;&#x666E;&#x901A;&#x7528;&#x6237;&#x57FA;&#x672C;&#x89C4;&#x5219;&#x662F;&#xFF1A;&#x53D1;&#x9001;&#x8005;&#x5B9E;&#x9645;&#x6216;&#x6709;&#x6548;&#x7528;&#x6237;ID == &#x63A5;&#x6536;&#x8005;&#x5B9E;&#x9645;&#x6216;&#x6709;&#x6548;&#x7528;&#x6237;ID</p>
+<p>&#x7EC3;&#x4E60;&#xFF1A;&#x5FAA;&#x73AF;&#x521B;&#x5EFA;5&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x4EFB;&#x4E00;&#x5B50;&#x8FDB;&#x7A0B;&#x7528;kill&#x51FD;&#x6570;&#x7EC8;&#x6B62;&#x5176;&#x7236;&#x8FDB;&#x7A0B;&#x3002; &#x3010;kill.c&#x3011;</p>
+<h4 id="raise-&#x51FD;&#x6570;"><a name="raise-&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#raise-&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>raise &#x51FD;&#x6570;</h4>
+<p>raise &#x51FD;&#x6570;&#xFF1A;&#x7ED9;<strong>&#x5F53;&#x524D;&#x8FDB;&#x7A0B;</strong>&#x81EA;&#x5DF1;&#x53D1;&#x9001;&#x6307;&#x5B9A;&#x4FE1;&#x53F7;(&#x81EA;&#x5DF1;&#x7ED9;&#x81EA;&#x5DF1;&#x53D1;)&#x3002; raise(signo) &#x7B49;&#x4EF7;&#x4E8E; kill(getpid(), signo);</p>
+<blockquote>
+<p>int raise(int sig); 
+&#x6210;&#x529F;&#xFF1A;0&#xFF0C;
+&#x5931;&#x8D25;&#xFF1A;&#x975E;0&#x503C;</p>
+</blockquote>
+<h4 id="abort-&#x51FD;&#x6570;"><a name="abort-&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#abort-&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>abort &#x51FD;&#x6570;</h4>
+<p>abort &#x51FD;&#x6570;&#xFF1A;&#x7ED9;<strong>&#x5F53;&#x524D;&#x8FDB;&#x7A0B;</strong>&#x81EA;&#x5DF1;&#x53D1;&#x9001;&#x5F02;&#x5E38;&#x7EC8;&#x6B62;&#x4FE1;&#x53F7; 6) SIGABRT &#x4FE1;&#x53F7;&#xFF0C;&#x7EC8;&#x6B62;&#x5E76;&#x4EA7;&#x751F;core&#x6587;&#x4EF6;</p>
+<blockquote>
+<p>void abort(void); 
+&#x65E0;&#x8FD4;&#x56DE;</p>
+</blockquote>
+<h3 id="&#x8F6F;&#x4EF6;&#x6761;&#x4EF6;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><a name="&#x8F6F;&#x4EF6;&#x6761;&#x4EF6;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x8F6F;&#x4EF6;&#x6761;&#x4EF6;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F6F;&#x4EF6;&#x6761;&#x4EF6;&#x4EA7;&#x751F;&#x4FE1;&#x53F7;</h3>
+<h4 id="alarm&#x51FD;&#x6570;"><a name="alarm&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#alarm&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>alarm&#x51FD;&#x6570;</h4>
+<p>&#x8BBE;&#x7F6E;&#x5B9A;&#x65F6;&#x5668;(&#x95F9;&#x949F;)&#x3002;&#x5728;&#x6307;&#x5B9A;seconds&#x79D2;&#x540E;&#xFF0C;&#x5185;&#x6838;&#x4F1A;&#x7ED9;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;<strong>&#x53D1;&#x9001;</strong> <code>14&#xFF09;SIGALRM</code><strong>&#x4FE1;&#x53F7;</strong>&#x3002;&#x8FDB;&#x7A0B;&#x6536;&#x5230;&#x8BE5;&#x4FE1;&#x53F7;&#xFF0C;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x7EC8;&#x6B62;&#x3002;&#x7F3A;&#x70B9;:&#x7CBE;&#x5EA6;&#x79D2;&#x7EA7;,&#x4E00;&#x6B21;&#x53EA;&#x80FD;&#x5B9A;&#x65F6;&#x4E00;&#x6B21;&#x3002;</p>
+<p><strong><em>&#x6BCF;&#x4E2A;(&#x5B50;)&#x8FDB;&#x7A0B;&#x90FD;&#x6709;&#x4E14;&#x53EA;&#x6709;&#x552F;&#x4E00;&#x4E2A;&#x5B9A;&#x65F6;&#x5668;</em>&#x3002;</strong></p>
+<blockquote>
+<p>unsigned int alarm(unsigned int seconds); 
+&#x8FD4;&#x56DE;0&#x6216;&#x5269;&#x4F59;&#x7684;&#x79D2;&#x6570;&#xFF0C;&#x65E0;&#x5931;&#x8D25;&#x3002;</p>
+</blockquote>
+<p>&#x5E38;&#x7528;&#xFF1A;<strong>&#x53D6;&#x6D88;</strong>&#x5B9A;&#x65F6;&#x5668;alarm(0)&#xFF0C;&#x8FD4;&#x56DE;&#x65E7;&#x95F9;&#x949F;&#x4F59;&#x4E0B;&#x79D2;&#x6570;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;alarm(5) &#x2192; 3sec &#x2192; alarm(4) &#x2192; 5sec &#x2192; alarm(5) &#x2192; alarm(0)
+    &#x8FD4;&#x56DE;0             &#x8FD4;&#x56DE;2       SIG    &#x8FD4;&#x56DE;0        &#x8FD4;&#x56DE;5</p>
+<p>alarm&#x5B9A;&#x65F6;&#xFF0C;&#x4E0E;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x65E0;&#x5173;(&#x81EA;&#x7136;&#x5B9A;&#x65F6;&#x6CD5;)&#xFF01;&#x5C31;&#x7EEA;&#x3001;&#x8FD0;&#x884C;&#x3001;&#x6302;&#x8D77;(&#x963B;&#x585E;&#x3001;&#x6682;&#x505C;)&#x3001;&#x7EC8;&#x6B62;&#x3001;&#x50F5;&#x5C38;...&#x65E0;&#x8BBA;&#x8FDB;&#x7A0B;&#x5904;&#x4E8E;&#x4F55;&#x79CD;&#x72B6;&#x6001;&#xFF0C;alarm&#x90FD;&#x8BA1;&#x65F6;&#x3002;</p>
+<p>&#x7EC3;&#x4E60;&#xFF1A;&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#xFF0C;&#x6D4B;&#x8BD5;&#x4F60;&#x4F7F;&#x7528;&#x7684;&#x8BA1;&#x7B97;&#x673A;1&#x79D2;&#x949F;&#x80FD;&#x6570;&#x591A;&#x5C11;&#x4E2A;&#x6570;&#x3002; &#x3010;alarm .c&#x3011;</p>
+<p>&#x4F7F;&#x7528;time&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x7684;&#x65F6;&#x95F4;&#x3002; &#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x7684;&#x74F6;&#x9888;&#x5728;&#x4E8E;IO&#xFF0C;&#x4F18;&#x5316;&#x7A0B;&#x5E8F;&#xFF0C;&#x9996;&#x9009;<strong>&#x4F18;&#x5316;IO</strong>&#x3002;</p>
+<p>&#x5B9E;&#x9645;&#x6267;&#x884C;&#x65F6;&#x95F4; = &#x7CFB;&#x7EDF;&#x65F6;&#x95F4; + &#x7528;&#x6237;&#x65F6;&#x95F4; + &#x7B49;&#x5F85;&#x65F6;&#x95F4;</p>
+<pre><code>time xxx  # &#x67E5;&#x770B;&#x7A0B;&#x5E8F;xxx&#x6267;&#x884C;&#x7684;&#x65F6;&#x95F4;
+</code></pre><h4 id="setitimer&#x51FD;&#x6570;"><a name="setitimer&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#setitimer&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>setitimer&#x51FD;&#x6570;</h4>
+<p>&#x8BBE;&#x7F6E;&#x5B9A;&#x65F6;&#x5668;(&#x95F9;&#x949F;)&#x3002; <strong>&#x53EF;&#x4EE3;&#x66FF;alarm</strong>&#x51FD;&#x6570;&#x3002;&#x7CBE;&#x5EA6;&#x5FAE;&#x79D2;us&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5468;&#x671F;&#x5B9A;&#x65F6;&#x3002;</p>
+<blockquote>
+<p>int setitimer(int which, const struct itimerval *new_value, struct itimerval *old_value); 
+&#x6210;&#x529F;&#xFF1A;0&#xFF1B;
+&#x5931;&#x8D25;&#xFF1A;-1&#xFF0C;&#x8BBE;&#x7F6E;errno</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;which&#xFF1A;&#x6307;&#x5B9A;&#x5B9A;&#x65F6;&#x65B9;&#x5F0F;</p>
+<p>&#x2460; &#x81EA;&#x7136;&#x5B9A;&#x65F6;&#xFF1A;ITIMER_REAL &#x2192; 14&#xFF09;SIGLARM &#x8BA1;&#x7B97;&#x81EA;&#x7136;&#x65F6;&#x95F4;</p>
+<p>&#x2461; &#x865A;&#x62DF;&#x7A7A;&#x95F4;&#x8BA1;&#x65F6;(&#x7528;&#x6237;&#x7A7A;&#x95F4;)&#xFF1A;ITIMER_VIRTUAL &#x2192; 26&#xFF09;SIGVTALRM &#x53EA;&#x8BA1;&#x7B97;&#x8FDB;&#x7A0B;&#x5360;&#x7528;cpu&#x7684;&#x65F6;&#x95F4;</p>
+<p>&#x2462; &#x8FD0;&#x884C;&#x65F6;&#x8BA1;&#x65F6;(&#x7528;&#x6237;+&#x5185;&#x6838;)&#xFF1A;ITIMER_PROF &#x2192; 27&#xFF09;SIGPROF &#x8BA1;&#x7B97;&#x5360;&#x7528;cpu&#x53CA;&#x6267;&#x884C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x95F4;</p>
+<p>&#x7EC3;&#x4E60;: &#x4F7F;&#x7528;setitimer&#x51FD;&#x6570;&#x5B9E;&#x73B0;alarm&#x51FD;&#x6570;&#xFF0C;&#x91CD;&#x590D;&#x8BA1;&#x7B97;&#x673A;1&#x79D2;&#x6570;&#x6570;&#x7A0B;&#x5E8F;&#x3002; &#x3010;setitimer.c&#x3011;</p>
+<p>&#x62D3;&#x5C55;&#x7EC3;&#x4E60;&#xFF0C;&#x7ED3;&#x5408;man page&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#xFF0C;&#x6D4B;&#x8BD5;it_interval&#x3001;it_value&#x8FD9;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x3002; &#x3010;setitimer1.c&#x3011;</p>
+<p>&#x63D0;&#x793A;&#xFF1A;     it_value&#xFF1A;&#x5B9A;&#x65F6;&#x7684;&#x65F6;&#x957F;(&#x7B2C;&#x4E00;&#x6B21;&#x5B9A;&#x65F6;&#x7684;&#x65F6;&#x957F;)
+        it_interval&#xFF1A;&#x7528;&#x6765;&#x8BBE;&#x5B9A;&#x4E24;&#x6B21;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x4E4B;&#x95F4;&#x95F4;&#x9694;&#x7684;&#x65F6;&#x95F4;(&#x7B2C;&#x4E8C;&#x6B21;&#x540E;&#x65F6;&#x957F;&#x95F4;&#x9694;&#x5468;&#x671F;)
+        &#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x90FD;&#x8BBE;&#x7F6E;&#x4E3A;0&#xFF0C;&#x5373;&#x6E05;0&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="&#x4FE1;&#x53F7;&#x96C6;&#x64CD;&#x4F5C;&#x51FD;&#x6570;"><a name="&#x4FE1;&#x53F7;&#x96C6;&#x64CD;&#x4F5C;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x53F7;&#x96C6;&#x64CD;&#x4F5C;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x53F7;&#x96C6;&#x64CD;&#x4F5C;&#x51FD;&#x6570;</h2>
+<p>&#x5185;&#x6838;&#x901A;&#x8FC7;&#x8BFB;&#x53D6;&#x672A;&#x51B3;&#x4FE1;&#x53F7;&#x96C6;&#x6765;&#x5224;&#x65AD;&#x4FE1;&#x53F7;&#x662F;&#x5426;&#x5E94;&#x88AB;&#x5904;&#x7406;&#x3002;&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x5B57;mask&#x53EF;&#x4EE5;&#x5F71;&#x54CD;&#x672A;&#x51B3;&#x4FE1;&#x53F7;&#x96C6;&#x3002;&#x800C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x81EA;&#x5B9A;&#x4E49;set&#x6765;&#x6539;&#x53D8;mask&#x3002;&#x5DF2;&#x8FBE;&#x5230;&#x5C4F;&#x853D;&#x6307;&#x5B9A;&#x4FE1;&#x53F7;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<h3 id="&#x8BBE;&#x5B9A;&#x4FE1;&#x53F7;&#x96C6;"><a name="&#x8BBE;&#x5B9A;&#x4FE1;&#x53F7;&#x96C6;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5B9A;&#x4FE1;&#x53F7;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5B9A;&#x4FE1;&#x53F7;&#x96C6;</h3>
+<p>sigset_t set; // typedef unsigned long sigset_t;</p>
+<blockquote>
+<p>int sigemptyset(sigset_t *set); &#x5C06;&#x67D0;&#x4E2A;&#x4FE1;&#x53F7;&#x96C6;&#x6E05;0 &#x6210;&#x529F;&#xFF1A;0&#xFF1B;&#x5931;&#x8D25;&#xFF1A;-1</p>
+<p>int sigfillset(sigset_t *set); &#x5C06;&#x67D0;&#x4E2A;&#x4FE1;&#x53F7;&#x96C6;&#x7F6E;1 &#x6210;&#x529F;&#xFF1A;0&#xFF1B;&#x5931;&#x8D25;&#xFF1A;-1</p>
+<p>int sigaddset(sigset_t *set, int signum); &#x5C06;&#x67D0;&#x4E2A;&#x4FE1;&#x53F7;&#x52A0;&#x5165;&#x4FE1;&#x53F7;&#x96C6; &#x6210;&#x529F;&#xFF1A;0&#xFF1B;&#x5931;&#x8D25;&#xFF1A;-1</p>
+<p>int sigdelset(sigset_t *set, int signum); &#x5C06;&#x67D0;&#x4E2A;&#x4FE1;&#x53F7;&#x6E05;&#x51FA;&#x4FE1;&#x53F7;&#x96C6; &#x6210;&#x529F;&#xFF1A;0&#xFF1B;&#x5931;&#x8D25;&#xFF1A;-1</p>
+<p>int sigismember(const sigset_t *set, int signum);&#x5224;&#x65AD;&#x67D0;&#x4E2A;&#x4FE1;&#x53F7;&#x662F;&#x5426;&#x5728;&#x4FE1;&#x53F7;&#x96C6;&#x4E2D; &#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5728;&#x96C6;&#x5408;&#xFF1A;1&#xFF1B;&#x4E0D;&#x5728;&#xFF1A;0&#xFF1B;&#x51FA;&#x9519;&#xFF1A;-1</p>
+</blockquote>
+<p>sigset_t&#x7C7B;&#x578B;&#x7684;&#x672C;&#x8D28;&#x662F;&#x4F4D;&#x56FE;&#x3002;&#x4F46;&#x4E0D;&#x5E94;&#x8BE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4F4D;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x51FD;&#x6570;&#xFF0C;&#x4FDD;&#x8BC1;&#x8DE8;&#x7CFB;&#x7EDF;&#x64CD;&#x4F5C;&#x6709;&#x6548;&#x3002;</p>
+<p>&#x5BF9;&#x6BD4;&#x8BA4;&#x77E5;select &#x51FD;&#x6570;&#x3002;</p>
+<h3 id="sigprocmask&#x51FD;&#x6570;"><a name="sigprocmask&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#sigprocmask&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>sigprocmask&#x51FD;&#x6570;</h3>
+<p>&#x7528;&#x6765;&#x5C4F;&#x853D;&#x4FE1;&#x53F7;&#x3001;&#x89E3;&#x9664;&#x5C4F;&#x853D;&#x4E5F;&#x4F7F;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x3002;&#x5176;&#x672C;&#x8D28;&#xFF0C;&#x8BFB;&#x53D6;&#x6216;&#x4FEE;&#x6539;&#x8FDB;&#x7A0B;&#x7684;&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x5B57;(PCB&#x4E2D;)</p>
+<p>&#x4E25;&#x683C;&#x6CE8;&#x610F;&#xFF0C;<strong>&#x5C4F;&#x853D;&#x4FE1;&#x53F7;</strong>&#xFF1A;&#x53EA;&#x662F;&#x5C06;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x5EF6;&#x540E;&#x6267;&#x884C;(&#x5EF6;&#x81F3;&#x89E3;&#x9664;&#x5C4F;&#x853D;)&#xFF1B;&#x800C;<strong>&#x5FFD;&#x7565;</strong>&#x8868;&#x793A;&#x5C06;&#x4FE1;&#x53F7;&#x4E22;&#x5904;&#x7406;&#x3002;</p>
+<blockquote>
+<p>int sigprocmask(int how, const sigset_t *set, sigset_t *oldset); 
+&#x6210;&#x529F;&#xFF1A;0&#xFF1B;
+&#x5931;&#x8D25;&#xFF1A;-1&#xFF0C;&#x8BBE;&#x7F6E;errno</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<p>how&#x53C2;&#x6570;&#x53D6;&#x503C;&#xFF1A; &#x5047;&#x8BBE;&#x5F53;&#x524D;&#x7684;&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x5B57;&#x4E3A;mask</p>
+<ol>
+<li>SIG_BLOCK: &#x5F53;how&#x8BBE;&#x7F6E;&#x4E3A;&#x6B64;&#x503C;&#xFF0C;set&#x8868;&#x793A;&#x9700;&#x8981;&#x5C4F;&#x853D;&#x7684;&#x4FE1;&#x53F7;&#x3002;&#x76F8;&#x5F53;&#x4E8E; mask = mask|set</li>
+<li>SIG_UNBLOCK: &#x5F53;how&#x8BBE;&#x7F6E;&#x4E3A;&#x6B64;&#xFF0C;set&#x8868;&#x793A;&#x9700;&#x8981;&#x89E3;&#x9664;&#x5C4F;&#x853D;&#x7684;&#x4FE1;&#x53F7;&#x3002;&#x76F8;&#x5F53;&#x4E8E; mask = mask &amp; ~set</li>
+<li>SIG_SETMASK: &#x5F53;how&#x8BBE;&#x7F6E;&#x4E3A;&#x6B64;&#xFF0C;set&#x8868;&#x793A;&#x7528;&#x4E8E;&#x66FF;&#x4EE3;&#x539F;&#x59CB;&#x5C4F;&#x853D;&#x53CA;&#x7684;&#x65B0;&#x5C4F;&#x853D;&#x96C6;&#x3002;&#x76F8;&#x5F53;&#x4E8E; mask = set&#x82E5;&#xFF0C;&#x8C03;&#x7528;sigprocmask&#x89E3;&#x9664;&#x4E86;&#x5BF9;&#x5F53;&#x524D;&#x82E5;&#x5E72;&#x4E2A;&#x4FE1;&#x53F7;&#x7684;&#x963B;&#x585E;&#xFF0C;&#x5219;&#x5728;sigprocmask&#x8FD4;&#x56DE;&#x524D;&#xFF0C;&#x81F3;&#x5C11;&#x5C06;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x9012;&#x8FBE;&#x3002;</li>
+</ol>
+<p>set&#xFF1A;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x4F4D;&#x56FE;&#xFF0C;set&#x4E2D;&#x54EA;&#x4F4D;&#x7F6E;1&#xFF0C;&#x5C31;&#x8868;&#x793A;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5C4F;&#x853D;&#x54EA;&#x4E2A;&#x4FE1;&#x53F7;&#x3002;
+oldset&#xFF1A;&#x4F20;&#x51FA;&#x53C2;&#x6570;&#xFF0C;&#x4FDD;&#x5B58;&#x65E7;&#x7684;&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x96C6;&#x3002;</p>
+<h3 id="sigpending&#x51FD;&#x6570;"><a name="sigpending&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#sigpending&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>sigpending&#x51FD;&#x6570;</h3>
+<p>sigpending&#x8BFB;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;<strong>&#x672A;&#x51B3;</strong>&#x4FE1;&#x53F7;&#x96C6;</p>
+<blockquote>
+<p>int sigpending(sigset_t *set); set&#x4F20;&#x51FA;&#x53C2;&#x6570;&#x3002; 
+&#x6210;&#x529F;&#xFF1A;0&#xFF1B;
+&#x5931;&#x8D25;&#xFF1A;-1&#xFF0C;&#x8BBE;&#x7F6E;errno</p>
+</blockquote>
+<p>&#x7EC3;&#x4E60;&#xFF1A;&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#x3002;&#x628A;&#x6240;&#x6709;&#x5E38;&#x89C4;&#x4FE1;&#x53F7;&#x7684;&#x672A;&#x51B3;&#x72B6;&#x6001;&#x6253;&#x5370;&#x81F3;&#x5C4F;&#x5E55;&#x3002; &#x3010;sigpending.c&#x3011;</p>
+<h2 id="&#x4FE1;&#x53F7;&#x6355;&#x6349;"><a name="&#x4FE1;&#x53F7;&#x6355;&#x6349;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x53F7;&#x6355;&#x6349;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x53F7;&#x6355;&#x6349;</h2>
+<h3 id="signal&#x51FD;&#x6570;"><a name="signal&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#signal&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>signal&#x51FD;&#x6570;</h3>
+<p>&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x51FD;&#x6570;&#xFF1A;</p>
+<p>typedef void (*sighandler_t)(int);</p>
+<blockquote>
+<p>sighandler_t signal(int signum, sighandler_t handler);</p>
+</blockquote>
+<p>&#x8BE5;&#x51FD;&#x6570;&#x7531;ANSI&#x5B9A;&#x4E49;&#xFF0C;&#x7531;&#x4E8E;&#x5386;&#x53F2;&#x539F;&#x56E0;&#x5728;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;Unix&#x548C;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;Linux&#x4E2D;&#x53EF;&#x80FD;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x56E0;&#x6B64;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x5B83;&#xFF0C;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x4F7F;&#x7528;sigaction&#x51FD;&#x6570;&#x3002;</p>
+<p>void (*signal(int signum, void (*sighandler_t)(int))) (int);</p>
+<p>&#x80FD;&#x770B;&#x51FA;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4EE3;&#x8868;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#x5417;&#xFF1F; &#x6CE8;&#x610F;&#x591A;&#x5728;&#x590D;&#x6742;&#x7ED3;&#x6784;&#x4E2D;&#x4F7F;&#x7528;typedef&#x3002;</p>
+<h3 id="sigaction&#x51FD;&#x6570;"><a name="sigaction&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#sigaction&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>sigaction&#x51FD;&#x6570;</h3>
+<p>sigaction&#x4FEE;&#x6539;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x52A8;&#x4F5C;&#xFF08;&#x901A;&#x5E38;&#x5728;Linux&#x7528;&#x5176;&#x6765;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x7684;&#x6355;&#x6349;&#x51FD;&#x6570;&#xFF09;</p>
+<blockquote>
+<p>int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact); 
+&#x6210;&#x529F;&#xFF1A;0&#xFF1B;
+&#x5931;&#x8D25;&#xFF1A;-1&#xFF0C;&#x8BBE;&#x7F6E;errno</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<p>act&#xFF1A;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x65B0;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>oldact&#xFF1A;&#x4F20;&#x51FA;&#x53C2;&#x6570;&#xFF0C;&#x65E7;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x3002; &#x3010;signal.c&#x3011;</p>
+<h4 id="struct-sigaction&#x7ED3;&#x6784;&#x4F53;"><a name="struct-sigaction&#x7ED3;&#x6784;&#x4F53;" class="anchor-navigation-ex-anchor" href="#struct-sigaction&#x7ED3;&#x6784;&#x4F53;"><i class="fa fa-link" aria-hidden="true"></i></a>struct sigaction&#x7ED3;&#x6784;&#x4F53;</h4>
+<p>struct sigaction {
+void (*sa_handler)(int);
+void (*<strong>sa_sigaction</strong>)(int, siginfo_t *, void *);
+sigset_t <strong>sa_mask</strong>;
+int <strong>sa_flags</strong>;
+void (*sa_restorer)(void);
+};</p>
+<p>&#x91CD;&#x70B9;&#x638C;&#x63E1;&#xFF1A;</p>
+<p>&#x2460; sa_handler&#xFF1A;&#x6307;&#x5B9A;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x540E;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x540D;(&#x5373;&#x6CE8;&#x518C;&#x51FD;&#x6570;)&#x3002;&#x4E5F;&#x53EF;&#x8D4B;&#x503C;&#x4E3A;SIG_IGN&#x8868;&#x5FFD;&#x7565; &#x6216; SIG_DFL&#x8868;&#x6267;&#x884C;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;</p>
+<p>&#x2461; sa_mask: &#x8C03;&#x7528;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x6240;&#x8981;&#x5C4F;&#x853D;&#x7684;&#x4FE1;&#x53F7;&#x96C6;&#x5408;(&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x5B57;)&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x4EC5;&#x5728;&#x5904;&#x7406;&#x51FD;&#x6570;&#x88AB;&#x8C03;&#x7528;&#x671F;&#x95F4;&#x5C4F;&#x853D;&#x751F;&#x6548;&#xFF0C;&#x662F;&#x4E34;&#x65F6;&#x6027;&#x8BBE;&#x7F6E;&#x3002;</p>
+<p>&#x2462; sa_flags&#xFF1A;&#x901A;&#x5E38;&#x8BBE;&#x7F6E;&#x4E3A;0&#xFF0C;&#x8868;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x5C5E;&#x6027;&#x3002;</p>
+<p>sa_restorer&#xFF1A;&#x8BE5;&#x5143;&#x7D20;&#x662F;&#x8FC7;&#x65F6;&#x7684;&#xFF0C;&#x4E0D;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#xFF0C;POSIX.1&#x6807;&#x51C6;&#x5C06;&#x4E0D;&#x6307;&#x5B9A;&#x8BE5;&#x5143;&#x7D20;&#x3002;(&#x5F03;&#x7528;)
+sa_sigaction&#xFF1A;&#x5F53;sa_flags&#x88AB;&#x6307;&#x5B9A;&#x4E3A;SA_SIGINFO&#x6807;&#x5FD7;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x8BE5;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;(&#x5F88;&#x5C11;&#x4F7F;&#x7528;)</p>
+<h4 id="&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x7279;&#x6027;"><a name="&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x7279;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x7279;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x7279;&#x6027;</h4>
+<ol>
+<li><p>&#x8FDB;&#x7A0B;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;PCB&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x5B57;&#xFF0C;&#x5047;&#x5B9A;&#x4E3A;&#x2606;&#xFF0C;&#x5B83;&#x51B3;&#x5B9A;&#x4E86;&#x8FDB;&#x7A0B;&#x81EA;&#x52A8;&#x5C4F;&#x853D;&#x54EA;&#x4E9B;&#x4FE1;&#x53F7;&#x3002;&#x5F53;&#x6CE8;&#x518C;&#x4E86;&#x67D0;&#x4E2A;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x51FD;&#x6570;&#xFF0C;&#x6355;&#x6349;&#x5230;&#x8BE5;&#x4FE1;&#x53F7;&#x4EE5;&#x540E;&#xFF0C;&#x8981;&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x3002;&#x800C;&#x8BE5;&#x51FD;&#x6570;&#x6709;&#x53EF;&#x80FD;&#x6267;&#x884C;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#xFF0C;&#x5728;&#x8FD9;&#x671F;&#x95F4;&#x6240;&#x5C4F;&#x853D;&#x7684;&#x4FE1;&#x53F7;&#x4E0D;&#x7531;&#x2606;&#x6765;&#x6307;&#x5B9A;&#x3002;&#x800C;&#x662F;&#x7528;sa_mask&#x6765;&#x6307;&#x5B9A;&#x3002;&#x8C03;&#x7528;&#x5B8C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x518D;&#x6062;&#x590D;&#x4E3A;&#x2606;&#x3002;</p>
+</li>
+<li><p>XXX&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x51FD;&#x6570;&#x6267;&#x884C;&#x671F;&#x95F4;&#xFF0C;XXX&#x4FE1;&#x53F7;&#x81EA;&#x52A8;&#x88AB;&#x5C4F;&#x853D;&#x3002;</p>
+</li>
+<li><p>&#x963B;&#x585E;&#x7684;&#x5E38;&#x89C4;&#x4FE1;&#x53F7;&#x4E0D;&#x652F;&#x6301;&#x6392;&#x961F;&#xFF0C;&#x4EA7;&#x751F;&#x591A;&#x6B21;<strong>&#x53EA;&#x8BB0;&#x5F55;&#x4E00;&#x6B21;</strong>&#x3002;&#xFF08;&#x540E;32&#x4E2A;&#x5B9E;&#x65F6;&#x4FE1;&#x53F7;&#x652F;&#x6301;&#x6392;&#x961F;&#xFF09;</p>
+</li>
+</ol>
+<p>&#x7EC3;&#x4E60;1&#xFF1A;&#x4E3A;&#x67D0;&#x4E2A;&#x4FE1;&#x53F7;&#x8BBE;&#x7F6E;&#x6355;&#x6349;&#x51FD;&#x6570; &#x3010;sigaction1.c&#x3011;
+&#x7EC3;&#x4E60;2&#xFF1A; &#x9A8C;&#x8BC1;&#x5728;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;&#x6267;&#x884C;&#x671F;&#x95F4;&#xFF0C;&#x8BE5;&#x4FE1;&#x53F7;&#x591A;&#x6B21;&#x9012;&#x9001;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x5728;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E4B;&#x884C;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x5904;&#x7406;&#x4E00;&#x6B21;&#x3002; &#x3010;sigaction2.c&#x3011;
+&#x7EC3;&#x4E60;3&#xFF1A;&#x9A8C;&#x8BC1;sa_mask&#x5728;&#x6355;&#x6349;&#x51FD;&#x6570;&#x6267;&#x884C;&#x671F;&#x95F4;&#x7684;&#x5C4F;&#x853D;&#x4F5C;&#x7528;&#x3002; &#x3010;sigaction3.c&#x3011;</p>
+<h3 id="&#x5185;&#x6838;&#x5B9E;&#x73B0;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x8FC7;&#x7A0B;&#xFF1A;"><a name="&#x5185;&#x6838;&#x5B9E;&#x73B0;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x8FC7;&#x7A0B;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x5185;&#x6838;&#x5B9E;&#x73B0;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x8FC7;&#x7A0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5185;&#x6838;&#x5B9E;&#x73B0;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x8FC7;&#x7A0B;&#xFF1A;</h3>
+<p><a href="assets/1583214483849.png" data-lightbox="039f3f4c-d9bd-4454-923d-21dfcc1e2e1f" data-title=""><img src="assets/1583214483849.png" alt=""></a>{width=&quot;4.291666666666667in&quot; height=&quot;3.3541666666666665in&quot;}</p>
+<h2 id="&#x7ADE;&#x6001;&#x6761;&#x4EF6;&#x65F6;&#x5E8F;&#x7ADE;&#x6001;&#xFF1A;"><a name="&#x7ADE;&#x6001;&#x6761;&#x4EF6;&#x65F6;&#x5E8F;&#x7ADE;&#x6001;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x7ADE;&#x6001;&#x6761;&#x4EF6;&#x65F6;&#x5E8F;&#x7ADE;&#x6001;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ADE;&#x6001;&#x6761;&#x4EF6;(&#x65F6;&#x5E8F;&#x7ADE;&#x6001;)&#xFF1A;</h2>
+<h3 id="pause&#x51FD;&#x6570;"><a name="pause&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#pause&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>pause&#x51FD;&#x6570;</h3>
+<p>&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x9020;&#x6210;<strong>&#x8FDB;&#x7A0B;&#x4E3B;&#x52A8;&#x6302;&#x8D77;</strong>&#xFF0C;&#x7B49;&#x5F85;&#x4FE1;&#x53F7;&#x5524;&#x9192;&#x3002;&#x8C03;&#x7528;&#x8BE5;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x8FDB;&#x7A0B;&#x5C06;&#x5904;&#x4E8E;&#x963B;&#x585E;&#x72B6;&#x6001;(&#x4E3B;&#x52A8;&#x653E;&#x5F03;cpu) &#x76F4;&#x5230;&#x6709;&#x4FE1;&#x53F7;&#x9012;&#x8FBE;&#x5C06;&#x5176;&#x5524;&#x9192;&#x3002;</p>
+<blockquote>
+<p>int pause(void); 
+&#x8FD4;&#x56DE;&#x503C;&#xFF1A;-1 &#x5E76;&#x8BBE;&#x7F6E;errno&#x4E3A;EINTR</p>
+</blockquote>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</p>
+<p>&#x2460; &#x5982;&#x679C;&#x4FE1;&#x53F7;&#x7684;&#x9ED8;&#x8BA4;&#x5904;&#x7406;&#x52A8;&#x4F5C;&#x662F;&#x7EC8;&#x6B62;&#x8FDB;&#x7A0B;&#xFF0C;&#x5219;&#x8FDB;&#x7A0B;&#x7EC8;&#x6B62;&#xFF0C;pause&#x51FD;&#x6570;&#x4E48;&#x6709;&#x673A;&#x4F1A;&#x8FD4;&#x56DE;&#x3002;</p>
+<p>&#x2461; &#x5982;&#x679C;&#x4FE1;&#x53F7;&#x7684;&#x9ED8;&#x8BA4;&#x5904;&#x7406;&#x52A8;&#x4F5C;&#x662F;&#x5FFD;&#x7565;&#xFF0C;&#x8FDB;&#x7A0B;&#x7EE7;&#x7EED;&#x5904;&#x4E8E;&#x6302;&#x8D77;&#x72B6;&#x6001;&#xFF0C;pause&#x51FD;&#x6570;&#x4E0D;&#x8FD4;&#x56DE;&#x3002;</p>
+<p>&#x2462; &#x5982;&#x679C;&#x4FE1;&#x53F7;&#x7684;&#x5904;&#x7406;&#x52A8;&#x4F5C;&#x662F;&#x6355;&#x6349;&#xFF0C;&#x5219;&#x3010;&#x8C03;&#x7528;&#x5B8C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E4B;&#x540E;&#xFF0C;pause&#x8FD4;&#x56DE;-1&#x3011;</p>
+<p>errno&#x8BBE;&#x7F6E;&#x4E3A;EINTR&#xFF0C;&#x8868;&#x793A;&#x201C;&#x88AB;&#x4FE1;&#x53F7;&#x4E2D;&#x65AD;&#x201D;&#x3002; </p>
+<p>&#x2463; pause&#x6536;&#x5230;&#x7684;&#x4FE1;&#x53F7;&#x4E0D;&#x80FD;&#x88AB;&#x5C4F;&#x853D;&#xFF0C;&#x5982;&#x679C;&#x88AB;&#x5C4F;&#x853D;&#xFF0C;&#x90A3;&#x4E48;pause&#x5C31;&#x4E0D;&#x80FD;&#x88AB;&#x5524;&#x9192;&#x3002;</p>
+<p>&#x7EC3;&#x4E60;&#xFF1A;&#x4F7F;&#x7528;pause&#x548C;alarm&#x6765;&#x5B9E;&#x73B0;sleep&#x51FD;&#x6570;&#x3002; &#x3010;pause_mysleep.c&#x3011;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;unslept = alarm(0)&#x7684;&#x7528;&#x6CD5;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;&#x7761;&#x89C9;&#xFF0C;alarm(10)&#x95F9;&#x94C3;&#x3002;</p>
+<p>&#x6B63;&#x5E38;&#xFF1A; 10&#x540E;&#x95F9;&#x94C3;&#x5C06;&#x6211;&#x5524;&#x9192;&#xFF0C;&#x8FD9;&#x65F6;&#x989D;&#x5916;&#x8BBE;&#x7F6E;alarm(0)&#x53D6;&#x6D88;&#x95F9;&#x94C3;&#xFF0C;&#x4E0D;&#x4F1A;&#x51FA;&#x9519;&#x3002;</p>
+<p>&#x5F02;&#x5E38;&#xFF1A; 5&#x5206;&#x949F;&#xFF0C;&#x88AB;&#x5176;&#x4ED6;&#x4E8B;&#x7269;&#x5435;&#x9192;&#xFF0C;alarm(0)&#x53D6;&#x6D88;&#x95F9;&#x94C3;&#x9632;&#x6B62;&#x6253;&#x6270;&#x3002;</p>
+<h3 id="&#x524D;&#x5BFC;&#x4F8B;"><a name="&#x524D;&#x5BFC;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x5BFC;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x5BFC;&#x4F8B;</h3>
+<p>&#x8BBE;&#x60F3;&#x5982;&#x4E0B;&#x573A;&#x666F;&#xFF1A;</p>
+<p>&#x6B32;&#x7761;&#x89C9;&#xFF0C;&#x5B9A;&#x95F9;&#x949F;10&#x5206;&#x949F;&#xFF0C;&#x5E0C;&#x671B;10&#x5206;&#x949F;&#x540E;&#x95F9;&#x94C3;&#x5C06;&#x81EA;&#x5DF1;&#x5524;&#x9192;&#x3002;</p>
+<p>&#x6B63;&#x5E38;&#xFF1A;&#x5B9A;&#x65F6;&#xFF0C;&#x7761;&#x89C9;&#xFF0C;10&#x5206;&#x949F;&#x540E;&#x88AB;&#x95F9;&#x949F;&#x5524;&#x9192;&#x3002;</p>
+<p>&#x5F02;&#x5E38;&#xFF1A;&#x95F9;&#x949F;&#x5B9A;&#x597D;&#x540E;&#xFF0C;&#x88AB;&#x5524;&#x8D70;&#xFF0C;&#x5916;&#x51FA;&#x52B3;&#x52A8;&#xFF0C;20&#x5206;&#x949F;&#x540E;&#x52B3;&#x52A8;&#x7ED3;&#x675F;&#x3002;&#x56DE;&#x6765;&#x7EE7;&#x7EED;&#x7761;&#x89C9;&#x8BA1;&#x5212;&#xFF0C;&#x4F46;&#x52B3;&#x52A8;&#x671F;&#x95F4;&#x95F9;&#x949F;&#x5DF2;&#x7ECF;&#x54CD;&#x8FC7;&#xFF0C;&#x4E0D;&#x4F1A;&#x518D;&#x5C06;&#x6211;&#x5524;&#x9192;&#x3002;</p>
+<h3 id="&#x65F6;&#x5E8F;&#x95EE;&#x9898;&#x5206;&#x6790;"><a name="&#x65F6;&#x5E8F;&#x95EE;&#x9898;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x65F6;&#x5E8F;&#x95EE;&#x9898;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65F6;&#x5E8F;&#x95EE;&#x9898;&#x5206;&#x6790;</h3>
+<p>&#x56DE;&#x987E;&#xFF0C;&#x501F;&#x52A9;pause&#x548C;alarm&#x5B9E;&#x73B0;&#x7684;mysleep&#x51FD;&#x6570;&#x3002;&#x8BBE;&#x60F3;&#x5982;&#x4E0B;&#x65F6;&#x5E8F;&#xFF1A;</p>
+<p>1. &#x6CE8;&#x518C;SIGALRM&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570; &#xFF08;sigaction...)</p>
+<p>2. &#x8C03;&#x7528;alarm(1) &#x51FD;&#x6570;&#x8BBE;&#x5B9A;&#x95F9;&#x949F;1&#x79D2;&#x3002;</p>
+<p>3. &#x51FD;&#x6570;&#x8C03;&#x7528;&#x521A;&#x7ED3;&#x675F;&#xFF0C;&#x5F00;&#x59CB;&#x5012;&#x8BA1;&#x65F6;1&#x79D2;&#x3002;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5931;&#x53BB;cpu&#xFF0C;&#x5185;&#x6838;&#x8C03;&#x5EA6;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x7684;&#x8FDB;&#x7A0B;(&#x6709;&#x591A;&#x4E2A;)&#x53D6;&#x4EE3;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x3002;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x65E0;&#x6CD5;&#x83B7;&#x5F97;cpu&#xFF0C;&#x8FDB;&#x5165;&#x5C31;&#x7EEA;&#x6001;&#x7B49;&#x5F85;cpu&#x3002;</p>
+<p>4. 1&#x79D2;&#x540E;&#xFF0C;&#x95F9;&#x949F;&#x8D85;&#x65F6;&#xFF0C;&#x5185;&#x6838;&#x5411;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;SIGALRM&#x4FE1;&#x53F7;(&#x81EA;&#x7136;&#x5B9A;&#x65F6;&#x6CD5;&#xFF0C;&#x4E0E;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x65E0;&#x5173;)&#xFF0C;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;&#x8FDB;&#x7A0B;&#x5C1A;&#x672A;&#x6267;&#x884C;&#x5B8C;&#xFF0C;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x4ECD;&#x5904;&#x4E8E;&#x5C31;&#x7EEA;&#x6001;&#xFF0C;&#x4FE1;&#x53F7;&#x65E0;&#x6CD5;&#x5904;&#x7406;(&#x672A;&#x51B3;)</p>
+<p>5. &#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x7684;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#xFF0C;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x83B7;&#x5F97;cpu&#x8D44;&#x6E90;&#xFF0C;&#x5185;&#x6838;&#x8C03;&#x5EA6;&#x56DE;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x3002;SIGALRM&#x4FE1;&#x53F7;&#x9012;&#x8FBE;&#xFF0C;&#x4FE1;&#x53F7;&#x8BBE;&#x7F6E;&#x6355;&#x6349;&#xFF0C;&#x6267;&#x884C;&#x5904;&#x7406;&#x51FD;&#x6570;sig_alarm&#x3002;</p>
+<p>6. &#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;&#x6267;&#x884C;&#x7ED3;&#x675F;&#xFF0C;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x4E3B;&#x63A7;&#x6D41;&#x7A0B;&#xFF0C;pause()&#x88AB;&#x8C03;&#x7528;&#x6302;&#x8D77;&#x7B49;&#x5F85;&#x3002;&#xFF08;&#x6B32;&#x7B49;&#x5F85;alarm&#x51FD;&#x6570;&#x53D1;&#x9001;&#x7684;SIGALRM&#x4FE1;&#x53F7;&#x5C06;&#x81EA;&#x5DF1;&#x5524;&#x9192;&#xFF09;</p>
+<p>7. SIGALRM&#x4FE1;&#x53F7;&#x5DF2;&#x7ECF;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#xFF0C;pause&#x4E0D;&#x4F1A;&#x7B49;&#x5230;&#x3002;</p>
+<h3 id="&#x89E3;&#x51B3;&#x65F6;&#x5E8F;&#x7ADE;&#x6001;&#x95EE;&#x9898;"><a name="&#x89E3;&#x51B3;&#x65F6;&#x5E8F;&#x7ADE;&#x6001;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x51B3;&#x65F6;&#x5E8F;&#x7ADE;&#x6001;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x51B3;&#x65F6;&#x5E8F;&#x7ADE;&#x6001;&#x95EE;&#x9898;</h3>
+<h3 id="sigsuspend&#x51FD;&#x6570;"><a name="sigsuspend&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#sigsuspend&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>sigsuspend&#x51FD;&#x6570;</h3>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x5C4F;&#x853D;SIGALRM&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x63A7;&#x5236;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x903B;&#x8F91;&#xFF0C;&#x4F46;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x8BBE;&#x7F6E;&#xFF0C;&#x7A0B;&#x5E8F;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x5728;&#x201C;&#x89E3;&#x9664;&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x201D;&#x4E0E;&#x201C;&#x6302;&#x8D77;&#x7B49;&#x5F85;&#x4FE1;&#x53F7;&#x201D;&#x8FD9;&#x4E2A;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x95F4;&#x9699;&#x5931;&#x53BB;cpu&#x8D44;&#x6E90;&#x3002;&#x9664;&#x975E;&#x5C06;&#x8FD9;&#x4E24;&#x6B65;&#x9AA4;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x201C;&#x539F;&#x5B50;&#x64CD;&#x4F5C;&#x201D;&#x3002;sigsuspend&#x51FD;&#x6570;&#x5177;&#x5907;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x3002;&#x5728;&#x5BF9;&#x65F6;&#x5E8F;&#x8981;&#x6C42;&#x4E25;&#x683C;&#x7684;&#x573A;&#x5408;&#x4E0B;&#x90FD;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;sigsuspend&#x66FF;&#x6362;pause&#x3002;</p>
+<blockquote>
+<p>int sigsuspend(const sigset_t *mask); 
+&#x6302;&#x8D77;&#x7B49;&#x5F85;&#x4FE1;&#x53F7;&#x3002;</p>
+</blockquote>
+<p>sigsuspend&#x51FD;&#x6570;&#x8C03;&#x7528;&#x671F;&#x95F4;&#xFF0C;&#x8FDB;&#x7A0B;&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x5B57;&#x7531;&#x5176;<strong>&#x53C2;&#x6570;mask</strong>&#x6307;&#x5B9A;&#x3002;</p>
+<p>&#x53EF;&#x5C06;&#x67D0;&#x4E2A;&#x4FE1;&#x53F7;&#xFF08;&#x5982;SIGALRM&#xFF09;&#x4ECE;&#x4E34;&#x65F6;&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x5B57;mask&#x4E2D;&#x5220;&#x9664;&#xFF0C;&#x8FD9;&#x6837;&#x5728;&#x8C03;&#x7528;sigsuspend&#x65F6;&#x5C06;&#x89E3;&#x9664;&#x5BF9;&#x8BE5;&#x4FE1;&#x53F7;&#x7684;&#x5C4F;&#x853D;&#xFF0C;&#x7136;&#x540E;&#x6302;&#x8D77;&#x7B49;&#x5F85;&#xFF0C;&#x5F53;sigsuspend&#x8FD4;&#x56DE;&#x65F6;&#xFF0C;&#x8FDB;&#x7A0B;&#x7684;&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x5B57;&#x6062;&#x590D;&#x4E3A;&#x539F;&#x6765;&#x7684;&#x503C;&#x3002;&#x5982;&#x679C;&#x539F;&#x6765;&#x5BF9;&#x8BE5;&#x4FE1;&#x53F7;&#x662F;&#x5C4F;&#x853D;&#x6001;&#xFF0C;sigsuspend&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x540E;&#x4ECD;&#x7136;&#x5C4F;&#x853D;&#x8BE5;&#x4FE1;&#x53F7;&#x3002;</p>
+<p>&#x6539;&#x8FDB;&#x7248;mysleep &#x3010;sigsuspend.c&#x3011;</p>
+<h3 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h3>
+<p>&#x7ADE;&#x6001;&#x6761;&#x4EF6;&#xFF0C;&#x8DDF;&#x7CFB;&#x7EDF;&#x8D1F;&#x8F7D;&#x6709;&#x5F88;&#x7D27;&#x5BC6;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x4F53;&#x73B0;&#x51FA;&#x4FE1;&#x53F7;&#x7684;&#x4E0D;&#x53EF;&#x9760;&#x6027;&#x3002;&#x7CFB;&#x7EDF;&#x8D1F;&#x8F7D;&#x8D8A;&#x4E25;&#x91CD;&#xFF0C;&#x4FE1;&#x53F7;&#x4E0D;&#x53EF;&#x9760;&#x6027;&#x8D8A;&#x5F3A;&#x3002;</p>
+<p>&#x4E0D;&#x53EF;&#x9760;&#x7531;&#x5176;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x6240;&#x81F4;&#x3002;&#x4FE1;&#x53F7;&#x662F;&#x901A;&#x8FC7;&#x8F6F;&#x4EF6;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;(&#x8DDF;&#x5185;&#x6838;&#x8C03;&#x5EA6;&#x9AD8;&#x5EA6;&#x4F9D;&#x8D56;&#xFF0C;&#x5EF6;&#x65F6;&#x6027;&#x5F3A;)&#xFF0C;&#x6BCF;&#x6B21;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x6216;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5904;&#x7406;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x9700;&#x901A;&#x8FC7;&#x626B;&#x63CF;PCB&#x4E2D;&#x7684;&#x672A;&#x51B3;&#x4FE1;&#x53F7;&#x96C6;&#xFF0C;&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5E94;&#x5904;&#x7406;&#x67D0;&#x4E2A;&#x4FE1;&#x53F7;&#x3002;&#x5F53;&#x7CFB;&#x7EDF;&#x8D1F;&#x8F7D;&#x8FC7;&#x91CD;&#x65F6;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x65F6;&#x5E8F;&#x6DF7;&#x4E71;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x610F;&#x5916;&#x60C5;&#x51B5;&#x53EA;&#x80FD;&#x5728;&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x63D0;&#x65E9;&#x9884;&#x89C1;&#xFF0C;&#x4E3B;&#x52A8;&#x89C4;&#x907F;&#xFF0C;&#x800C;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;gdb&#x7A0B;&#x5E8F;&#x8C03;&#x8BD5;&#x7B49;&#x5176;&#x4ED6;&#x624B;&#x6BB5;&#x5F25;&#x8865;&#x3002;&#x4E14;&#x7531;&#x4E8E;&#x8BE5;&#x9519;&#x8BEF;&#x4E0D;&#x5177;&#x89C4;&#x5F8B;&#x6027;&#xFF0C;&#x540E;&#x671F;&#x6355;&#x6349;&#x548C;&#x91CD;&#x73B0;&#x5341;&#x5206;&#x56F0;&#x96BE;&#x3002;</p>
+<h3 id="&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x5F02;&#x6B65;io"><a name="&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x5F02;&#x6B65;io" class="anchor-navigation-ex-anchor" href="#&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x5F02;&#x6B65;io"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x5F02;&#x6B65;I/O</h3>
+<p>&#x5206;&#x6790;&#x5982;&#x4E0B;&#x7236;&#x5B50;&#x8FDB;&#x7A0B;&#x4EA4;&#x66FF;&#x6570;&#x6570;&#x7A0B;&#x5E8F;&#x3002;&#x5F53;&#x6355;&#x6349;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x7684;sleep&#x53D6;&#x6D88;&#xFF0C;&#x7A0B;&#x5E8F;&#x5373;&#x4F1A;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x3002;&#x8BF7;&#x5206;&#x6790;&#x539F;&#x56E0;&#x3002;</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;signal.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+
+int n = 0, flag = 0;
+void sys_err(char *str)
+{
+    perror(str);
+    exit(1);
+}
+void do_sig_child(int num)
+{
+    printf(&quot;I am child  %d\t%d\n&quot;, getpid(), n);
+    n += 2;
+    flag = 1;
+    sleep(1);
+}
+void do_sig_parent(int num)
+{
+    printf(&quot;I am parent %d\t%d\n&quot;, getpid(), n);
+    n += 2;
+    flag = 1;
+    sleep(1);
+}
+int main(void)
+{
+    pid_t pid;
+struct sigaction act;
+
+    if ((pid = fork()) &lt; 0)
+        sys_err(&quot;fork&quot;);
+    else if (pid &gt; 0) {     
+        n = 1;
+        sleep(1);
+        act.sa_handler = do_sig_parent;
+        sigemptyset(&amp;act.sa_mask);
+        act.sa_flags = 0;
+        sigaction(SIGUSR2, &amp;act, NULL);             //&#x6CE8;&#x518C;&#x81EA;&#x5DF1;&#x7684;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x51FD;&#x6570;  &#x7236;&#x4F7F;&#x7528;SIGUSR2&#x4FE1;&#x53F7;
+        do_sig_parent(0);                          
+        while (1) {
+            /* wait for signal */;
+           if (flag == 1) {                         //&#x7236;&#x8FDB;&#x7A0B;&#x6570;&#x6570;&#x5B8C;&#x6210;
+                kill(pid, SIGUSR1);
+                flag = 0;                        //&#x6807;&#x5FD7;&#x5DF2;&#x7ECF;&#x7ED9;&#x5B50;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x5B8C;&#x4FE1;&#x53F7;
+            }
+        }
+    } else if (pid == 0) {       
+        n = 2;
+        act.sa_handler = do_sig_child;
+        sigemptyset(&amp;act.sa_mask);
+        act.sa_flags = 0;
+        sigaction(SIGUSR1, &amp;act, NULL);
+
+        while (1) {
+            /* waiting for a signal */;
+            if (flag == 1) {
+                kill(getppid(), SIGUSR2);
+                flag = 0;
+            }
+        }
+    }
+    return 0;
+}
+</code></pre><p>&#x3010;sync_process.c&#x3011;</p>
+<p>&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;flag&#x53D8;&#x91CF;&#x6807;&#x8BB0;&#x7A0B;&#x5E8F;&#x5B9E;&#x884C;&#x8C03;&#x5EA6;&#x3002;flag&#x7F6E;1&#x8868;&#x793A;&#x6570;&#x6570;&#x5B8C;&#x6210;&#x3002;flag&#x7F6E;0&#x8868;&#x793A;&#x7ED9;&#x5BF9;&#x65B9;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x5B8C;&#x6210;&#x3002;</p>
+<p>&#x95EE;&#x9898;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5728;&#x7236;&#x5B50;&#x8FDB;&#x7A0B;kill&#x51FD;&#x6570;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x7D27;&#x63A5;&#x7740;&#x8C03;&#x7528; flag&#xFF0C;&#x5C06;&#x5176;&#x7F6E;0&#xFF0C;&#x6807;&#x8BB0;&#x4FE1;&#x53F7;&#x5DF2;&#x7ECF;&#x53D1;&#x9001;&#x3002;&#x4F46;&#xFF0C;&#x5728;&#x8FD9;&#x671F;&#x95F4;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x88AB;kernel&#x8C03;&#x5EA6;&#xFF0C;&#x5931;&#x53BB;&#x6267;&#x884C;&#x6743;&#x5229;&#xFF0C;&#x800C;&#x5BF9;&#x65B9;&#x83B7;&#x53D6;&#x4E86;&#x6267;&#x884C;&#x65F6;&#x95F4;&#xFF0C;&#x901A;&#x8FC7;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x56DE;&#x8C03;&#x6355;&#x6349;&#x51FD;&#x6570;&#xFF0C;&#x4ECE;&#x800C;&#x4FEE;&#x6539;&#x4E86;&#x5168;&#x5C40;&#x7684;flag,&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;&#x518D;&#x7EE7;&#x7EED;&#x4EA4;&#x66FF;&#x6570;&#x6570;&#x4E0B;&#x53BB;&#x3002;</p>
+<p>&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x8BE5;&#x95EE;&#x9898;&#x5462;&#xFF1F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x540E;&#x7EED;&#x8BFE;&#x7A0B;&#x8BB2;&#x5230;&#x7684;&#x201C;&#x9501;&#x201D;&#x673A;&#x5236;&#x3002;&#x5F53;&#x64CD;&#x4F5C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x8FC7;&#x52A0;&#x9501;&#x3001;&#x89E3;&#x9501;&#x6765;&#x89E3;&#x51B3;&#x8BE5;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x73B0;&#x9636;&#x6BB5;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x7F16;&#x7A0B;&#x671F;&#x95F4;&#x5982;&#x82E5;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x5E94;&#x5728;&#x4E3B;&#x89C2;&#x4E0A;&#x6CE8;&#x610F;<strong>&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x7684;&#x5F02;&#x6B65;IO</strong>&#x53EF;&#x80FD;&#x9020;&#x6210;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h3 id="&#x53EF;&#x4E0D;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;"><a name="&#x53EF;&#x4E0D;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x53EF;&#x4E0D;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53EF;/&#x4E0D;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;</h3>
+<p>&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5728;&#x88AB;&#x8C03;&#x7528;&#x6267;&#x884C;&#x671F;&#x95F4;(&#x5C1A;&#x672A;&#x8C03;&#x7528;&#x7ED3;&#x675F;)&#xFF0C;&#x7531;&#x4E8E;&#x67D0;&#x79CD;&#x65F6;&#x5E8F;&#x53C8;&#x88AB;&#x91CD;&#x590D;&#x8C03;&#x7528;&#xFF0C;&#x79F0;&#x4E4B;&#x4E3A;&#x201C;&#x91CD;&#x5165;&#x201D;&#x3002;&#x6839;&#x636E;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x7684;&#x65B9;&#x6CD5;&#x53EF;&#x5206;&#x4E3A;&#x201C;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;&#x201D;&#x548C;&#x201C;&#x4E0D;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;&#x201D;&#x4E24;&#x79CD;&#x3002;&#x770B;&#x5982;&#x4E0B;&#x65F6;&#x5E8F;&#x3002;</p>
+<p><a href="assets/1583215320524.png" data-lightbox="13605623-bd64-45cc-a0e8-1e5808226cbc" data-title=""><img src="assets/1583215320524.png" alt=""></a>{width=&quot;5.949305555555555in&quot; height=&quot;3.767361111111111in&quot;}</p>
+<p>&#x663E;&#x7136;&#xFF0C;insert&#x51FD;&#x6570;&#x662F;&#x4E0D;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;&#xFF0C;&#x91CD;&#x5165;&#x8C03;&#x7528;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x610F;&#x5916;&#x7ED3;&#x679C;&#x5448;&#x73B0;&#x3002;&#x7A76;&#x5176;&#x539F;&#x56E0;&#xFF0C;&#x662F;&#x8BE5;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#x4F7F;&#x7528;&#x4E86;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;</p>
+<h4 id="&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><a name="&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h4>
+<ol>
+<li><p>&#x5B9A;&#x4E49;<strong>&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;</strong>&#xFF0C;&#x51FD;&#x6570;&#x5185;<strong>&#x4E0D;&#x80FD;</strong>&#x542B;&#x6709;<strong>&#x5168;&#x5C40;&#x53D8;&#x91CF;</strong>&#x53CA;<strong>static</strong>&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;<strong>malloc</strong>&#x3001;free</p>
+</li>
+<li><p>&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x51FD;&#x6570;&#x5E94;&#x8BBE;&#x8BA1;&#x4E3A;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;</p>
+</li>
+<li><p>&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x7684;&#x53EF;&#x91CD;&#x5165;&#x51FD;&#x6570;&#x53EF;&#x53C2;&#x9605;man 7 signal</p>
+</li>
+<li><p>&#x6CA1;&#x6709;&#x5305;&#x542B;&#x5728;&#x4E0A;&#x8FF0;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x5927;&#x591A;&#x662F;&#x4E0D;&#x53EF;&#x91CD;&#x5165;&#x7684;&#xFF0C;&#x5176;&#x539F;&#x56E0;&#x4E3A;&#xFF1A;</p>
+<p>a.  &#x4F7F;&#x7528;&#x9759;&#x6001;&#x6570;&#x636E;&#x7ED3;&#x6784;</p>
+<p>b.  &#x8C03;&#x7528;&#x4E86;malloc&#x6216;free</p>
+<p>c.  &#x662F;&#x6807;&#x51C6;I/O&#x51FD;&#x6570;</p>
+</li>
+</ol>
+<h2 id="sigchld&#x4FE1;&#x53F7;"><a name="sigchld&#x4FE1;&#x53F7;" class="anchor-navigation-ex-anchor" href="#sigchld&#x4FE1;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>SIGCHLD&#x4FE1;&#x53F7;</h2>
+<h3 id="sigchld&#x7684;&#x4EA7;&#x751F;&#x6761;&#x4EF6;"><a name="sigchld&#x7684;&#x4EA7;&#x751F;&#x6761;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#sigchld&#x7684;&#x4EA7;&#x751F;&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>SIGCHLD&#x7684;&#x4EA7;&#x751F;&#x6761;&#x4EF6;</h3>
+<p>&#x5B50;&#x8FDB;&#x7A0B;&#x7EC8;&#x6B62;&#x65F6;</p>
+<p>&#x5B50;&#x8FDB;&#x7A0B;&#x63A5;&#x6536;&#x5230;SIGSTOP&#x4FE1;&#x53F7;&#x505C;&#x6B62;&#x65F6;</p>
+<p>&#x5B50;&#x8FDB;&#x7A0B;&#x5904;&#x5728;&#x505C;&#x6B62;&#x6001;&#xFF0C;&#x63A5;&#x53D7;&#x5230;SIGCONT&#x540E;&#x5524;&#x9192;&#x65F6;</p>
+<h3 id="&#x501F;&#x52A9;sigchld&#x4FE1;&#x53F7;&#x56DE;&#x6536;&#x5B50;&#x8FDB;&#x7A0B;"><a name="&#x501F;&#x52A9;sigchld&#x4FE1;&#x53F7;&#x56DE;&#x6536;&#x5B50;&#x8FDB;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x501F;&#x52A9;sigchld&#x4FE1;&#x53F7;&#x56DE;&#x6536;&#x5B50;&#x8FDB;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x501F;&#x52A9;SIGCHLD&#x4FE1;&#x53F7;&#x56DE;&#x6536;&#x5B50;&#x8FDB;&#x7A0B;</h3>
+<p>&#x5B50;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;&#x8FD0;&#x884C;&#xFF0C;&#x5176;&#x7236;&#x8FDB;&#x7A0B;&#x4F1A;&#x6536;&#x5230;SIGCHLD&#x4FE1;&#x53F7;&#x3002;&#x8BE5;&#x4FE1;&#x53F7;&#x7684;&#x9ED8;&#x8BA4;&#x5904;&#x7406;&#x52A8;&#x4F5C;&#x662F;&#x5FFD;&#x7565;&#x3002;&#x53EF;&#x4EE5;&#x6355;&#x6349;&#x8BE5;&#x4FE1;&#x53F7;&#xFF0C;&#x5728;&#x6355;&#x6349;&#x51FD;&#x6570;&#x4E2D;&#x5B8C;&#x6210;&#x5B50;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x7684;&#x56DE;&#x6536;&#x3002;</p>
+<p>&#x7ED3;&#x5408; 17)SIGCHLD &#x4FE1;&#x53F7;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#xFF0C;&#x638C;&#x63E1;&#x7236;&#x4F7F;&#x7528;&#x6355;&#x6349;&#x51FD;&#x6570;&#x56DE;&#x6536;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#x3002; &#x3010;sigchild.c&#x3011;</p>
+<p>&#x5982;&#x679C;&#x6BCF;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#x540E;&#x4E0D;&#x4F7F;&#x7528;sleep&#x53EF;&#x4EE5;&#x5417;&#xFF1F;&#x53EF;&#x4E0D;&#x53EF;&#x4EE5;&#x5C06;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x6355;&#x6349;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;while&#x66FF;&#x6362;&#x4E3A;if&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#xFF1F;</p>
+<p>if ((pid = waitpid(0, &amp;status, WNOHANG)) &gt; 0) { ... }</p>
+<p>&#x601D;&#x8003;&#xFF1A;&#x4FE1;&#x53F7;&#x4E0D;&#x652F;&#x6301;&#x6392;&#x961F;&#xFF0C;&#x5F53;&#x6B63;&#x5728;&#x6267;&#x884C;SIGCHLD&#x6355;&#x6349;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x518D;&#x8FC7;&#x6765;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;SIGCHLD&#x4FE1;&#x53F7;&#x600E;&#x4E48;&#x529E;&#xFF1F;</p>
+<h3 id="&#x5B50;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;status&#x5904;&#x7406;&#x65B9;&#x5F0F;"><a name="&#x5B50;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;status&#x5904;&#x7406;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;status&#x5904;&#x7406;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B50;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;status&#x5904;&#x7406;&#x65B9;&#x5F0F;</h3>
+<blockquote>
+<p>pid_t waitpid(pid_t pid, int *status, int options)</p>
+</blockquote>
+<p>&#x53C2;&#x6570;:</p>
+<p>options&#x9009;&#x9879;</p>
+<p>WNOHANG&#x6CA1;&#x6709;&#x5B50;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;&#xFF0C;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;
+WUNTRACED&#x5982;&#x679C;&#x5B50;&#x8FDB;&#x7A0B;&#x7531;&#x4E8E;&#x88AB;&#x505C;&#x6B62;&#x4EA7;&#x751F;&#x7684;SIGCHLD&#xFF0C;waitpid&#x5219;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;
+WCONTINUED&#x5982;&#x679C;&#x5B50;&#x8FDB;&#x7A0B;&#x7531;&#x4E8E;&#x88AB;SIGCONT&#x5524;&#x9192;&#x800C;&#x4EA7;&#x751F;&#x7684;SIGCHLD&#xFF0C;waitpid&#x5219;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;</p>
+<p>&#x83B7;&#x53D6;status</p>
+<p>WIFEXITED(status)&#x5B50;&#x8FDB;&#x7A0B;&#x6B63;&#x5E38;exit&#x7EC8;&#x6B62;&#xFF0C;&#x8FD4;&#x56DE;&#x771F;</p>
+<p>&#x200B;    WEXITSTATUS(status)&#x8FD4;&#x56DE;&#x5B50;&#x8FDB;&#x7A0B;&#x6B63;&#x5E38;&#x9000;&#x51FA;&#x503C;</p>
+<p>WIFSIGNALED(status)&#x5B50;&#x8FDB;&#x7A0B;&#x88AB;&#x4FE1;&#x53F7;&#x7EC8;&#x6B62;&#xFF0C;&#x8FD4;&#x56DE;&#x771F;</p>
+<p>&#x200B;    WTERMSIG(status)&#x8FD4;&#x56DE;&#x7EC8;&#x6B62;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x4FE1;&#x53F7;&#x503C;</p>
+<p>WIFSTOPPED(status)&#x5B50;&#x8FDB;&#x7A0B;&#x88AB;&#x505C;&#x6B62;&#xFF0C;&#x8FD4;&#x56DE;&#x771F;</p>
+<p>&#x200B;    WSTOPSIG(status)&#x8FD4;&#x56DE;&#x505C;&#x6B62;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x4FE1;&#x53F7;&#x503C;</p>
+<p>WIFCONTINUED(status)</p>
+<h3 id="sigchld&#x4FE1;&#x53F7;&#x6CE8;&#x610F;&#x95EE;&#x9898;"><a name="sigchld&#x4FE1;&#x53F7;&#x6CE8;&#x610F;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#sigchld&#x4FE1;&#x53F7;&#x6CE8;&#x610F;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>SIGCHLD&#x4FE1;&#x53F7;&#x6CE8;&#x610F;&#x95EE;&#x9898;</h3>
+<ol>
+<li><p>&#x5B50;&#x8FDB;&#x7A0B;<strong>&#x7EE7;&#x627F;</strong>&#x4E86;&#x7236;&#x8FDB;&#x7A0B;&#x7684;<strong>&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x5B57;</strong>&#x548C;<strong>&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x52A8;&#x4F5C;</strong>&#xFF0C;&#x4F46;&#x5B50;&#x8FDB;&#x7A0B;<strong>&#x6CA1;&#x6709;</strong>&#x7EE7;&#x627F;<strong>&#x672A;&#x51B3;&#x4FE1;&#x53F7;&#x96C6;</strong>spending&#x3002;</p>
+</li>
+<li><p>&#x6CE8;&#x610F;&#x6CE8;&#x518C;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x51FD;&#x6570;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</li>
+<li><p>&#x5E94;&#x8BE5;&#x5728;fork&#x4E4B;&#x524D;&#xFF0C;&#x963B;&#x585E;SIGCHLD&#x4FE1;&#x53F7;&#x3002;&#x6CE8;&#x518C;&#x5B8C;&#x6355;&#x6349;&#x51FD;&#x6570;&#x540E;&#x89E3;&#x9664;&#x963B;&#x585E;&#x3002;</p>
+</li>
+</ol>
+<h2 id="&#x4FE1;&#x53F7;&#x4F20;&#x53C2;"><a name="&#x4FE1;&#x53F7;&#x4F20;&#x53C2;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x53F7;&#x4F20;&#x53C2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FE1;&#x53F7;&#x4F20;&#x53C2;</h2>
+<h3 id="&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x4F20;&#x53C2;"><a name="&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x4F20;&#x53C2;" class="anchor-navigation-ex-anchor" href="#&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x4F20;&#x53C2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x4F20;&#x53C2;</h3>
+<h4 id="sigqueue&#x51FD;&#x6570;"><a name="sigqueue&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#sigqueue&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>sigqueue&#x51FD;&#x6570;</h4>
+<p>sigqueue&#x51FD;&#x6570;&#x5BF9;&#x5E94;kill&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x53EF;&#x5728;&#x5411;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x7684;&#x540C;&#x65F6;&#x643A;&#x5E26;&#x53C2;&#x6570;</p>
+<blockquote>
+<p>int sigqueue(pid_t pid, int sig, const union sigval value);
+&#x6210;&#x529F;&#xFF1A;0&#xFF1B;
+&#x5931;&#x8D25;&#xFF1A;-1&#xFF0C;&#x8BBE;&#x7F6E;errno</p>
+</blockquote>
+<p>union sigval {</p>
+<p>int sival_int;</p>
+<p>void *sival_ptr;</p>
+<p>};</p>
+<p>&#x5411;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x6307;&#x5B9A;&#x4FE1;&#x53F7;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x643A;&#x5E26;&#x6570;&#x636E;&#x3002;&#x4F46;&#xFF0C;&#x5982;&#x4F20;&#x5730;&#x5740;&#xFF0C;&#x9700;&#x6CE8;&#x610F;&#xFF0C;&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x5404;&#x81EA;&#x72EC;&#x7ACB;&#xFF0C;&#x5C06;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5730;&#x5740;&#x4F20;&#x9012;&#x7ED9;&#x53E6;&#x4E00;&#x8FDB;&#x7A0B;&#x6CA1;&#x6709;&#x5B9E;&#x9645;&#x610F;&#x4E49;&#x3002;</p>
+<h3 id="&#x6355;&#x6349;&#x51FD;&#x6570;&#x4F20;&#x53C2;"><a name="&#x6355;&#x6349;&#x51FD;&#x6570;&#x4F20;&#x53C2;" class="anchor-navigation-ex-anchor" href="#&#x6355;&#x6349;&#x51FD;&#x6570;&#x4F20;&#x53C2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6355;&#x6349;&#x51FD;&#x6570;&#x4F20;&#x53C2;</h3>
+<blockquote>
+<p>int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact);</p>
+</blockquote>
+<p>struct sigaction {
+void (*sa_handler)(int);
+void (*sa_sigaction)(int, siginfo_t *, void *);
+sigset_t sa_mask;
+int sa_flags;
+void (*sa_restorer)(void);
+};</p>
+<p>&#x5F53;&#x6CE8;&#x518C;&#x4FE1;&#x53F7;&#x6355;&#x6349;&#x51FD;&#x6570;&#xFF0C;&#x5E0C;&#x671B;&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x4FE1;&#x53F7;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x4E0D;&#x5E94;&#x4F7F;&#x7528;sa_handler&#x800C;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;<strong>sa_sigaction</strong>&#x3002;&#x4F46;&#x6B64;&#x65F6;&#x7684;<strong>sa_flags&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x4E3A;SA_SIGINFO</strong>&#x3002;siginfo_t&#x662F;&#x4E00;&#x4E2A;&#x6210;&#x5458;&#x5341;&#x5206;&#x4E30;&#x5BCC;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x643A;&#x5E26;&#x5404;&#x79CD;&#x4E0E;&#x4FE1;&#x53F7;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h2 id="&#x4E2D;&#x65AD;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;"><a name="&#x4E2D;&#x65AD;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4E2D;&#x65AD;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E2D;&#x65AD;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</h2>
+<p>&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x53EF;&#x5206;&#x4E3A;&#x4E24;&#x7C7B;&#xFF1A;&#x6162;&#x901F;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x548C;&#x5176;&#x4ED6;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x3002;</p>
+<ol>
+<li><p>&#x6162;&#x901F;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF1A;&#x53EF;&#x80FD;&#x4F1A;&#x4F7F;&#x8FDB;&#x7A0B;&#x6C38;&#x8FDC;&#x963B;&#x585E;&#x7684;&#x4E00;&#x7C7B;&#x3002;&#x5982;&#x679C;&#x5728;&#x963B;&#x585E;&#x671F;&#x95F4;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#xFF0C;&#x8BE5;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x5C31;&#x88AB;&#x4E2D;&#x65AD;,&#x4E0D;&#x518D;&#x7EE7;&#x7EED;&#x6267;&#x884C;(&#x65E9;&#x671F;)&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x5B9A;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x662F;&#x5426;&#x91CD;&#x542F;&#x3002;&#x5982;&#xFF0C;read&#x3001;write&#x3001;pause&#x3001;wait...</p>
+</li>
+<li><p>&#x5176;&#x4ED6;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF1A;getpid&#x3001;getppid&#x3001;fork...</p>
+</li>
+</ol>
+<p>&#x7ED3;&#x5408;pause&#xFF0C;&#x56DE;&#x987E;&#x6162;&#x901F;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF1A;</p>
+<p>&#x6162;&#x901F;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x88AB;&#x4E2D;&#x65AD;&#x7684;&#x76F8;&#x5173;&#x884C;&#x4E3A;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;pause&#x7684;&#x884C;&#x4E3A;&#xFF1A; &#x5982;&#xFF0C;read</p>
+<p>&#x2460; &#x60F3;&#x4E2D;&#x65AD;pause&#xFF0C;&#x4FE1;&#x53F7;&#x4E0D;&#x80FD;&#x88AB;&#x5C4F;&#x853D;&#x3002;</p>
+<p>&#x2461; &#x4FE1;&#x53F7;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x5FC5;&#x987B;&#x662F;&#x6355;&#x6349; (&#x9ED8;&#x8BA4;&#x3001;&#x5FFD;&#x7565;&#x90FD;&#x4E0D;&#x53EF;&#x4EE5;)</p>
+<p>&#x2462; &#x4E2D;&#x65AD;&#x540E;&#x8FD4;&#x56DE;-1&#xFF0C; &#x8BBE;&#x7F6E;errno&#x4E3A;EINTR(&#x8868;&#x201C;&#x88AB;&#x4FE1;&#x53F7;&#x4E2D;&#x65AD;&#x201D;)</p>
+<p>&#x53EF;&#x4FEE;&#x6539;<code>sa_flags</code>&#x53C2;&#x6570;&#x6765;&#x8BBE;&#x7F6E;<strong>&#x88AB;&#x4FE1;&#x53F7;&#x4E2D;&#x65AD;&#x540E;</strong>&#x7CFB;&#x7EDF;&#x8C03;&#x7528;<strong>&#x662F;&#x5426;&#x91CD;&#x542F;</strong>&#x3002;SA_INTERRURT&#x4E0D;&#x91CD;&#x542F;&#x3002; SA_RESTART&#x91CD;&#x542F;&#x3002;</p>
+<p>&#x6269;&#x5C55;&#x4E86;&#x89E3;&#xFF1A;</p>
+<p>sa_flags&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x4E0D;&#x540C;&#x60C5;&#x51B5;&#x3002;&#x5982;&#xFF1A;&#x6355;&#x6349;&#x5230;&#x4FE1;&#x53F7;&#x540E;&#xFF0C;&#x5728;&#x6267;&#x884C;&#x6355;&#x6349;&#x51FD;&#x6570;&#x671F;&#x95F4;&#xFF0C;&#x4E0D;&#x5E0C;&#x671B;&#x81EA;&#x52A8;&#x963B;&#x585E;&#x8BE5;&#x4FE1;&#x53F7;&#xFF0C;&#x53EF;&#x5C06;sa_flags&#x8BBE;&#x7F6E;&#x4E3A;SA_NODEFER&#xFF0C;&#x9664;&#x975E;sa_mask&#x4E2D;&#x5305;&#x542B;&#x8BE5;&#x4FE1;&#x53F7;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02-Inter-Process-Communication.html" class="navigation navigation-prev " aria-label="Previous page: 进程间通信">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05-daemon.html" class="navigation navigation-next " aria-label="Next page: 守护进程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"信号","level":"1.4.3","depth":2,"next":{"title":"守护进程","level":"1.4.4","depth":2,"path":"linux-xi-tong-bian-cheng/05-daemon.md","ref":"linux-xi-tong-bian-cheng/05-daemon.md","articles":[]},"previous":{"title":"进程间通信","level":"1.4.2","depth":2,"path":"linux-xi-tong-bian-cheng/02-Inter-Process-Communication.md","ref":"linux-xi-tong-bian-cheng/02-Inter-Process-Communication.md","articles":[]},"dir":"ltr"},"config":{"plugins":["todo","back-to-top-button","chapter-fold","splitter","github","anchor-navigation-ex","simple-page-toc","search-pro","-lunr","-search","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/robotchaoX/gitbook"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":false,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"robotchaoX","language":"zh-hans","links":{"sidebar":{"GitHub":"https://github.com/robotchaoX"}},"gitbook":"*","description":"gitbook description"},"file":{"path":"linux-xi-tong-bian-cheng/04-signal.md","mtime":"2020-03-30T09:14:08.695Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-31T04:05:24.071Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
