@@ -1,0 +1,1531 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>valgrind内存检测 · robotchaoX</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../linux-system/" />
+    
+    
+    <link rel="prev" href="json.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/robotchaoX" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../c++/">
+            
+                <a href="../c++/">
+            
+                    
+                    C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../c++/c++-basic.html">
+            
+                <a href="../c++/c++-basic.html">
+            
+                    
+                    C++基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../c++/stl.html">
+            
+                <a href="../c++/stl.html">
+            
+                    
+                    STL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../linux-basic/">
+            
+                <a href="../linux-basic/">
+            
+                    
+                    linux基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../linux-basic/linux-command.html">
+            
+                <a href="../linux-basic/linux-command.html">
+            
+                    
+                    Linux基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    linux工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="gcc.html">
+            
+                <a href="gcc.html">
+            
+                    
+                    GCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="gdb.html">
+            
+                <a href="gdb.html">
+            
+                    
+                    GDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="make.html">
+            
+                <a href="make.html">
+            
+                    
+                    make
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="json.html">
+            
+                <a href="json.html">
+            
+                    
+                    json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="valgrind内存检测.html">
+            
+                <a href="valgrind内存检测.html">
+            
+                    
+                    valgrind内存检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../linux-system/">
+            
+                <a href="../linux-system/">
+            
+                    
+                    linux系统编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../linux-system/01-process.html">
+            
+                <a href="../linux-system/01-process.html">
+            
+                    
+                    进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../linux-system/02-Inter-Process-Communication.html">
+            
+                <a href="../linux-system/02-Inter-Process-Communication.html">
+            
+                    
+                    进程间通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../linux-system/04-signal.html">
+            
+                <a href="../linux-system/04-signal.html">
+            
+                    
+                    信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../linux-system/05-daemon.html">
+            
+                <a href="../linux-system/05-daemon.html">
+            
+                    
+                    守护进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../linux-system/06-thread.html">
+            
+                <a href="../linux-system/06-thread.html">
+            
+                    
+                    线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../linux-system/07-thread-synchronization.html">
+            
+                <a href="../linux-system/07-thread-synchronization.html">
+            
+                    
+                    线程同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../linux-internet/">
+            
+                <a href="../linux-internet/">
+            
+                    
+                    linux网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../linux-internet/wang-luo-ji-chu.html">
+            
+                <a href="../linux-internet/wang-luo-ji-chu.html">
+            
+                    
+                    网络基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../linux-internet/tcp-udp.html">
+            
+                <a href="../linux-internet/tcp-udp.html">
+            
+                    
+                    TCP/UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../linux-internet/duo-jin-cheng-bing-fa.html">
+            
+                <a href="../linux-internet/duo-jin-cheng-bing-fa.html">
+            
+                    
+                    多进程线程并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../linux-internet/duo-lu-IO-zhuan-jie.html">
+            
+                <a href="../linux-internet/duo-lu-IO-zhuan-jie.html">
+            
+                    
+                    多路IO转接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../web-server/">
+            
+                <a href="../web-server/">
+            
+                    
+                    Web服务器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../web-server/untitled.html">
+            
+                <a href="../web-server/untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../html/html.html">
+            
+                <a href="../html/html.html">
+            
+                    
+                    HTML基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    HTTP协议
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../http/http.html">
+            
+                <a href="../http/http.html">
+            
+                    
+                    HTTP基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../http/https.md">
+            
+                <span>
+            
+                    
+                    https原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../design-pattern/">
+            
+                <a href="../design-pattern/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../design-pattern/uml.html">
+            
+                <a href="../design-pattern/uml.html">
+            
+                    
+                    UML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../design-pattern/design-pattern.html">
+            
+                <a href="../design-pattern/design-pattern.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../shell/">
+            
+                <a href="../shell/">
+            
+                    
+                    shell编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../shell/shell.html">
+            
+                <a href="../shell/shell.html">
+            
+                    
+                    shell基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../python/">
+            
+                <a href="../python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../python/python.html">
+            
+                <a href="../python/python.html">
+            
+                    
+                    Python基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../vim/">
+            
+                <a href="../vim/">
+            
+                    
+                    vim编辑器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../vim/vim.html">
+            
+                <a href="../vim/vim.html">
+            
+                    
+                    vim编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../doxygen/">
+            
+                <a href="../doxygen/">
+            
+                    
+                    doxygen
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../doxygen/doxygen源码文档.md">
+            
+                <span>
+            
+                    
+                    doxygen源码文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../markdown/">
+            
+                <a href="../markdown/">
+            
+                    
+                    MarkDown
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../markdown/markdown.html">
+            
+                <a href="../markdown/markdown.html">
+            
+                    
+                    MarkDown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../gitbook/gitbook.html">
+            
+                <a href="../gitbook/gitbook.html">
+            
+                    
+                    GitBook笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../git/git.html">
+            
+                <a href="../git/git.html">
+            
+                    
+                    Git&GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../jetson/">
+            
+                <a href="../jetson/">
+            
+                    
+                    NVIDIA-jetson
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../jetson/jetson.html">
+            
+                <a href="../jetson/jetson.html">
+            
+                    
+                    jetson笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../opencv/">
+            
+                <a href="../opencv/">
+            
+                    
+                    OpenCV
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../opencv/opencv.html">
+            
+                <a href="../opencv/opencv.html">
+            
+                    
+                    OpenCV笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../shu-ju-ku/">
+            
+                <a href="../shu-ju-ku/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.1" data-path="../shu-ju-ku/mysql.html">
+            
+                <a href="../shu-ju-ku/mysql.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.2" data-path="../shu-ju-ku/mongodb.html">
+            
+                <a href="../shu-ju-ku/mongodb.html">
+            
+                    
+                    MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../shu-ju-jie-gou/README.md">
+            
+                <span>
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >valgrind内存检测</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#valgrind"><b></b>Valgrind</a></li><ul><li><span class="title-icon "></span><a href="#valgrind&#x7B80;&#x4ECB;"><b></b>valgrind&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#valgrind&#x7684;&#x4F7F;&#x7528;"><b></b>valgrind&#x7684;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#valgrind&#x4F8B;&#x5B50;"><b></b>valgrind&#x4F8B;&#x5B50;</a></li><li><span class="title-icon "></span><a href="#reference"><b></b>reference</a></li></ul></ul></ul></div><h2 id="valgrind"><a name="valgrind" class="anchor-navigation-ex-anchor" href="#valgrind"><i class="fa fa-link" aria-hidden="true"></i></a>Valgrind</h2>
+<h3 id="valgrind&#x7B80;&#x4ECB;"><a name="valgrind&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#valgrind&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>valgrind&#x7B80;&#x4ECB;</h3>
+<p>Valgrind&#x662F;&#x4E00;&#x6B3E;&#x7528;&#x4E8E;&#x5185;&#x5B58;&#x8C03;&#x8BD5;&#x3001;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x68C0;&#x6D4B;&#x4EE5;&#x53CA;&#x6027;&#x80FD;&#x5206;&#x6790;&#x7684;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x3002;</p>
+<p>Valgrind&#x662F;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#x548C;&#x5206;&#x6790;Linux&#x7A0B;&#x5E8F;&#x7684;GPL&#x7CFB;&#x7EDF;&#x3002;&#x4F7F;&#x7528;Valgrind&#x7684; &#x5DE5;&#x5177;&#x5957;&#x4EF6;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x68C0;&#x6D4B;&#x8BB8;&#x591A;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x548C;&#x7EBF;&#x7A0B;&#x9519;&#x8BEF;&#x3002;&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x8BE6;&#x7EC6;&#x7684;&#x6027;&#x80FD;&#x5206;&#x6790;&#xFF0C;&#x4EE5;&#x5E2E;&#x52A9;&#x52A0;&#x5FEB;&#x7A0B;&#x5E8F;&#x901F;&#x5EA6;&#x3002;</p>
+<p>Valgrind&#x53EF;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#x3002;&#x56E0;&#x4E3A;Valgrind&#x76F4;&#x63A5;&#x4E0E;&#x7A0B;&#x5E8F;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x53EF;&#x4EE5;&#x4E0E;&#x4EE5;&#x4EFB;&#x4F55;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x65E0;&#x8BBA;&#x5B83;&#x4EEC;&#x662F;&#x7F16;&#x8BD1;&#x7684;&#xFF0C;&#x5373;&#x65F6;&#x7F16;&#x8BD1;&#x7684;&#x8FD8;&#x662F;&#x89E3;&#x91CA;&#x7684;&#x3002;Valgrind&#x5DE5;&#x5177;&#x4E3B;&#x8981;&#x9488;&#x5BF9;&#x7528;C&#x548C;C ++&#x7F16;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x56E0;&#x4E3A;&#x7528;&#x8FD9;&#x4E9B;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#x5F80;&#x5F80;&#x6709;&#x6700;&#x591A;&#x7684;&#x9519;&#x8BEF;&#xFF01;&#x4F46;&#x662F;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#x548C;&#x5206;&#x6790;&#x4EE5;&#x591A;&#x79CD;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x7CFB;&#x7EDF;&#x3002;Valgrind&#x5DF2;&#x7528;&#x4E8E;&#x90E8;&#x5206;&#x6216;&#x5168;&#x90E8;&#x7528;C&#xFF0C;C ++&#xFF0C;Java&#xFF0C;Perl&#xFF0C;Python&#xFF0C;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#xFF0C;Fortran&#xFF0C;Ada&#x7B49;&#x7F16;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#x4E0A;&#x3002;</p>
+<p>Valgrind&#x662F;&#x4E00;&#x5957;Linux&#x4E0B;&#xFF0C;&#x5F00;&#x653E;&#x6E90;&#x4EE3;&#x7801;&#xFF08;GPL V2&#xFF09;&#x7684;&#x4EFF;&#x771F;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#x7684;&#x96C6;&#x5408;&#x3002;Valgrind&#x7531;&#x5185;&#x6838;&#xFF08;core&#xFF09;&#x4EE5;&#x53CA;&#x57FA;&#x4E8E;&#x5185;&#x6838;&#x7684;&#x5176;&#x4ED6;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#x7EC4;&#x6210;&#x3002;&#x5185;&#x6838;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E00;&#x4E2A;&#x6846;&#x67B6;&#xFF08;framework&#xFF09;&#xFF0C;&#x5B83;&#x6A21;&#x62DF;&#x4E86;&#x4E00;&#x4E2A;CPU&#x73AF;&#x5883;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x7ED9;&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#xFF1B;&#x800C;&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#x5219;&#x7C7B;&#x4F3C;&#x4E8E;&#x63D2;&#x4EF6; (plug-in)&#xFF0C;&#x5229;&#x7528;&#x5185;&#x6838;&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;&#x5B8C;&#x6210;&#x5404;&#x79CD;&#x7279;&#x5B9A;&#x7684;&#x5185;&#x5B58;&#x8C03;&#x8BD5;&#x4EFB;&#x52A1;&#x3002;Valgrind&#x7684;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><a href="assets/1783214-cef417fe58980365.jpg" data-lightbox="3bf6d34a-b5f6-4a1d-a7b7-7e0342ccf689" data-title="img"><img src="assets/1783214-cef417fe58980365.jpg" alt="img"></a></p>
+<h4 id="valgrind&#x5DE5;&#x5177;"><a name="valgrind&#x5DE5;&#x5177;" class="anchor-navigation-ex-anchor" href="#valgrind&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>valgrind&#x5DE5;&#x5177;</h4>
+<ol>
+<li><p><strong>Memcheck</strong>&#xFF1A;</p>
+<p><strong>&#x5185;&#x5B58;&#x9519;&#x8BEF;</strong>&#x68C0;&#x6D4B;&#x5668;&#xFF0C;&#x80FD;&#x591F;&#x53D1;&#x73B0;&#x5F00;&#x53D1;&#x4E2D;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x5185;&#x5B58;&#x9519;&#x8BEF;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x60A8;&#x4F7F;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C24;&#x5176;&#x662F;C&#x548C;C ++&#x7684;&#x7A0B;&#x5E8F;&#x66F4;&#x52A0;&#x6B63;&#x786E;&#x3002;</p>
+<p>Memcheck &#x5DE5;&#x5177;&#x4E3B;&#x8981;&#x68C0;&#x67E5;&#x4E0B;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x9519;&#x8BEF;&#xFF1A;</p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5185;&#x5B58; (Use of uninitialised memory)</li>
+<li>&#x8BFB;/&#x5199;&#x5DF2;&#x7ECF;&#x88AB;&#x91CA;&#x653E;&#x7684;&#x5185;&#x5B58; (Reading/writing memory after it has been free&#x2019;d)</li>
+<li>&#x8BFB;/&#x5199;&#x5185;&#x5B58;&#x8D8A;&#x754C; (Reading/writing off the end of malloc&#x2019;d blocks)</li>
+<li>&#x8BFB;/&#x5199;&#x4E0D;&#x6070;&#x5F53;&#x7684;&#x5185;&#x5B58;&#x6808;&#x7A7A;&#x95F4; (Reading/writing inappropriate areas on the stack)</li>
+<li>&#x5185;&#x5B58;&#x6CC4;&#x6F0F; (Memory leaks &#x2013; where pointers to malloc&#x2019;d blocks are lost forever)</li>
+<li>malloc/new/new[]&#x548C;free/delete/delete[]&#x4E0D;&#x5339;&#x914D; (Mismatched use of malloc/new/new [] vs free/delete/delete [])</li>
+<li>src&#x548C;dst&#x7684;&#x91CD;&#x53E0; (Overlapping src and dst pointers in memcpy() and related functions)</li>
+</ul>
+</li>
+<li><p><strong>Callgrind</strong>&#xFF1A;</p>
+<p>&#x751F;&#x6210;&#x8C03;&#x7528;&#x56FE;&#x7684;&#x7F13;&#x5B58;&#x5206;&#x6790;&#x5668;&#xFF0C;&#x5B83;&#x4E3B;&#x8981;&#x7528;&#x6765;&#x68C0;&#x67E5;&#x7A0B;&#x5E8F;&#x4E2D;<strong>&#x51FD;&#x6570;&#x8C03;&#x7528;</strong>&#x8FC7;&#x7A0B;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;&#x3002;
+Callgrind&#x6536;&#x96C6;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5173;&#x7CFB;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x6709;&#x9009;&#x62E9;&#x5730;&#x8FDB;&#x884C;cache &#x6A21;&#x62DF;&#x3002;&#x5728;&#x8FD0;&#x884C;&#x7ED3;&#x675F;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x628A;&#x5206;&#x6790;&#x6570;&#x636E;&#x5199;&#x5165;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x3002;callgrind_annotate&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x8F6C;&#x5316;&#x6210;&#x53EF;&#x8BFB;&#x7684;&#x5F62;&#x5F0F;&#x3002;</p>
+</li>
+<li><p><strong>Cachegrind</strong>&#xFF1A;</p>
+<p>&#x7F13;&#x5B58;&#x548C;&#x5206;&#x652F;&#x9884;&#x6D4B;&#x63A2;&#x67E5;&#x5668;&#xFF0C;&#x5B83;&#x4E3B;&#x8981;&#x7528;&#x6765;&#x68C0;&#x67E5;&#x7A0B;&#x5E8F;&#x4E2D;<strong>&#x7F13;&#x5B58;&#x4F7F;&#x7528;</strong>&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x60A8;&#x4F7F;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x66F4;&#x5FEB;&#x3002;
+&#x5B83;&#x6A21;&#x62DF; CPU&#x4E2D;&#x7684;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;I1,D1&#x548C;L2&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#xFF0C;&#x80FD;&#x591F;&#x7CBE;&#x786E;&#x5730;&#x6307;&#x51FA;&#x7A0B;&#x5E8F;&#x4E2D; cache&#x7684;&#x4E22;&#x5931;&#x548C;&#x547D;&#x4E2D;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#xFF0C;&#x5B83;&#x8FD8;&#x80FD;&#x591F;&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;cache&#x4E22;&#x5931;&#x6B21;&#x6570;&#xFF0C;&#x5185;&#x5B58;&#x5F15;&#x7528;&#x6B21;&#x6570;&#xFF0C;&#x4EE5;&#x53CA;&#x6BCF;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x6BCF;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x4EA7;&#x751F;&#x7684;&#x6307;&#x4EE4;&#x6570;&#x3002;&#x8FD9;&#x5BF9;&#x4F18;&#x5316;&#x7A0B;&#x5E8F;&#x6709;&#x5F88;&#x5927;&#x7684;&#x5E2E;&#x52A9;&#x3002;</p>
+</li>
+<li><p><strong>Helgrind</strong>&#xFF1A;</p>
+<p>&#x7EBF;&#x7A0B;&#x9519;&#x8BEF;&#x68C0;&#x6D4B;&#x5668;&#xFF0C;&#x5B83;&#x4E3B;&#x8981;&#x7528;&#x6765;&#x68C0;&#x67E5;<strong>&#x591A;&#x7EBF;&#x7A0B;&#x7A0B;</strong>&#x5E8F;&#x4E2D;&#x51FA;&#x73B0;&#x7684;<strong>&#x7ADE;&#x4E89;</strong>&#x95EE;&#x9898;&#x3002;
+Helgrind &#x5BFB;&#x627E;&#x5185;&#x5B58;&#x4E2D;&#x88AB;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x8BBF;&#x95EE;&#xFF0C;&#x800C;&#x53C8;&#x6CA1;&#x6709;&#x4E00;&#x8D2F;&#x52A0;&#x9501;&#x7684;&#x533A;&#x57DF;&#xFF0C;&#x8FD9;&#x4E9B;&#x533A;&#x57DF;&#x5F80;&#x5F80;&#x662F;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x5931;&#x53BB;&#x540C;&#x6B65;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x800C;&#x4E14;&#x4F1A;&#x5BFC;&#x81F4;&#x96BE;&#x4EE5;&#x53D1;&#x6398;&#x7684;&#x9519;&#x8BEF;&#x3002;Helgrind&#x5B9E;&#x73B0;&#x4E86;&#x540D;&#x4E3A;&#x201D; Eraser&#x201D; &#x7684;&#x7ADE;&#x4E89;&#x68C0;&#x6D4B;&#x7B97;&#x6CD5;&#xFF0C;&#x5E76;&#x505A;&#x4E86;&#x8FDB;&#x4E00;&#x6B65;&#x6539;&#x8FDB;&#xFF0C;&#x51CF;&#x5C11;&#x4E86;&#x62A5;&#x544A;&#x9519;&#x8BEF;&#x7684;&#x6B21;&#x6570;&#x3002;</p>
+</li>
+<li><p>DRD&#xFF1A;&#x8FD8;&#x662F;&#x7EBF;&#x7A0B;&#x9519;&#x8BEF;&#x68C0;&#x6D4B;&#x5668;&#x3002;&#x5B83;&#x7C7B;&#x4F3C;&#x4E8E;Helgrind&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x5206;&#x6790;&#x6280;&#x672F;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x73B0;&#x4E0D;&#x540C;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+<li><p><strong>Massif</strong>&#xFF1A;</p>
+<p>&#x5806;&#x5206;&#x6790;&#x5668;&#xFF0C;&#x5B83;&#x4E3B;&#x8981;&#x7528;&#x6765;&#x68C0;&#x67E5;&#x7A0B;&#x5E8F;&#x4E2D;<strong>&#x5806;&#x6808;&#x4F7F;&#x7528;</strong>&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;&#x3002;
+&#x5806;&#x6808;&#x5206;&#x6790;&#x5668;&#xFF0C;&#x5B83;&#x80FD;&#x6D4B;&#x91CF;&#x7A0B;&#x5E8F;&#x5728;&#x5806;&#x6808;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x591A;&#x5C11;&#x5185;&#x5B58;&#xFF0C;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x5806;&#x5757;&#xFF0C;&#x5806;&#x7BA1;&#x7406;&#x5757;&#x548C;&#x6808;&#x7684;&#x5927;&#x5C0F;&#x3002;Massif&#x80FD;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x51CF;&#x5C11;&#x5185;&#x5B58;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x5728;&#x5E26;&#x6709;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7684;&#x73B0;&#x4EE3;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x5B83;&#x8FD8;&#x80FD;&#x591F;&#x52A0;&#x901F;&#x6211;&#x4EEC;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#xFF0C;&#x51CF;&#x5C11;&#x7A0B;&#x5E8F;&#x505C;&#x7559;&#x5728;&#x4EA4;&#x6362;&#x533A;&#x4E2D;&#x7684;&#x51E0;&#x7387;&#x3002;</p>
+</li>
+<li><p>DHAT&#xFF1A;&#x662F;&#x53E6;&#x4E00;&#x79CD;&#x5806;&#x5206;&#x6790;&#x5668;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x60A8;&#x4E86;&#x89E3;&#x6A21;&#x5757;&#x5BFF;&#x547D;&#xFF0C;&#x6A21;&#x5757;&#x5229;&#x7528;&#x7387;&#x548C;&#x5E03;&#x5C40;&#x6548;&#x7387;&#x4F4E;&#x4E0B;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+<li><p>BBV&#xFF1A;&#x662F;&#x4E00;&#x4E2A;&#x5B9E;&#x9A8C;&#x6027;&#x7684;SimPoint&#x57FA;&#x672C;&#x5757;&#x77E2;&#x91CF;&#x751F;&#x6210;&#x5668;&#x3002;&#x8FD9;&#x5BF9;&#x4ECE;&#x4E8B;&#x8BA1;&#x7B97;&#x673A;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x7814;&#x7A76;&#x548C;&#x5F00;&#x53D1;&#x7684;&#x4EBA;&#x5458;&#x5F88;&#x6709;&#x7528;&#x3002;</p>
+</li>
+</ol>
+<h4 id="&#x5185;&#x5B58;&#x68C0;&#x67E5;&#x539F;&#x7406;"><a name="&#x5185;&#x5B58;&#x68C0;&#x67E5;&#x539F;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x5185;&#x5B58;&#x68C0;&#x67E5;&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5185;&#x5B58;&#x68C0;&#x67E5;&#x539F;&#x7406;</h4>
+<p><strong>Memcheck</strong>&#x68C0;&#x6D4B;&#x5185;&#x5B58;&#x95EE;&#x9898;&#x7684;&#x539F;&#x7406;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><a href="assets/image003.jpg" data-lightbox="b49d4128-59a8-496e-ada2-a8a2ff84b9aa" data-title="&#x5185;&#x5B58;&#x68C0;&#x67E5;&#x539F;&#x7406;"><img src="assets/image003.jpg" alt="&#x5185;&#x5B58;&#x68C0;&#x67E5;&#x539F;&#x7406;"></a></p>
+<p>Memcheck &#x80FD;&#x591F;&#x68C0;&#x6D4B;&#x51FA;&#x5185;&#x5B58;&#x95EE;&#x9898;&#xFF0C;&#x5173;&#x952E;&#x5728;&#x4E8E;&#x5176;&#x5EFA;&#x7ACB;&#x4E86;&#x4E24;&#x4E2A;&#x5168;&#x5C40;&#x8868;&#x3002;</p>
+<ul>
+<li>Valid-Value &#x8868;&#xFF1A;
+&#x5BF9;&#x4E8E;&#x8FDB;&#x7A0B;&#x7684;&#x6574;&#x4E2A;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x8282;(byte)&#xFF0C;&#x90FD;&#x6709;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#x7684; 8 &#x4E2A; bits&#xFF1B;&#x5BF9;&#x4E8E; CPU &#x7684;&#x6BCF;&#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#x7684; bit &#x5411;&#x91CF;&#x3002;&#x8FD9;&#x4E9B; bits &#x8D1F;&#x8D23;&#x8BB0;&#x5F55;&#x8BE5;&#x5B57;&#x8282;&#x6216;&#x8005;&#x5BC4;&#x5B58;&#x5668;&#x503C;&#x662F;&#x5426;&#x5177;&#x6709;&#x6709;&#x6548;&#x7684;&#x3001;&#x5DF2;&#x521D;&#x59CB;&#x5316;&#x7684;&#x503C;&#x3002;</li>
+<li>Valid-Address &#x8868;
+&#x5BF9;&#x4E8E;&#x8FDB;&#x7A0B;&#x6574;&#x4E2A;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x8282;(byte)&#xFF0C;&#x8FD8;&#x6709;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#x7684; 1 &#x4E2A; bit&#xFF0C;&#x8D1F;&#x8D23;&#x8BB0;&#x5F55;&#x8BE5;&#x5730;&#x5740;&#x662F;&#x5426;&#x80FD;&#x591F;&#x88AB;&#x8BFB;&#x5199;&#x3002;</li>
+</ul>
+<p><strong>&#x68C0;&#x6D4B;&#x539F;&#x7406;</strong>&#xFF1A;</p>
+<ul>
+<li>&#x5F53;&#x8981;&#x8BFB;&#x5199;&#x5185;&#x5B58;&#x4E2D;&#x67D0;&#x4E2A;&#x5B57;&#x8282;&#x65F6;&#xFF0C;&#x9996;&#x5148;&#x68C0;&#x67E5;&#x8FD9;&#x4E2A;&#x5B57;&#x8282;&#x5BF9;&#x5E94;&#x7684; A bit&#x3002;&#x5982;&#x679C;&#x8BE5;A bit&#x663E;&#x793A;&#x8BE5;&#x4F4D;&#x7F6E;&#x662F;&#x65E0;&#x6548;&#x4F4D;&#x7F6E;&#xFF0C;memcheck &#x5219;&#x62A5;&#x544A;&#x8BFB;&#x5199;&#x9519;&#x8BEF;&#x3002;</li>
+<li>&#x5185;&#x6838;&#xFF08;core&#xFF09;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x7684; CPU &#x73AF;&#x5883;&#xFF0C;&#x8FD9;&#x6837;&#x5F53;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x5B57;&#x8282;&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x771F;&#x5B9E;&#x7684; CPU &#x4E2D;&#x65F6;&#xFF0C;&#x8BE5;&#x5B57;&#x8282;&#x5BF9;&#x5E94;&#x7684; V bit &#x4E5F;&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x865A;&#x62DF;&#x7684; CPU &#x73AF;&#x5883;&#x4E2D;&#x3002;&#x4E00;&#x65E6;&#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#x7684;&#x503C;&#xFF0C;&#x88AB;&#x7528;&#x6765;&#x4EA7;&#x751F;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x6216;&#x8005;&#x8BE5;&#x503C;&#x80FD;&#x591F;&#x5F71;&#x54CD;&#x7A0B;&#x5E8F;&#x8F93;&#x51FA;&#xFF0C;&#x5219; memcheck &#x4F1A;&#x68C0;&#x67E5;&#x5BF9;&#x5E94;&#x7684;V bits&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x503C;&#x5C1A;&#x672A;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5219;&#x4F1A;&#x62A5;&#x544A;&#x4F7F;&#x7528;&#x672A;&#x521D;&#x59CB;&#x5316;&#x5185;&#x5B58;&#x9519;&#x8BEF;&#x3002;</li>
+</ul>
+<h3 id="valgrind&#x7684;&#x4F7F;&#x7528;"><a name="valgrind&#x7684;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#valgrind&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>valgrind&#x7684;&#x4F7F;&#x7528;</h3>
+<h4 id="&#x7F16;&#x8BD1;&#x51C6;&#x5907;"><a name="&#x7F16;&#x8BD1;&#x51C6;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8BD1;&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F16;&#x8BD1;&#x51C6;&#x5907;</h4>
+<p>&#x5EFA;&#x8BAE;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x52A0;&#x4E0A;<code>-g</code>&#x53C2;&#x6570;&#x542F;&#x7528;&#x4E86;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;valgrind&#x53D1;&#x73B0;&#x7684;&#x9519;&#x8BEF;&#x66F4;&#x7CBE;&#x786E;&#xFF0C;&#x5982;&#x80FD;&#x591F;&#x5B9A;&#x4F4D;&#x5230;&#x6E90;&#x4EE3;&#x7801;&#x884C;&#x3002;</p>
+<p>&#x7F16;&#x8BD1;&#x4F18;&#x5316;&#x9009;&#x9879;&#x8BF7;&#x9009;&#x62E9;<code>-O0</code>&#xFF0C;&#x867D;&#x7136;&#x8FD9;&#x4F1A;&#x964D;&#x4F4E;&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x6548;&#x7387;&#x3002;&#x56E0;&#x4E3A;&#x5728;&#x6781;&#x5C11;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>-O2</code> &#x4F1A;<code>-O1</code>&#x89C2;&#x5BDF;&#x5230;&#x7F16;&#x8BD1;&#x5668;&#x7684;&#x4F18;&#x5316;&#xFF0C;&#x4ECE;&#x800C;&#x751F;&#x6210;&#x4F7F;Memcheck&#x8BEF;&#x62A5;&#x672A;&#x521D;&#x59CB;&#x5316;&#x503C;&#x9519;&#x8BEF;&#x6216;&#x4E22;&#x5931;&#x672A;&#x521D;&#x59CB;&#x5316;&#x503C;&#x9519;&#x8BEF;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x9664;&#x4E86;Memcheck&#x6240;&#x6709;&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#x4E0D;&#x53D7;&#x4F18;&#x5316;&#x7EA7;&#x522B;&#x7684;&#x5F71;&#x54CD;&#xFF0C;&#x5BF9;&#x4E8E;Cachegrind&#x4E4B;&#x7C7B;&#x7684;&#x6027;&#x80FD;&#x5206;&#x6790;&#x5DE5;&#x5177;&#xFF0C;&#x6700;&#x597D;&#x4EE5;&#x5176;&#x5E38;&#x89C4;&#x4F18;&#x5316;&#x7EA7;&#x522B;&#x7F16;&#x8BD1;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;<code>-Wall</code>&#x5F00;&#x542F;&#x6240;&#x6709;&#x8B66;&#x544A;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x53EF;&#x4EE5;&#x8BC6;&#x522B;Valgrind&#x5728;&#x8F83;&#x9AD8;&#x7684;&#x4F18;&#x5316;&#x7EA7;&#x522B;&#x4E0A;&#x53EF;&#x80FD;&#x4F1A;&#x9057;&#x6F0F;&#x7684;&#x90E8;&#x5206;&#x6216;&#x5168;&#x90E8;&#x95EE;&#x9898;&#x3002;</p>
+<pre><code>#include &lt;stdlib.h&gt;
+void f(void) {
+  int *x = malloc(10 * sizeof(int));
+  x[10] = 0; // problem 1: heap block overrun
+  // problem 2: memory leak -- x not freed
+} 
+
+int main(void) {
+  f();
+  return 0;
+}
+</code></pre><p>&#x7F16;&#x8BD1;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x52A0;&#x4E0A;-g&#x9009;&#x9879;&#xFF1A;</p>
+<pre><code>$ gcc -g -o main main.c
+</code></pre><h4 id="valgrind&#x8C03;&#x8BD5;"><a name="valgrind&#x8C03;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#valgrind&#x8C03;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>valgrind&#x8C03;&#x8BD5;</h4>
+<p>Valgrind&#x88AB;&#x8BBE;&#x8BA1;&#x4E3A;&#x5C3D;&#x53EF;&#x80FD;&#x975E;&#x4FB5;&#x5165;&#x6027;&#x7684;&#x3002;&#x5229;&#x7528;valgrind&#x8C03;&#x8BD5;&#x5185;&#x5B58;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x6E90;&#xFF0C;&#x91CD;&#x65B0;&#x94FE;&#x63A5;&#x6216;&#x4EE5;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x4FEE;&#x6539;&#x8981;&#x68C0;&#x67E5;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x7684;&#x8F93;&#x5165;&#x5C31;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x7684;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>&#x8C03;&#x7528;Valgrind&#x7684;&#x901A;&#x7528;&#x683C;&#x5F0F;&#x662F;&#xFF1A;</p>
+<pre><code>valgrind [valgrind-options] your-prog-name [your-prog-options]
+
+valgrind --tool=memcheck --leak-check=full ./main
+</code></pre><p><code>--tool=memcheck</code>&#x9009;&#x62E9;valgrind&#x5DE5;&#x5177;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;memcheck&#x3002;<code>--leak-check=full</code> &#x9009;&#x9879;&#x6253;&#x5F00;&#x8BE6;&#x7EC6;&#x7684;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x68C0;&#x6D4B;&#x5668;&#x3002;</p>
+<p>&#x60A8;&#x7684;&#x7A0B;&#x5E8F;&#x5C06;&#x6BD4;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x6162;&#x5F97;&#x591A;&#xFF08;&#x4F8B;&#x5982;20&#x5230;30&#x500D;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x4F7F;&#x7528;&#x66F4;&#x591A;&#x7684;&#x5185;&#x5B58;&#x3002;memcheck&#x5C06;&#x53D1;&#x51FA;&#x6709;&#x5173;&#x5185;&#x5B58;&#x9519;&#x8BEF;&#x548C;&#x5B83;&#x68C0;&#x6D4B;&#x5230;&#x7684;&#x6CC4;&#x6F0F;&#x7684;&#x6D88;&#x606F;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x60A8;&#x4F7F;&#x7528;&#x7684;&#x662F;C ++&#xFF0C;&#x5219;&#x53EF;&#x80FD;&#x8981;&#x8003;&#x8651;&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x9009;&#x62E9;&#x662F;<code>-fno-inline</code>&#x3002;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x66F4;&#x8F7B;&#x677E;&#x5730;&#x67E5;&#x770B;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x94FE;&#xFF0C;&#x8FD9;&#x6709;&#x52A9;&#x4E8E;&#x51CF;&#x5C11;&#x5728;&#x5927;&#x578B;C ++&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x5BFC;&#x822A;&#x65F6;&#x7684;&#x6DF7;&#x4E71;&#x3002;&#x6216;&#x8005;&#xFF0C;Valgrind&#x9009;&#x9879; <code>--read-inline-info=yes</code>&#x6307;&#x793A;Valgrind&#x8BFB;&#x53D6;&#x63CF;&#x8FF0;&#x5185;&#x8054;&#x4FE1;&#x606F;&#x7684;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x5373;&#x4F7F;&#x4F7F;&#x7528;&#x5185;&#x8054;&#x7F16;&#x8BD1;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x94FE;&#x4E5F;&#x4F1A;&#x6B63;&#x786E;&#x663E;&#x793A;&#x3002;</p>
+<h4 id="&#x9009;&#x9879;&#x53C2;&#x6570;"><a name="&#x9009;&#x9879;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x9009;&#x9879;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9009;&#x9879;&#x53C2;&#x6570;</h4>
+<p>Valgrind &#x7684;&#x53C2;&#x6570;&#x5206;&#x4E3A;&#x4E24;&#x7C7B;&#xFF0C;&#x4E00;&#x7C7B;&#x662F; Valgrind&#x6838;&#x5FC3;&#x7684;&#x53C2;&#x6570;&#x9009;&#x9879;&#xFF0C;&#x5B83;&#x5BF9;&#x6240;&#x6709;&#x7684;&#x5DE5;&#x5177;&#x90FD;&#x9002;&#x7528;&#xFF1B;&#x53E6;&#x5916;&#x4E00;&#x7C7B;&#x5C31;&#x662F;&#x5177;&#x4F53;&#x67D0;&#x4E2A;&#x5DE5;&#x5177;&#x5982; memcheck &#x7684;&#x53C2;&#x6570;&#x9009;&#x9879;&#x3002;</p>
+<p>Valgrind &#x9ED8;&#x8BA4;&#x7684;&#x5DE5;&#x5177;&#x5C31;&#x662F; memcheck&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x201C;--tool=tool name&#x201D;&#x6307;&#x5B9A;&#x5176;&#x4ED6;&#x7684;&#x5DE5;&#x5177;&#x3002;Valgrind &#x63D0;&#x4F9B;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x53C2;&#x6570;&#x6EE1;&#x8DB3;&#x4F60;&#x7279;&#x5B9A;&#x7684;&#x8C03;&#x8BD5;&#x9700;&#x6C42;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x53C2;&#x8003;&#x5176;&#x7528;&#x6237;&#x624B;&#x518C;&#xFF0C;<a href="https://www.valgrind.org/docs/manual/manual-core.html" target="_blank">Valgrind&#x6838;&#x5FC3;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x9009;&#x9879;</a>&#x3002;</p>
+<p>&#x5E38;&#x7528;&#x9009;&#x9879;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x6240;&#x6709;Valgrind&#x5DE5;&#x5177;&#xFF1A;</p>
+<ol>
+<li>--tool=<name> &#x8FD0;&#x884C; valgrind&#x4E2D;&#x540D;&#x4E3A;toolname&#x7684;&#x5DE5;&#x5177;&#x3002;&#x4F8B;&#x5982;memcheck&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;&#xFF0C;cachegrind&#xFF0C;callgrind&#xFF0C;helgrind&#xFF0C;drd&#xFF0C;massif&#xFF0C;dhat&#xFF0C;bouchey&#xFF0C;none&#xFF0C;exp-bbv&#x7B49;&#x3002;</name></li>
+<li>-h --help &#x663E;&#x793A;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;&#x3002;</li>
+<li>--version &#x663E;&#x793A;valgrind&#x5185;&#x6838;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x6BCF;&#x4E2A;&#x5DE5;&#x5177;&#x90FD;&#x6709;&#x5404;&#x81EA;&#x7684;&#x7248;&#x672C;&#x3002;</li>
+<li>-q --quiet &#x5B89;&#x9759;&#x5730;&#x8FD0;&#x884C;&#xFF0C;&#x53EA;&#x6253;&#x5370;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</li>
+<li>-v --verbose &#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x4FE1;&#x606F;, &#x589E;&#x52A0;&#x9519;&#x8BEF;&#x6570;&#x7EDF;&#x8BA1;&#x3002;</li>
+<li>--trace-children=no|yes &#x8DDF;&#x8E2A;&#x5B50;&#x7EBF;&#x7A0B;? [no]</li>
+<li>--track-fds=no|yes &#x8DDF;&#x8E2A;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#xFF1F;[no]</li>
+<li>--time-stamp=no|yes &#x589E;&#x52A0;&#x65F6;&#x95F4;&#x6233;&#x5230;LOG&#x4FE1;&#x606F;? [no]</li>
+<li>--log-fd=<number> &#x8F93;&#x51FA;LOG&#x5230;&#x63CF;&#x8FF0;&#x7B26;&#x6587;&#x4EF6; [2=stderr]</number></li>
+<li>--log-file=<file> &#x5C06;&#x8F93;&#x51FA;LOG&#x4FE1;&#x606F;&#x5199;&#x5165;&#x5230;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x91CC;</file></li>
+<li>--log-file-exactly=<file> &#x8F93;&#x51FA;LOG&#x4FE1;&#x606F;&#x5230; file</file></li>
+<li>--log-file-qualifier=<var> &#x53D6;&#x5F97;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x6765;&#x505A;&#x4E3A;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002; [none]</var></li>
+<li>--log-socket=<ip-address:port-number> &#x8F93;&#x51FA;LOG&#x4FE1;&#x606F;&#x5230;&#x6307;&#x5B9A;IP&#x5730;&#x5740;&#x7684;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;</ip-address:port-number></li>
+</ol>
+<p>LOG&#x4FE1;&#x606F;&#x8F93;&#x51FA;</p>
+<ol>
+<li>-xml=yes &#x5C06;&#x4FE1;&#x606F;&#x4EE5;xml&#x683C;&#x5F0F;&#x8F93;&#x51FA;&#xFF0C;&#x53EA;&#x6709;memcheck&#x53EF;&#x7528;</li>
+<li>-num-callers=<number> show <number> callers in stack traces [12]</number></number></li>
+<li>-error-limit=no|yes &#x5982;&#x679C;&#x592A;&#x591A;&#x9519;&#x8BEF;&#xFF0C;&#x5219;&#x505C;&#x6B62;&#x663E;&#x793A;&#x65B0;&#x9519;&#x8BEF;? [yes]</li>
+<li>-error-exitcode=<number> &#x5982;&#x679C;&#x53D1;&#x73B0;&#x9519;&#x8BEF;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801; [0=disable]</number></li>
+<li>-db-attach=no|yes &#x5F53;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;valgrind&#x4F1A;&#x81EA;&#x52A8;&#x542F;&#x52A8;&#x8C03;&#x8BD5;&#x5668;gdb&#x3002;[no]</li>
+<li>-db-command=<command> &#x542F;&#x52A8;&#x8C03;&#x8BD5;&#x5668;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;[gdb -nw %f %p]</li>
+</ol>
+<p>&#x9002;&#x7528;&#x4E8E;Memcheck&#x5DE5;&#x5177;&#x7684;&#x76F8;&#x5173;&#x9009;&#x9879;&#xFF1A;</p>
+<ol>
+<li>-leak-check=no|summary|full &#x8981;&#x6C42;&#x5BF9;leak&#x7ED9;&#x51FA;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</li>
+<li>-leak-resolution=low|med|high how much bt merging in leak check</li>
+<li>-show-reachable=no|yes show reachable blocks in leak check</li>
+</ol>
+<h4 id="&#x8F93;&#x51FA;&#x4FE1;&#x606F;"><a name="&#x8F93;&#x51FA;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x8F93;&#x51FA;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F93;&#x51FA;&#x4FE1;&#x606F;</h4>
+<pre><code>
+
+</code></pre><p><code>==19182==</code>&#x8FDB;&#x7A0B;ID19182 &#xFF0C;&#x901A;&#x5E38;&#x4E0D;&#x91CD;&#x8981;&#x3002;</p>
+<p><code>HEAP SUMMARY</code>&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x7A0B;&#x5E8F;&#x5728;&#x5806;&#x4E0A;&#x5206;&#x914D;&#x5185;&#x5B58;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x7A0B;&#x5E8F;&#x62A5;&#x9519;&#x7684;&#x5177;&#x4F53;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p><code>LEAK SUMMARY</code>&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x7A0B;&#x5E8F;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5176;&#x4E2D;&#x5BF9;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x8FDB;&#x884C;&#x4E86;&#x5206;&#x7C7B;&#xFF0C;&#x603B;&#x5171;&#x6709;&#x4E94;&#x7C7B;&#xFF1A;</p>
+<ul>
+<li><strong>definitely lost</strong> &#x610F;&#x5473;&#x7740;&#x4F60;&#x7684;&#x7A0B;&#x5E8F;&#x4E00;&#x5B9A;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#xFF1B;</li>
+<li><strong>indirectly lost</strong> &#x610F;&#x5473;&#x7740;&#x4F60;&#x7684;&#x7A0B;&#x5E8F;&#x4E00;&#x5B9A;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#xFF0C;&#x5E76;&#x4E14;&#x6CC4;&#x9732;&#x60C5;&#x51B5;&#x548C;&#x6307;&#x9488;&#x7ED3;&#x6784;&#x76F8;&#x5173;&#x3002;</li>
+<li><strong>possibly lost</strong> &#x610F;&#x5473;&#x7740;&#x4F60;&#x7684;&#x7A0B;&#x5E8F;&#x4E00;&#x5B9A;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#xFF0C;&#x9664;&#x975E;&#x4F60;&#x662F;&#x6545;&#x610F;&#x8FDB;&#x884C;&#x7740;&#x4E0D;&#x7B26;&#x5408;&#x5E38;&#x89C4;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x5C06;&#x6307;&#x9488;&#x6307;&#x5411;&#x67D0;&#x4E2A;&#x5DF2;&#x5206;&#x914D;&#x5185;&#x5B58;&#x5757;&#x7684;&#x4E2D;&#x95F4;&#x4F4D;&#x7F6E;&#x3002;</li>
+<li><strong>still reachable</strong> &#x610F;&#x5473;&#x7740;&#x4F60;&#x7684;&#x7A0B;&#x5E8F;&#x53EF;&#x80FD;&#x662F;&#x6CA1;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x4F46;&#x786E;&#x5B9E;&#x6CA1;&#x6709;&#x91CA;&#x653E;&#x6389;&#x4E00;&#x4E9B;&#x672C;&#x53EF;&#x4EE5;&#x91CA;&#x653E;&#x7684;&#x5185;&#x5B58;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x662F;&#x5F88;&#x5E38;&#x89C1;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x901A;&#x5E38;&#x57FA;&#x4E8E;&#x5408;&#x7406;&#x7684;&#x7406;&#x7531;&#x3002;</li>
+<li><strong>suppressed</strong> &#x610F;&#x5473;&#x7740;&#x6709;&#x4E9B;&#x6CC4;&#x9732;&#x4FE1;&#x606F;&#x88AB;&#x538B;&#x5236;&#x4E86;&#x3002;&#x5728;&#x9ED8;&#x8BA4;&#x7684; suppression &#x6587;&#x4EF6;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E00;&#x4E9B; suppression &#x76F8;&#x5173;&#x8BBE;&#x7F6E;&#x3002;</li>
+</ul>
+<h4 id="valgrind&#x7684;&#x5C40;&#x9650;&#xFF1F;&#xFF1F;"><a name="valgrind&#x7684;&#x5C40;&#x9650;&#xFF1F;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#valgrind&#x7684;&#x5C40;&#x9650;&#xFF1F;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>Valgrind&#x7684;&#x5C40;&#x9650;&#xFF1F;&#xFF1F;</h4>
+<ol>
+<li><p>Valgrind&#x4E0D;&#x5BF9;&#x9759;&#x6001;&#x6570;&#x7EC4;(&#x5206;&#x914D;&#x5728;&#x6808;&#x4E0A;)&#x8FDB;&#x884C;&#x8FB9;&#x754C;&#x68C0;&#x67E5;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;:</p>
+<pre><code>int main() {
+  char x[10];
+  x[11] = &apos;a&apos;;
+}
+</code></pre><p>Valgrind&#x5219;&#x4E0D;&#x4F1A;&#x8B66;&#x544A;&#x4F60;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x6570;&#x7EC4;&#x6539;&#x4E3A;&#x52A8;&#x6001;&#x5728;&#x5806;&#x4E0A;&#x5206;&#x914D;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x80FD;&#x8FDB;&#x884C;&#x8FB9;&#x754C;&#x68C0;&#x67E5;&#x4E86;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x597D;&#x50CF;&#x6709;&#x70B9;&#x5F97;&#x4E0D;&#x507F;&#x5931;&#x7684;&#x611F;&#x89C9;&#x3002;</p>
+</li>
+<li><p>Valgrind&#x5360;&#x7528;&#x4E86;&#x66F4;&#x591A;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x53EF;&#x8FBE;&#x4E24;&#x500D;&#x4E8E;&#x4F60;&#x7A0B;&#x5E8F;&#x7684;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x91CF;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x7528;Valgrind&#x6765;&#x68C0;&#x6D4B;&#x4F7F;&#x7528;&#x5927;&#x91CF;&#x5185;&#x5B58;&#x7684;&#x7A0B;&#x5E8F;&#x5C31;&#x4F1A;&#x9047;&#x5230;&#x95EE;&#x9898;&#xFF0C;&#x5B83;&#x53EF;&#x80FD;&#x4F1A;&#x7528;&#x5F88;&#x957F;&#x7684;&#x65F6;&#x95F4;&#x6765;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x90FD;&#x4E0D;&#x662F;&#x95EE;&#x9898;&#xFF0C;&#x5373;&#x4F7F;&#x901F;&#x5EA6;&#x6162;&#x4E5F;&#x4EC5;&#x662F;&#x68C0;&#x6D4B;&#x65F6;&#x901F;&#x5EA6;&#x6162;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7528;Valgrind&#x6765;&#x68C0;&#x6D4B;&#x4E00;&#x4E2A;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x65F6;&#x901F;&#x5EA6;&#x5C31;&#x5F88;&#x6162;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x4E0B;&#x95EE;&#x9898;&#x5C31;&#x5927;&#x4E86;&#x3002; Valgrind&#x4E0D;&#x53EF;&#x80FD;&#x68C0;&#x6D4B;&#x51FA;&#x4F60;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x72AF;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x9519;&#x8BEF;--&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x68C0;&#x67E5;&#x7F13;&#x51B2;&#x533A;&#x6EA2;&#x51FA;&#xFF0C;Valgrind&#x4E5F;&#x4E0D;&#x4F1A;&#x544A;&#x8BC9;&#x4F60;&#x4EE3;&#x7801;&#x5199;&#x4E86;&#x5B83;&#x4E0D;&#x5E94;&#x8BE5;&#x5199;&#x7684;&#x5185;&#x5B58;&#x3002;</p>
+</li>
+</ol>
+<h3 id="valgrind&#x4F8B;&#x5B50;"><a name="valgrind&#x4F8B;&#x5B50;" class="anchor-navigation-ex-anchor" href="#valgrind&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>valgrind&#x4F8B;&#x5B50;</h3>
+<h4 id="&#x4F7F;&#x7528;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5185;&#x5B58;"><a name="&#x4F7F;&#x7528;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5185;&#x5B58;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5185;&#x5B58;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5185;&#x5B58;</h4>
+<pre><code>#include &lt;iostream&gt;
+int main() {
+  int x;
+  if (x == 0) {
+    std::cout &lt;&lt; &quot;X is zero&quot; &lt;&lt; std::endl;
+  }
+  return 0;
+}
+</code></pre><p>&#x4F7F;&#x7528; Valgrind &#x68C0;&#x6D4B;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF1A;</p>
+<pre><code>$ g++ -std=c++11 -g -o main_cpp main.cpp
+$ valgrind --tool=memcheck --leak-check=full ./main_cpp
+</code></pre><pre><code>==31554== Memcheck, a memory error detector
+==31554== Copyright (C) 2002-2017, and GNU GPL&apos;d, by Julian Seward et al.
+==31554== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==31554== Command: ./main_cpp
+==31554==
+==31554== Conditional jump or move depends on uninitialised value(s)
+==31554==    at 0x400852: main (main.cpp:6)
+</code></pre><h4 id="&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x672A;&#x91CA;&#x653E;&#x5185;&#x5B58;"><a name="&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x672A;&#x91CA;&#x653E;&#x5185;&#x5B58;" class="anchor-navigation-ex-anchor" href="#&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x672A;&#x91CA;&#x653E;&#x5185;&#x5B58;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5185;&#x5B58;&#x6CC4;&#x6F0F;/&#x672A;&#x91CA;&#x653E;&#x5185;&#x5B58;</h4>
+<h5 id="c&#x8BED;&#x8A00;"><a name="c&#x8BED;&#x8A00;" class="anchor-navigation-ex-anchor" href="#c&#x8BED;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>C&#x8BED;&#x8A00;</h5>
+<p>Valgrind &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x7A0B;&#x5E8F;&#x5728;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;&#x53D1;&#x751F;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#xFF0C;&#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x7684;C&#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#xFF1A;</p>
+<pre><code>#include &lt;stdlib.h&gt;
+int main() {
+  int *array = malloc(sizeof(int));
+  return 0;
+}
+</code></pre><p>&#x7F16;&#x8BD1;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x52A0;&#x4E0A;-g&#x9009;&#x9879;&#xFF1A;</p>
+<pre><code>$ gcc -g -o main_c main.c
+</code></pre><p>&#x4F7F;&#x7528; Valgrind &#x68C0;&#x6D4B;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF1A;</p>
+<pre><code>$ valgrind --tool=memcheck --leak-check=full  ./main_c
+</code></pre><pre><code>==31416== Memcheck, a memory error detector
+==31416== Copyright (C) 2002-2017, and GNU GPL&apos;d, by Julian Seward et al.
+==31416== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==31416== Command: ./main_c
+==31416==
+==31416==
+==31416== HEAP SUMMARY:
+==31416==     in use at exit: 4 bytes in 1 blocks
+==31416==   total heap usage: 1 allocs, 0 frees, 4 bytes allocated
+==31416==
+==31416== 4 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==31416==    at 0x4C2DBF6: malloc (vg_replace_malloc.c:299)
+==31416==     by 0x400537: main (main.c:5)
+==31416==
+==31416== LEAK SUMMARY:
+==31416==    definitely lost: 4 bytes in 1 blocks
+==31416==    indirectly lost: 0 bytes in 0 blocks
+==31416==      possibly lost: 0 bytes in 0 blocks
+==31416==    still reachable: 0 bytes in 0 blocks
+==31416==         suppressed: 0 bytes in 0 blocks
+==31416==
+==31416== For counts of detected and suppressed errors, rerun with: -v
+==31416== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+</code></pre><p>&#x5148;&#x770B;&#x770B;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x4E2D;&#x7684;<code>HEAP SUMMARY</code>&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x7A0B;&#x5E8F;&#x5728;&#x5806;&#x4E0A;&#x5206;&#x914D;&#x5185;&#x5B58;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5176;&#x4E2D;&#x7684;<code>1 allocs</code>&#x8868;&#x793A;&#x7A0B;&#x5E8F;&#x5206;&#x914D;&#x4E86; 1 &#x6B21;&#x5185;&#x5B58;&#xFF0C;<code>0 frees</code>&#x8868;&#x793A;&#x7A0B;&#x5E8F;&#x91CA;&#x653E;&#x4E86; 0 &#x6B21;&#x5185;&#x5B58;&#xFF0C;<code>4 bytes allocated</code>&#x8868;&#x793A;&#x5206;&#x914D;&#x4E86; 4 &#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5185;&#x5B58;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;Valgrind &#x4E5F;&#x4F1A;&#x62A5;&#x544A;&#x7A0B;&#x5E8F;&#x662F;&#x5728;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;&#x53D1;&#x751F;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x3002;<code>by 0x400537: main (main.c:5)</code>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x7A0B;&#x5E8F;&#x53D1;&#x751F;&#x4E86;&#x4E00;&#x6B21;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#xFF0C;&#x4F4D;&#x7F6E;&#x662F;<code>main.c</code>&#x6587;&#x4EF6;&#x7684;&#x7B2C; 5 &#x884C;&#x3002;</p>
+<p><code>LEAK SUMMARY</code>&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x7A0B;&#x5E8F;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x7684;&#x60C5;&#x51B5;&#x3002;<code>definitely lost: 4 bytes in 1 blocks</code>&#x7A0B;&#x5E8F;&#x4E00;&#x5B9A;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x3002;</p>
+<h5 id="c-&#x7A0B;&#x5E8F;reachable&#x539F;&#x56E0;"><a name="c-&#x7A0B;&#x5E8F;reachable&#x539F;&#x56E0;" class="anchor-navigation-ex-anchor" href="#c-&#x7A0B;&#x5E8F;reachable&#x539F;&#x56E0;"><i class="fa fa-link" aria-hidden="true"></i></a>C++ &#x7A0B;&#x5E8F;reachable&#x539F;&#x56E0;</h5>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x5E38;&#x7684; C++ &#x7A0B;&#x5E8F;&#xFF0C;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#xFF1A;</p>
+<pre><code>#include &lt;string&gt;
+int main() {
+  auto ptr = new std::string(&quot;Hello, World!&quot;);
+  delete ptr;
+  return 0;
+}
+</code></pre><p>&#x4F7F;&#x7528; Valgrind &#x5206;&#x6790;&#x8FD9;&#x6BB5;&#x7A0B;&#x5E8F;&#xFF1A;</p>
+<pre><code>$ valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all ./main_cpp
+</code></pre><pre><code>==31438== Memcheck, a memory error detector
+==31438== Copyright (C) 2002-2017, and GNU GPL&apos;d, by Julian Seward et al.
+==31438== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==31438== Command: ./main_cpp
+==31438==
+==31438==
+==31438== HEAP SUMMARY:
+==31438==     in use at exit: 72,704 bytes in 1 blocks
+==31438==   total heap usage: 2 allocs, 1 frees, 72,736 bytes allocated
+==31438==
+==31438== 72,704 bytes in 1 blocks are still reachable in loss record 1 of 1
+==31438==    at 0x4C2DBF6: malloc (vg_replace_malloc.c:299)
+==31438==    by 0x4EC3EFF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==31438==    by 0x40104E9: call_init.part.0 (dl-init.c:72)
+==31438==    by 0x40105FA: call_init (dl-init.c:30)
+==31438==    by 0x40105FA: _dl_init (dl-init.c:120)
+==31438==    by 0x4000CF9: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+==31438==
+==31438== LEAK SUMMARY:
+==31438==    definitely lost: 0 bytes in 0 blocks
+==31438==    indirectly lost: 0 bytes in 0 blocks
+==31438==      possibly lost: 0 bytes in 0 blocks
+==31438==    still reachable: 72,704 bytes in 1 blocks
+==31438==         suppressed: 0 bytes in 0 blocks
+==31438==
+==31438== For counts of detected and suppressed errors, rerun with: -v
+==31438== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</code></pre><p>&#x4F7F;&#x7528; Valgrind &#x5206;&#x6790; C++ &#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x6709;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#x9700;&#x8981;&#x7559;&#x610F;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x5E76;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#xFF0C;&#x4F46;&#x662F;&#x4ECE;<code>HEAP SUMMARY</code>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x7A0B;&#x5E8F;&#x5206;&#x914D;&#x4E86; 2 &#x6B21;&#x5185;&#x5B58;&#xFF0C;&#x4F46;&#x5374;&#x53EA;&#x91CA;&#x653E;&#x4E86; 1 &#x6B21;&#x5185;&#x5B58;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x8FD9;&#x6837;&#x5462;&#xFF1F;
+&#x5B9E;&#x9645;&#x4E0A;&#x8FD9;&#x662F;<strong>&#x7531;&#x4E8E;C++ &#x5728;&#x5206;&#x914D;&#x5185;&#x5B58;&#x65F6;&#xFF0C;&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x5185;&#x5B58;&#x6C60;&#x3002;&#x5F53;&#x7A0B;&#x5E8F;&#x7EC8;&#x6B62;&#x65F6;&#xFF0C;&#x5185;&#x5B58;&#x6C60;&#x7684;&#x5185;&#x5B58;&#x624D;&#x4F1A;&#x88AB;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x56DE;&#x6536;</strong>&#xFF0C;&#x6240;&#x4EE5; Valgrind &#x4F1A;&#x5C06;&#x8FD9;&#x90E8;&#x5206;&#x5185;&#x5B58;&#x62A5;&#x544A;&#x4E3A; reachable &#x7684;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;<strong>reachable &#x7684;&#x5185;&#x5B58;&#x4E0D;&#x4EE3;&#x8868;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;</strong>&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x8F93;&#x51FA;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6709; 72704 &#x4E2A;&#x5B57;&#x8282;&#x662F; reachable &#x7684;&#xFF0C;&#x4F46;&#x6CA1;&#x6709;&#x62A5;&#x544A;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x3002;</p>
+<h4 id="&#x5185;&#x5B58;&#x8BFB;&#x5199;&#x8D8A;&#x754C;"><a name="&#x5185;&#x5B58;&#x8BFB;&#x5199;&#x8D8A;&#x754C;" class="anchor-navigation-ex-anchor" href="#&#x5185;&#x5B58;&#x8BFB;&#x5199;&#x8D8A;&#x754C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5185;&#x5B58;&#x8BFB;&#x5199;&#x8D8A;&#x754C;</h4>
+<p>C++ &#x7A0B;&#x5E8F;&#x7ECF;&#x5E38;&#x51FA;&#x73B0;&#x7684; Bug &#x5C31;&#x662F;&#x6570;&#x7EC4;&#x8D8A;&#x754C;&#x8BBF;&#x95EE;&#xFF0C;&#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x51FA;&#x73B0;&#x4E86;&#x8D8A;&#x754C;&#x8BBF;&#x95EE;&#xFF1A;</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+int main() {
+  std::vector&lt;int&gt; v(10, 0);
+  std::cout &lt;&lt; v[10] &lt;&lt; std::endl;
+  return 0;
+}
+</code></pre><p>&#x4F7F;&#x7528; Valgrind &#x5206;&#x6790;&#x8FD9;&#x6BB5;&#x7A0B;&#x5E8F;&#xFF0C;Valgrind &#x4F1A;&#x63D0;&#x793A;&#x8D8A;&#x754C;&#x8BBF;&#x95EE;&#xFF1A;</p>
+<pre><code>$ g++ -std=c++11 -g -o main_cpp main.cpp
+$ valgrind --tool=memcheck --leak-check=full ./main_cpp
+</code></pre><pre><code>==31523== Memcheck, a memory error detector
+==31523== Copyright (C) 2002-2017, and GNU GPL&apos;d, by Julian Seward et al.
+==31523== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==31523== Command: ./main_cpp
+==31523==
+==31523== Invalid read of size 4
+==31523==    at 0x400AD7: main (main.cpp:5)
+==31523==  Address 0x5ab5ca8 is 0 bytes after a block of size 40 alloc&apos;d
+==31523==    at 0x4C2E216: operator new(unsigned long) (vg_replace_malloc.c:334)
+==31523==    by 0x4010D3: __gnu_cxx::new_allocator&lt;int&gt;::allocate(unsigned long, void const*) (new_allocator.h:104)
+==31523==    by 0x401040: std::allocator_traits&lt;std::allocator&lt;int&gt; &gt;::allocate(std::allocator&lt;int&gt;&amp;, unsigned long) (alloc_traits.h:491)
+==31523==    by 0x400F91: std::_Vector_base&lt;int, std::allocator&lt;int&gt; &gt;::_M_allocate(unsigned long) (stl_vector.h:170)
+==31523==    by 0x400E7E: std::_Vector_base&lt;int, std::allocator&lt;int&gt; &gt;::_M_create_storage(unsigned long) (stl_vector.h:185)
+==31523==    by 0x400D1E: std::_Vector_base&lt;int, std::allocator&lt;int&gt; &gt;::_Vector_base(unsigned long, std::allocator&lt;int&gt; const&amp;) (stl_vector.h:136)
+==31523==    by 0x400C11: std::vector&lt;int, std::allocator&lt;int&gt; &gt;::vector(unsigned long, int const&amp;, std::allocator&lt;int&gt; const&amp;) (stl_vector.h:291)
+==31523==    by 0x400AB9: main (main.cpp:4)
+</code></pre><p><code>Invalid read of size 4</code>&#x8868;&#x793A;&#x8D8A;&#x754C;&#x8BFB;&#x53D6; 4 &#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x51FA;&#x73B0;&#x5728;<code>main.cpp</code>&#x6587;&#x4EF6;&#x7684;&#x7B2C; 5 &#x884C;&#x3002;&#x53E6;&#x5916;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;<code>vector</code>&#x5206;&#x914D;&#x4E86;&#x4E00;&#x5757; 40 &#x5B57;&#x8282;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x7A0B;&#x5E8F;&#x8D8A;&#x754C;&#x8BBF;&#x95EE;&#x7D27;&#x63A5;&#x7740;&#x8FD9;&#x5757;&#x5185;&#x5B58;&#x4E4B;&#x540E;&#x7684; 4 &#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
+<h4 id="&#x975E;&#x6CD5;&#x8BFB;&#x5199;"><a name="&#x975E;&#x6CD5;&#x8BFB;&#x5199;" class="anchor-navigation-ex-anchor" href="#&#x975E;&#x6CD5;&#x8BFB;&#x5199;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x975E;&#x6CD5;&#x8BFB;&#x5199;</h4>
+<pre><code>int main() {
+  int i, *x;
+  x = (int *)malloc(10 * sizeof(int));
+  for (i = 0; i &lt; 11; i++)
+    x[i] = i;
+  free(x);
+}
+</code></pre><blockquote>
+<p><code>==21483== Invalid write of size 4
+==21483== at 0x4004EA: main (sample6.c:6)
+==21483== Address 0x4C2E058 is 0 bytes after a block of size 40 alloc&apos;d
+==21483== at 0x4A05809: malloc (vg_replace_malloc.c:149)
+==21483== by 0x4004C9: main (sample6.c:4)
+==21483==
+==21483== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 5 from 1)
+==21483== malloc/free: in use at exit: 0 bytes in 0 blocks.
+==21483== malloc/free: 1 allocs, 1 frees, 40 bytes allocated.
+==21483== For counts of detected errors, rerun with: -v
+==21483== All heap blocks were freed -- no leaks are possible.</code></p>
+</blockquote>
+<h4 id="&#x65E0;&#x6548;&#x6307;&#x9488;"><a name="&#x65E0;&#x6548;&#x6307;&#x9488;" class="anchor-navigation-ex-anchor" href="#&#x65E0;&#x6548;&#x6307;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65E0;&#x6548;&#x6307;&#x9488;</h4>
+<pre><code>#include &lt;stdlib.h&gt;
+int main() {
+  char *x = malloc(10);
+  x[10] = &apos;a&apos;;
+  free(x);
+  return 0;
+}
+</code></pre><blockquote>
+<p><code>==15262== Invalid write of size 1
+==15262== at 0x4004D6: main (sample7.c:5)
+==15262== Address 0x4C2E03A is 0 bytes after a block of size 10 alloc&apos;d
+==15262== at 0x4A05809: malloc (vg_replace_malloc.c:149)
+==15262== by 0x4004C9: main (sample7.c:4)
+==15262==
+==15262== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 5 from 1)
+==15262== malloc/free: in use at exit: 0 bytes in 0 blocks.
+==15262== malloc/free: 1 allocs, 1 frees, 10 bytes allocated.
+==15262== For counts of detected errors, rerun with: -v
+==15262== All heap blocks were freed -- no leaks are possible.</code></p>
+</blockquote>
+<h4 id="&#x91CD;&#x590D;&#x91CA;&#x653E;"><a name="&#x91CD;&#x590D;&#x91CA;&#x653E;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x590D;&#x91CA;&#x653E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CD;&#x590D;&#x91CA;&#x653E;</h4>
+<pre><code>#include &lt;stdlib.h&gt;
+int main() {
+  char *x = malloc(10);
+  free(x);
+  free(x);
+  return 0;
+}
+</code></pre><blockquote>
+<p><code>==15005== Invalid free() / delete / delete[]
+==15005== at 0x4A0541E: free (vg_replace_malloc.c:233)
+==15005== by 0x4004DF: main (sample8.c:6)
+==15005== Address 0x4C2E030 is 0 bytes inside a block of size 10 free&apos;d
+==15005== at 0x4A0541E: free (vg_replace_malloc.c:233)
+==15005== by 0x4004D6: main (sample8.c:5)
+==15005==
+==15005== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 5 from 1)
+==15005== malloc/free: in use at exit: 0 bytes in 0 blocks.
+==15005== malloc/free: 1 allocs, 2 frees, 10 bytes allocated.
+==15005== For counts of detected errors, rerun with: -v
+==15005== All heap blocks were freed -- no leaks are possible.</code></p>
+</blockquote>
+<h4 id="&#x52A8;&#x6001;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x9519;&#x8BEF;"><a name="&#x52A8;&#x6001;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x9519;&#x8BEF;" class="anchor-navigation-ex-anchor" href="#&#x52A8;&#x6001;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x9519;&#x8BEF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x52A8;&#x6001;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x9519;&#x8BEF;</h4>
+<p>&#x5E38;&#x89C1;&#x7684;&#x5185;&#x5B58;&#x5206;&#x914D;&#x65B9;&#x5F0F;&#x5206;&#x4E09;&#x79CD;&#xFF1A;&#x9759;&#x6001;&#x5B58;&#x50A8;&#xFF0C;&#x6808;&#x4E0A;&#x5206;&#x914D;&#xFF0C;&#x5806;&#x4E0A;&#x5206;&#x914D;&#x3002;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x5C5E;&#x4E8E;&#x9759;&#x6001;&#x5B58;&#x50A8;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x5C31;&#x88AB;&#x5206;&#x914D;&#x4E86;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x51FD;&#x6570;&#x5185;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x5C5E;&#x4E8E;&#x6808;&#x4E0A;&#x5206;&#x914D;&#xFF0C;&#x800C;&#x6700;&#x7075;&#x6D3B;&#x7684;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x5F53;&#x5C5E;&#x5806;&#x4E0A;&#x5206;&#x914D;&#xFF0C;&#x4E5F;&#x53EB;&#x505A;&#x5185;&#x5B58;&#x52A8;&#x6001;&#x5206;&#x914D;&#x4E86;&#x3002;&#x5E38;&#x7528;&#x7684;&#x5185;&#x5B58;&#x52A8;&#x6001;&#x5206;&#x914D;&#x51FD;&#x6570;&#x5305;&#x62EC;&#xFF1A;malloc, alloc, realloc, new&#x7B49;&#xFF0C;&#x52A8;&#x6001;&#x91CA;&#x653E;&#x51FD;&#x6570;&#x5305;&#x62EC;free, delete&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x6210;&#x529F;&#x7533;&#x8BF7;&#x4E86;&#x52A8;&#x6001;&#x5185;&#x5B58;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#xFF0C;&#x800C;&#x8FD9;&#x53C8;&#x662F;&#x6700;&#x5BB9;&#x6613;&#x72AF;&#x9519;&#x8BEF;&#x7684;&#x3002;&#x5E38;&#x89C1;&#x7684;&#x5185;&#x5B58;&#x52A8;&#x6001;&#x7BA1;&#x7406;&#x9519;&#x8BEF;&#x5305;&#x62EC;&#xFF1A;</p>
+<h5 id="&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;&#x4E0D;&#x4E00;&#x81F4;"><a name="&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;&#x4E0D;&#x4E00;&#x81F4;" class="anchor-navigation-ex-anchor" href="#&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;&#x4E0D;&#x4E00;&#x81F4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;&#x4E0D;&#x4E00;&#x81F4;</h5>
+<p>&#x7531;&#x4E8E; C++ &#x517C;&#x5BB9; C&#xFF0C;&#x800C; C &#x4E0E; C++ &#x7684;&#x5185;&#x5B58;&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;&#x51FD;&#x6570;&#x662F;&#x4E0D;&#x540C;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5728; C++ &#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5C31;&#x6709;&#x4E24;&#x5957;&#x52A8;&#x6001;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x51FD;&#x6570;&#x3002;&#x4E00;&#x6761;&#x4E0D;&#x53D8;&#x7684;&#x89C4;&#x5219;&#x5C31;&#x662F;&#x91C7;&#x7528; C &#x65B9;&#x5F0F;&#x7533;&#x8BF7;&#x7684;&#x5185;&#x5B58;&#x5C31;&#x7528; C &#x65B9;&#x5F0F;&#x91CA;&#x653E;&#xFF1B;&#x7528; C++ &#x65B9;&#x5F0F;&#x7533;&#x8BF7;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x7528; C++ &#x65B9;&#x5F0F;&#x91CA;&#x653E;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x7528; malloc/alloc/realloc &#x65B9;&#x5F0F;&#x7533;&#x8BF7;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x7528; free &#x91CA;&#x653E;&#xFF1B;&#x7528; new &#x65B9;&#x5F0F;&#x7533;&#x8BF7;&#x7684;&#x5185;&#x5B58;&#x7528; delete &#x91CA;&#x653E;&#x3002;&#x5728;&#x4E0A;&#x8FF0;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x7528; malloc &#x65B9;&#x5F0F;&#x7533;&#x8BF7;&#x4E86;&#x5185;&#x5B58;&#x5374;&#x7528; delete &#x6765;&#x91CA;&#x653E;&#xFF0C;&#x867D;&#x7136;&#x8FD9;&#x5728;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x4F1A;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x8FD9;&#x7EDD;&#x5BF9;&#x662F;&#x6F5C;&#x5728;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h5 id="&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;&#x4E0D;&#x5339;&#x914D;"><a name="&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;&#x4E0D;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;&#x4E0D;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7533;&#x8BF7;&#x548C;&#x91CA;&#x653E;&#x4E0D;&#x5339;&#x914D;</h5>
+<p>&#x7533;&#x8BF7;&#x4E86;&#x591A;&#x5C11;&#x5185;&#x5B58;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x5B8C;&#x6210;&#x540E;&#x5C31;&#x8981;&#x91CA;&#x653E;&#x591A;&#x5C11;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x91CA;&#x653E;&#xFF0C;&#x6216;&#x8005;&#x5C11;&#x91CA;&#x653E;&#x4E86;&#x5C31;&#x662F;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#xFF1B;&#x591A;&#x91CA;&#x653E;&#x4E86;&#x4E5F;&#x4F1A;&#x4EA7;&#x751F;&#x95EE;&#x9898;&#x3002;&#x4E0A;&#x8FF0;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x6307;&#x9488;p&#x548C;pt&#x6307;&#x5411;&#x7684;&#x662F;&#x540C;&#x4E00;&#x5757;&#x5185;&#x5B58;&#xFF0C;&#x5374;&#x88AB;&#x5148;&#x540E;&#x91CA;&#x653E;&#x4E24;&#x6B21;&#x3002;</p>
+<h5 id="&#x91CA;&#x653E;&#x540E;&#x4ECD;&#x7136;&#x8BFB;&#x5199;"><a name="&#x91CA;&#x653E;&#x540E;&#x4ECD;&#x7136;&#x8BFB;&#x5199;" class="anchor-navigation-ex-anchor" href="#&#x91CA;&#x653E;&#x540E;&#x4ECD;&#x7136;&#x8BFB;&#x5199;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CA;&#x653E;&#x540E;&#x4ECD;&#x7136;&#x8BFB;&#x5199;</h5>
+<p>&#x672C;&#x8D28;&#x4E0A;&#x8BF4;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x5728;&#x5806;&#x4E0A;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x5185;&#x5B58;&#x94FE;&#x8868;&#xFF0C;&#x5982;&#x679C;&#x88AB;&#x91CA;&#x653E;&#xFF0C;&#x5C31;&#x610F;&#x5473;&#x7740;&#x8BE5;&#x5757;&#x5185;&#x5B58;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x88AB;&#x5206;&#x914D;&#x7ED9;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#xFF0C;&#x5982;&#x679C;&#x5185;&#x5B58;&#x88AB;&#x91CA;&#x653E;&#x540E;&#x518D;&#x8BBF;&#x95EE;&#xFF0C;&#x5C31;&#x53EF;&#x80FD;&#x8986;&#x76D6;&#x5176;&#x4ED6;&#x90E8;&#x5206;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x4E25;&#x91CD;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x4E0A;&#x8FF0;&#x7A0B;&#x5E8F;&#x7B2C;16&#x884C;&#x4E2D;&#x5C31;&#x5728;&#x91CA;&#x653E;&#x540E;&#x4ECD;&#x7136;&#x5199;&#x8FD9;&#x5757;&#x5185;&#x5B58;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4E00;&#x6BB5;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C31;&#x5305;&#x62EC;&#x4E86;&#x5185;&#x5B58;&#x52A8;&#x6001;&#x7BA1;&#x7406;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+int main(int argc, char *argv[]) {
+  char *p = (char *)malloc(10);
+  char *pt = p;
+  int i;
+  for (i = 0; i &lt; 10; i++) {
+    p[i] = &apos;z&apos;;
+  }
+  delete p;
+  p[1] = &apos;a&apos;;
+  free(pt);
+  return 0;
+}
+</code></pre><blockquote>
+<p><code>Valgrind&#x63D0;&#x793A;&#x5982;&#x4E0B;
+==25811== Mismatched free() / delete / delete []
+==25811== at 0x4A05130: operator delete(void*) (vg_replace_malloc.c:244)
+==25811== by 0x400654: main (sample4.c:9)
+==25811== Address 0x4C2F030 is 0 bytes inside a block of size 10 alloc&apos;d
+==25811== at 0x4A05809: malloc (vg_replace_malloc.c:149)
+==25811== by 0x400620: main (sample4.c:4)
+==25811==
+==25811== Invalid write of size 1
+==25811== at 0x40065D: main (sample4.c:10)
+==25811== Address 0x4C2F031 is 1 bytes inside a block of size 10 free&apos;d
+==25811== at 0x4A05130: operator delete(void*) (vg_replace_malloc.c:244)
+==25811== by 0x400654: main (sample4.c:9)
+==25811==
+==25811== Invalid free() / delete / delete[]
+==25811== at 0x4A0541E: free (vg_replace_malloc.c:233)
+==25811== by 0x400668: main (sample4.c:11)
+==25811== Address 0x4C2F030 is 0 bytes inside a block of size 10 free&apos;d
+==25811== at 0x4A05130: operator delete(void*) (vg_replace_malloc.c:244)
+==25811== by 0x400654: main (sample4.c:9)
+==25811==
+==25811== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 5 from 1)
+==25811== malloc/free: in use at exit: 0 bytes in 0 blocks.
+==25811== malloc/free: 1 allocs, 2 frees, 10 bytes allocated.
+==25811== For counts of detected errors, rerun with: -v
+==25811== All heap blocks were freed -- no leaks are possible.</code></p>
+</blockquote>
+<h4 id="src&#x548C;dst&#x5185;&#x5B58;&#x8986;&#x76D6;"><a name="src&#x548C;dst&#x5185;&#x5B58;&#x8986;&#x76D6;" class="anchor-navigation-ex-anchor" href="#src&#x548C;dst&#x5185;&#x5B58;&#x8986;&#x76D6;"><i class="fa fa-link" aria-hidden="true"></i></a>src&#x548C;dst&#x5185;&#x5B58;&#x8986;&#x76D6;</h4>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+int main(int argc, char *argv[]) {
+  char x[50];
+  int i;
+  for (i = 0; i &lt; 50; i++) {
+    x[i] = i;
+  }
+  strncpy(x + 20, x, 20); // Good
+  strncpy(x + 20, x, 21); // Overlap
+  x[39] = &apos;\0&apos;;
+  strcpy(x, x + 20); // Good
+  x[39] = 40;
+  x[40] = &apos;\0&apos;;
+  strcpy(x, x + 20); // Overlap
+
+  return 0;
+}
+</code></pre><blockquote>
+<p><code>Valgrind&#x63D0;&#x793A;&#x5982;&#x4E0B;
+==24139== Source and destination overlap in strncpy(0x7FEFFFC09, 0x7FEFFFBF5, 21)
+==24139== at 0x4A0724F: strncpy (mc_replace_strmem.c:116)
+==24139== by 0x400527: main (sample3.c:10)
+==24139==
+==24139== Source and destination overlap in strcpy(0x7FEFFFBE0, 0x7FEFFFBF4)
+==24139== at 0x4A06E47: strcpy (mc_replace_strmem.c:106)
+==24139== by 0x400555: main (sample3.c:15)
+==24139==
+==24139== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 5 from 1)
+==24139== malloc/free: in use at exit: 0 bytes in 0 blocks.
+==24139== malloc/free: 0 allocs, 0 frees, 0 bytes allocated.
+==24139== For counts of detected errors, rerun with: -v
+==24139== All heap blocks were freed -- no leaks are possible.</code></p>
+</blockquote>
+<h3 id="reference"><a name="reference" class="anchor-navigation-ex-anchor" href="#reference"><i class="fa fa-link" aria-hidden="true"></i></a>reference</h3>
+<p><a href="https://www.valgrind.org/docs/" target="_blank">Valgrind Documentation</a></p>
+<p><a href="https://www.cnblogs.com/wangkangluo1/archive/2011/07/20/2111273.html" target="_blank">valgrind &#x8BE6;&#x7EC6;&#x8BF4;&#x660E;</a></p>
+<p><a href="http://senlinzhan.github.io/2017/12/31/valgrind/" target="_blank">&#x4F7F;&#x7528; Valgrind &#x68C0;&#x6D4B; C++ &#x5185;&#x5B58;&#x6CC4;&#x6F0F;</a></p>
+<p><a href="https://blog.csdn.net/caohao2008/article/details/5682291" target="_blank">&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x68C0;&#x67E5;&#x5DE5;&#x5177;valgrind&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="json.html" class="navigation navigation-prev " aria-label="Previous page: json">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../linux-system/" class="navigation navigation-next " aria-label="Next page: linux系统编程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"valgrind内存检测","level":"1.4.5","depth":2,"next":{"title":"linux系统编程","level":"1.5","depth":1,"path":"linux-system/README.md","ref":"linux-system/README.md","articles":[{"title":"进程","level":"1.5.1","depth":2,"path":"linux-system/01-process.md","ref":"linux-system/01-process.md","articles":[]},{"title":"进程间通信","level":"1.5.2","depth":2,"path":"linux-system/02-Inter-Process-Communication.md","ref":"linux-system/02-Inter-Process-Communication.md","articles":[]},{"title":"信号","level":"1.5.3","depth":2,"path":"linux-system/04-signal.md","ref":"linux-system/04-signal.md","articles":[]},{"title":"守护进程","level":"1.5.4","depth":2,"path":"linux-system/05-daemon.md","ref":"linux-system/05-daemon.md","articles":[]},{"title":"线程","level":"1.5.5","depth":2,"path":"linux-system/06-thread.md","ref":"linux-system/06-thread.md","articles":[]},{"title":"线程同步","level":"1.5.6","depth":2,"path":"linux-system/07-thread-synchronization.md","ref":"linux-system/07-thread-synchronization.md","articles":[]}]},"previous":{"title":"json","level":"1.4.4","depth":2,"path":"linux-tool/json.md","ref":"linux-tool/json.md","articles":[]},"dir":"ltr"},"config":{"plugins":["todo","back-to-top-button","chapter-fold","splitter","github","anchor-navigation-ex","simple-page-toc","search-pro","-lunr","-search","lightbox"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/robotchaoX/gitbook"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":false,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"robotchaoX","language":"zh-hans","links":{"sidebar":{"GitHub":"https://github.com/robotchaoX"}},"gitbook":"*","description":"gitbook description"},"file":{"path":"linux-tool/valgrind内存检测.md","mtime":"2020-08-15T07:16:41.401Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-15T07:19:22.594Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
