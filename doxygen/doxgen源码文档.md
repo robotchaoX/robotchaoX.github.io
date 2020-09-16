@@ -17,6 +17,16 @@ Graphviz(Graph Visualization Software)是一个由AT&T实验室启动的开源�
 
 微软出品的HTML Help WorkShop是制作CHM文件的最佳工具，它能将HTML文件编译生成CHM文档。Doxygen软件默认生成HTML文件或Latex文件，我们要通过HTML生成CHM文档，需要先安装HTML Help WorkShop软件，并在Doxygen中进行关联。
 
+**4.vscode 插件**
+
+Doxygen Documentation Generator 格式代码， Doxygen Previewer 单文件预览，Doxygen 格式高亮
+
+#### 自动链接
+
+[Automatic link generation](https://www.doxygen.nl/manual/autolink.html)
+
+doxygen可以自动链接 网页，文件，类，函数，成员，typedefs，具体细节参见链接。
+
 ### 注释规则
 
 #### 单行注释
@@ -101,6 +111,7 @@ Qt类型：
 | @attention | 注意                                                         |
 | @remark    |                                                              |
 | @note      | 注解                                                         |
+| @sa        | see also                                                     |
 | @warinng   | 警告信息                                                     |
 | @exception | 可能产生的异常描述eg:@exception 本函数执行可能会产生超出范围的异常 |
 | @code      | 代码块开始                                                   |
@@ -581,6 +592,30 @@ Click [here](https://www.doxygen.nl/manual/examples/jdstyle/html/class_javadoc__
   virtual void OnRspError(CUstpFtdcRspInfoField *pRspInfo, int nRequestID,
                           bool bIsLast){};
 ```
+
+
+
+
+
+### ubuntu使用doxygen
+
+1. 安装 doxygen   doxygen-gui
+
+```
+sudo apt-get install doxygen doxygen-gui doxygen-doc
+```
+
+2. 生成源代码注释文档
+
+```
+doxywizard
+```
+
+终端输入`doxywizard`出现图形界面，根据图形界面提示就可以了。
+
+3. 学习doxygen
+
+安装doxygen-doc后，会在`/usr/share/doc/doxygen`目录下有文档和例子.
 
 
 
