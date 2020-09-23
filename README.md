@@ -2,7 +2,9 @@
 
 ---
 
-GitHub Pages: https://robotchaox.github.io/
+# 主页
+
+[GitHubPages](https://robotchaox.github.io/)：https://robotchaox.github.io/
 
 [谷歌云服务器链接](http://34.80.131.159/)
 
